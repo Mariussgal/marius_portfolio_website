@@ -8,8 +8,8 @@ export default function Header() {
     const siteTitle = "Home"
 
     return (
-        <Flex h="10vh" ml="2%" mr="2%" borderBottomColor="black">
-            <HStack spacing="4vw" w="15%">
+        <Flex h="10vh" borderBottom="1px">
+            <HStack spacing="4vw" w="30%" ml="2%">
                 <LinkBox>
                     <NextLink href={'/'} passHref>
                         <LinkOverlay>
@@ -42,9 +42,9 @@ export default function Header() {
             <Spacer/>
             <Medias/>
             <Spacer/>
-            <Box w="15%">
+            <Flex w="30%" alignItems="center" justifyContent="right" mr="2%">
                 <ConnectButton />
-            </Box>
+            </Flex>
         </Flex>
     );
 }
