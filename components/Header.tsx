@@ -38,6 +38,13 @@ export default function Header() {
                         </LinkOverlay>
                     </NextLink>
                 </LinkBox>
+                <LinkBox>
+                    <NextLink href={'/messages'} passHref>
+                        <LinkOverlay>
+                            <Text fontSize="lg" fontWeight="bold">{"Messages"}</Text>
+                        </LinkOverlay>
+                    </NextLink>
+                </LinkBox>
             </HStack>
             <Spacer/>
             <Medias/>
