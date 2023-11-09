@@ -18,7 +18,7 @@ export default function Header() {
                     </NextLink>
                 </LinkBox>
                 <LinkBox>
-                    <NextLink href={'/work'} passHref>
+                    <NextLink href={'/projects'} passHref>
                         <LinkOverlay>
                             <Text fontSize="lg" fontWeight="bold">{"Work"}</Text>
                         </LinkOverlay>

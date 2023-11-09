@@ -1,4 +1,3 @@
-import { Button } from "@chakra-ui/react";
 import { isValidAddress, useStartConversation } from "@xmtp/react-sdk";
 import { ChangeEvent, useCallback, useState } from "react";
 
