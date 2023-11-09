@@ -1,44 +1,35 @@
-import { HStack, Text, Link } from "@chakra-ui/react";
-import Github from "../icons/GitHub";
-import Linkedin from "../icons/Linkedin";
-import Mail from "../icons/Mail";
-import Twitter from "../icons/Twitter";
+import { Box, Flex, IconButton } from '@chakra-ui/react'
+import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter } from "react-icons/fa";
 
 export default function Medias() {
     return (
-        <HStack spacing={"30px"}>
-            <Link
-                fontSize="xl"
-                fontFamily="heading"
-                href="mailto:jeangal.pro@gmail.com"
-                isExternal
-            >
-                <Mail/>
-            </Link>
-            <Link
-                fontSize="xl"
-                fontFamily="heading"
-                href="https://www.linkedin.com/in/jean-gal-b1280b155/"
-                isExternal
-            >
-                <Linkedin/>
-            </Link>
-            <Link
-                fontSize="xl"
-                fontFamily="heading"
-                href="https://github.com/jjeangal"
-                isExternal
-            >
-                <Github/>
-            </Link>
-            <Link
-                fontSize="xl"
-                fontFamily="heading"
-                href="https://twitter.com/jeangalbc"
-                isExternal
-            >
-                <Twitter/>
-            </Link>
-        </HStack>
+        <Box position="fixed" right="0" top="50%">
+            <Flex direction="column" align="center" justify="center" transform="translateY(-50%)">
+                <IconButton
+                    aria-label="Mail"
+                    icon={<FaEnvelope size="24px" />}
+                    color="black"
+                    onClick={() => window.open('https://www.facebook.com/yourusername', '_blank')}
+                />
+                <IconButton
+                    aria-label="Twitter"
+                    icon={<FaTwitter size="24px" />}
+                    color="black"
+                    onClick={() => window.open('https://twitter.com/yourusername', '_blank')}
+                />
+                <IconButton
+                    aria-label="LinkedIn"
+                    icon={<FaLinkedin size="24px" />}
+                    color="black"
+                    onClick={() => window.open('https://www.linkedin.com/in/yourusername', '_blank')}
+                />
+                <IconButton
+                    aria-label="Github"
+                    icon={<FaGithub size="24px" />}
+                    color="black"
+                    onClick={() => window.open('https://www.instagram.com/yourusername', '_blank')}
+                />
+            </Flex>
+        </Box>
     );
 }
