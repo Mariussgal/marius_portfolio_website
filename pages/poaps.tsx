@@ -5,7 +5,7 @@ import { fetchPoapData } from '../requests/fetchPoaps';
 import { POAP } from '../ts/types';
 
 
-const nfts: NextPage = () => {
+const poaps: NextPage = () => {
   
   const [poaps, setPoaps] = useState<POAP[]>([]);
 
@@ -35,4 +35,4 @@ const nfts: NextPage = () => {
   )
 }
 
-export default nfts
+export default poaps;
