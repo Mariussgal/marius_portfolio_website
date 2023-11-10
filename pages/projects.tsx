@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Container } from "@chakra-ui/layout";
 
-const work: NextPage = () => {
+const projects: NextPage = () => {
   return (
     <>
       <Container>
@@ -11,4 +11,4 @@ const work: NextPage = () => {
   )
 }
 
-export default work
+export default projects;

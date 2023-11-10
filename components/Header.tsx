@@ -18,7 +18,7 @@ export default function Header() {
                     </NextLink>
                 </LinkBox>
                 <LinkBox>
-                    <NextLink href={'/work'} passHref>
+                    <NextLink href={'/projects'} passHref>
                         <LinkOverlay>
                             <Text fontSize="lg" fontWeight="bold">{"Work"}</Text>
                         </LinkOverlay>
@@ -35,6 +35,13 @@ export default function Header() {
                     <NextLink href={'/nfts'} passHref>
                         <LinkOverlay>
                             <Text fontSize="lg" fontWeight="bold">{"NFTs"}</Text>
+                        </LinkOverlay>
+                    </NextLink>
+                </LinkBox>
+                <LinkBox>
+                    <NextLink href={'/messages'} passHref>
+                        <LinkOverlay>
+                            <Text fontSize="lg" fontWeight="bold">{"Messages"}</Text>
                         </LinkOverlay>
                     </NextLink>
                 </LinkBox>

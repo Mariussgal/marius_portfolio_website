@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <Flex flexDirection="row" height="100%">
+    <Flex flexDirection="row" height="100%" color="black">
       <Box 
         position="absolute" 
         height="200px"
