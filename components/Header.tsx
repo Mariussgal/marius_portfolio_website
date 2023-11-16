@@ -32,9 +32,9 @@ export default function Header() {
                     </NextLink>
                 </LinkBox>
                 <LinkBox>
-                    <NextLink href={'/nfts'} passHref>
+                    <NextLink href={'/poaps'} passHref>
                         <LinkOverlay>
-                            <Text fontSize="lg" fontWeight="bold">{"NFTs"}</Text>
+                            <Text fontSize="lg" fontWeight="bold">{"POAPs"}</Text>
                         </LinkOverlay>
                     </NextLink>
                 </LinkBox>
