@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { GridItem, ListItem, UnorderedList } from "@chakra-ui/layout";
+import { GridItem } from "@chakra-ui/layout";
 import { Box, Grid, Flex } from '@chakra-ui/react';
 
 const about: NextPage = () => {
