@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Container } from '@chakra-ui/react'
+import { Container, Flex } from '@chakra-ui/react'
 import Header from '../components/Header'
 import Head from 'next/head'
 
@@ -14,10 +14,12 @@ export function Layout(props: Props) {
                 <title>Portfolio App</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Header/>
-            <Container backgroundColor='#DCD7C9' maxW="full" height="90vh" py='8'>
-                {props.children}
-            </Container>
+            <Flex direction="column" minHeight="100vh">
+                <Header/>
+                <Container flexGrow={1} backgroundColor='#DCD7C9' maxW="full">
+                    {props.children}
+                </Container>
+            </Flex>
         </div>
     )
 }
