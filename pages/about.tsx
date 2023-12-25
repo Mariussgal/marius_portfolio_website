@@ -1,11 +1,10 @@
 import type { NextPage } from 'next';
-import { GridItem, ListItem, UnorderedList } from "@chakra-ui/layout";
+import { Circle } from "@chakra-ui/layout";
 import { Box, Grid, Flex } from '@chakra-ui/react';
 
 const about: NextPage = () => {
   return (
-    <>
-      <Flex flexDirection="row" width="100%">
+      <Flex as="div" flexDirection="row" width="100%">
         <Box width="100%" color="black">
           <Box w="100%" p={4}>
             EDUCATION
@@ -34,53 +33,47 @@ const about: NextPage = () => {
             <Box alignItems="flex-start">Science Baccalaureat</Box>
             <Box>2014-2018</Box>
           </Flex>
-          <Box h="4px" bg="black" />
-          <Box w="100%" p={4}>
-            ACHIEVEMENTS
-          </Box>
+          <Box h="2px" bg="black" />
+          <Flex px={10} flexDirection="row" justifyContent="space-between">
+            <Box>Lycée Français International de Bangkok </Box>
+            <Box>Middle school</Box>
+            <Box>2008-2013</Box>
+          </Flex>
           <Box h="4px" bg="black" />
           <Box w="100%" p={4}>
             SKILLS
           </Box>
+          <Box h="2px" bg="black" />
+          <Grid h="300px" templateColumns="40% 60%">
+            <Box h="100%" w="100%" p={4}>
+              Development
+              <Grid templateColumns="repeat(4, 1fr)">
+                <Circle size="50px" bg="blue" />
+                <Circle size="50px" bg="tomato" />
+                <Circle size="50px" bg="blue" />
+                <Circle size="50px" bg="blue" />
+              </Grid>
+            </Box>
+            <Grid h="100%" templateRows="15% 15% 70%">
+              <Box bg="blue">Web3</Box>
+              <Box display="flex" flexDirection="row">
+                <Box>Child 1</Box>
+                <Box>Child 2</Box>
+              </Box>
+              <Grid templateColumns="50% 50%">
+                <Box bg="tomato">Tools</Box>
+                <Box bg="blue">Knowledge</Box>
+              </Grid>
+            </Grid>
+          </Grid>
           <Box h="4px" bg="black" />
           <Box w="100%" p={4}>
-            Soft
+            ACHIEVEMENTS
           </Box>
-          <Box h="2px" bg="black" />
-          <Grid
-            h="75px"
-            templateRows="repeat(1, 1fr)"
-            templateColumns="repeat(6, 1fr)"
-            gap="4"
-          >
-            <GridItem rowSpan={1} colSpan={1} bg='tomato' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='blue' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='tomato' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='blue' />  
-            <GridItem rowSpan={1} colSpan={1} bg='tomato' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='blue' /> 
-          </Grid>
-          <Box h="2px" bg="black" />
-          <Box w="100%" p={4}>
-            Technical
-          </Box>
-          <Grid
-            h="75px"
-            templateRows="repeat(1, 1fr)"
-            templateColumns="repeat(6, 1fr)"
-            gap="4"
-          >
-            <GridItem rowSpan={1} colSpan={1} bg='blue' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='tomato' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='blue' />  
-            <GridItem rowSpan={1} colSpan={1} bg='tomato' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='blue' /> 
-            <GridItem rowSpan={1} colSpan={1} bg='tomato' /> 
-          </Grid>
         </Box>
       </Flex>
-    </>
   )
 }
 
 export default about
+
