@@ -4,6 +4,7 @@ import { Circle } from "@chakra-ui/layout";
 import { Box, Grid, Flex } from '@chakra-ui/react';
 import Solidity from '../icons/Solidity';
 import Ethereum from '../icons/Ethereum';
+import Tezos from '../icons/Tezos';
 
 const about: NextPage = () => {
   return (
@@ -70,6 +71,7 @@ const about: NextPage = () => {
               <Box>Ethereum</Box>
               <Ethereum />
               <Box>Tezos</Box>
+              <Tezos />
               <Box>Solidity</Box>
               <Solidity />
               <Box>Hardhat</Box>
