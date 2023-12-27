@@ -5,6 +5,11 @@ import { Box, Grid, Flex } from '@chakra-ui/react';
 import Solidity from '../icons/Solidity';
 import Ethereum from '../icons/Ethereum';
 import Tezos from '../icons/Tezos';
+import Wagmi from '../icons/Wagmi';
+import Hardhat from '../icons/Hardhat';
+import Archetype from '../icons/Archetype';
+import Pinata from '../icons/Pinata';
+import OpenZeppelin from '../icons/OpenZeppelin';
 
 const about: NextPage = () => {
   return (
@@ -67,7 +72,7 @@ const about: NextPage = () => {
           </Box>
           <Grid h="100%" templateRows="15% 35% 50%">
             <Box pt={3}>Web3</Box>
-            <Box display="flex" flexDirection="row">
+            <Grid templateColumns="repeat(9, 1fr)">
               <Box>Ethereum</Box>
               <Ethereum />
               <Box>Tezos</Box>
@@ -77,14 +82,15 @@ const about: NextPage = () => {
               <Box>Hardhat</Box>
               <Box>Truffle</Box>
               <Box>Wagmi</Box>
+              <Wagmi />
               <Box>Web3.js</Box>
               <Box>IPFS</Box>
-              <Box>OpenZeppelin</Box>
+              <OpenZeppelin />
               <Box>Metamask</Box>
-              <Box>Pinata</Box>
-              <Box>Archetype</Box>
+              <Pinata />
+              <Archetype />
               <Box>JsLigo</Box>
-            </Box>
+            </Grid>
             <Grid templateColumns="50% 50%">
               <Box bg="tomato">ERCs</Box>
               <Box bg="blue">Tools</Box>
