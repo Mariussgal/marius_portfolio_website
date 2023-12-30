@@ -1,15 +1,16 @@
 
 import type { NextPage } from 'next';
 import { Circle } from "@chakra-ui/layout";
-import { Box, Grid, Flex } from '@chakra-ui/react';
+import { Box, Grid, Flex, Text } from '@chakra-ui/react';
 import Solidity from '../icons/Solidity';
 import Ethereum from '../icons/Ethereum';
 import Tezos from '../icons/Tezos';
 import Wagmi from '../icons/Wagmi';
-import Hardhat from '../icons/Hardhat';
 import Archetype from '../icons/Archetype';
 import Pinata from '../icons/Pinata';
 import OpenZeppelin from '../icons/OpenZeppelin';
+import Metamask from '../icons/Metamask';
+import Web3Js from '../icons/Web3Js';
 
 const about: NextPage = () => {
   return (
@@ -56,7 +57,7 @@ const about: NextPage = () => {
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
             Development
-            <Grid templateColumns="repeat(4, 1fr)" pt={1}>
+            <Grid templateColumns="repeat(4, 1fr)" fontSize="small" pt={1}>
               <Circle size="70px" borderColor="black" borderWidth={1}>React</Circle>
               <Circle size="70px" borderColor="black" borderWidth={1}>Typescript</Circle>
               <Circle size="70px" borderColor="black" borderWidth={1}>Javascript</Circle>
@@ -70,27 +71,55 @@ const about: NextPage = () => {
               <Circle size="70px" borderColor="black" borderWidth={1}>Flutter</Circle>
             </Grid>
           </Box>
-          <Grid h="100%" templateRows="15% 35% 50%">
+          <Grid h="100%" w="100%" templateRows="15% 35% 50%">
             <Box pt={3}>Web3</Box>
-            <Grid templateColumns="repeat(9, 1fr)">
-              <Box>Ethereum</Box>
-              <Ethereum />
-              <Box>Tezos</Box>
-              <Tezos />
-              <Box>Solidity</Box>
-              <Solidity />
-              <Box>Hardhat</Box>
-              <Box>Truffle</Box>
-              <Box>Wagmi</Box>
-              <Wagmi />
-              <Box>Web3.js</Box>
-              <Box>IPFS</Box>
-              <OpenZeppelin />
-              <Box>Metamask</Box>
-              <Pinata />
-              <Archetype />
-              <Box>JsLigo</Box>
-            </Grid>
+            <Flex wrap="wrap" h="35%">
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Ethereum</Text>
+                <Ethereum />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Tezos</Text>
+                <Tezos />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Solidity</Text>
+                <Solidity />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Hardhat</Text>
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Truffle</Text>
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Wagmi</Text>
+                <Wagmi />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Web.js</Text>
+                <Web3Js />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>IPFS</Text>
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
+                <OpenZeppelin />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
+                <Pinata />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Text>Metamask</Text>
+                <Metamask />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
+                <Archetype />
+              </Flex>
+              <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <img src="https://ligolang.org/img/logo/logo-night.svg" alt="LIGO Logo" height="32" width="104"></img>
+              </Flex>
+            </Flex>
             <Grid templateColumns="50% 50%">
               <Box bg="tomato">ERCs</Box>
               <Box bg="blue">Tools</Box>
