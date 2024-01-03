@@ -14,7 +14,7 @@ import Web3Js from '../icons/Web3Js';
 
 const about: NextPage = () => {
 
-  const ercs = ["ERC-20", "ERC-721", "ERC-1155"];
+  const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
   const tools = ["Remix IDE", "Visual Studio Code", "Figma"];
   const devSkills = ["React", "Typescript", "Javascript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
@@ -25,34 +25,34 @@ const about: NextPage = () => {
           EDUCATION
         </Box>
         <Box h="4px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between" >
-          <Box><b>New York</b> University</Box>
-          <Box alignItems="flex-start">Master of Science in Computing, Entrepreneurship & Innovation</Box>
-          <Box>2023-2024</Box>
+        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 20%"><b>New York</b> University</Box>
+          <Box flex="2 0 60%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
+          <Box flex="1 0 20%" textAlign="right">2023-2024</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box>Alyra Blockchain School</Box>
-          <Box alignItems="flex-start">Blockchain Developer Course</Box>
-          <Box>2022</Box>
+        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 20%">Alyra Blockchain School</Box>
+          <Box flex="2 0 60%" textAlign="center">Blockchain Developer Course</Box>
+          <Box flex="1 0 20%" textAlign="right">2022</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box><b>Delft</b> University of Technology</Box>
-          <Box alignItems="flex-start">Bachelor of Science, Computer Science & Engineering</Box>
-          <Box>2018-2021</Box>
+        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 20%"><b>Delft</b> University of Technology</Box>
+          <Box flex="2 0 60%" textAlign="center">Bachelor of Science, Computer Science & Engineering</Box>
+          <Box flex="1 0 20%" textAlign="right">2018-2021</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box>Lycée Lyautey, <b>Casablanca</b></Box>
-          <Box alignItems="flex-start">Science Baccalaureat</Box>
-          <Box>2014-2018</Box>
+        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 20%">Lycée Lyautey, <b>Casablanca</b></Box>
+          <Box flex="2 0 60%" textAlign="center">Science Baccalaureat</Box>
+          <Box flex="1 0 20%" textAlign="right">2014-2018</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box>Lycée Français International de <b>Bangkok</b> </Box>
-          <Box>Middle school</Box>
-          <Box>2008-2013</Box>
+        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 20%">Lycée Français International de <b>Bangkok</b> </Box>
+          <Box flex="2 0 60%" textAlign="center">Middle school</Box>
+          <Box flex="1 0 20%" textAlign="right">2008-2013</Box>
         </Flex>
         <Box h="4px" bg="black" />
         <Box w="100%" p={4}>
@@ -121,15 +121,17 @@ const about: NextPage = () => {
             </Flex>
             <Grid templateColumns="50% 50%">
               <Box>
-                ERCs
-                {ercs.map((erc, index) => (
-                  <Box key={index}>{erc}</Box>
-                ))}
+                ERCs and OpenZeppelin Contracts
+                <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" gap={1}>
+                  {ercs.map((erc, index) => (
+                    <Box key={index} fontSize="small">{erc}</Box>
+                  ))}
+                </Grid>
               </Box>
               <Box>
                 Tools
                 {tools.map((erc, index) => (
-                  <Box key={index}>{erc}</Box>
+                  <Box key={index} fontSize="small">{erc}</Box>
                 ))}
               </Box>
             </Grid>
