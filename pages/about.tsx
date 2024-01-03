@@ -13,6 +13,11 @@ import Metamask from '../icons/Metamask';
 import Web3Js from '../icons/Web3Js';
 
 const about: NextPage = () => {
+
+  const ercs = ["ERC-20", "ERC-721", "ERC-1155"];
+  const tools = ["Remix IDE", "Visual Studio Code", "Figma"];
+  const devSkills = ["React", "Typescript", "Javascript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
+
   return (
     <Flex as="div" flexDirection="row" width="100%">
       <Box width="100%" color="black">
@@ -21,7 +26,7 @@ const about: NextPage = () => {
         </Box>
         <Box h="4px" bg="black" />
         <Flex px={10} flexDirection="row" justifyContent="space-between" >
-          <Box>New York University</Box>
+          <Box><b>New York</b> University</Box>
           <Box alignItems="flex-start">Master of Science in Computing, Entrepreneurship & Innovation</Box>
           <Box>2023-2024</Box>
         </Flex>
@@ -33,19 +38,19 @@ const about: NextPage = () => {
         </Flex>
         <Box h="2px" bg="black" />
         <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box>Delft University of Technology</Box>
+          <Box><b>Delft</b> University of Technology</Box>
           <Box alignItems="flex-start">Bachelor of Science, Computer Science & Engineering</Box>
           <Box>2018-2021</Box>
         </Flex>
         <Box h="2px" bg="black" />
         <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box>Lycée Lyautey, Casablanca</Box>
+          <Box>Lycée Lyautey, <b>Casablanca</b></Box>
           <Box alignItems="flex-start">Science Baccalaureat</Box>
           <Box>2014-2018</Box>
         </Flex>
         <Box h="2px" bg="black" />
         <Flex px={10} flexDirection="row" justifyContent="space-between">
-          <Box>Lycée Français International de Bangkok </Box>
+          <Box>Lycée Français International de <b>Bangkok</b> </Box>
           <Box>Middle school</Box>
           <Box>2008-2013</Box>
         </Flex>
@@ -57,18 +62,12 @@ const about: NextPage = () => {
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
             Development
-            <Grid templateColumns="repeat(4, 1fr)" fontSize="small" pt={1}>
-              <Circle size="70px" borderColor="black" borderWidth={1}>React</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Typescript</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Javascript</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Nextjs</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Node.js</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>HTML</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Matlab</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Java</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Python</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Dart</Circle>
-              <Circle size="70px" borderColor="black" borderWidth={1}>Flutter</Circle>
+            <Grid templateColumns="repeat(4, 1fr)" fontSize="small" p={2} gap={2}>
+              {devSkills.map((skill, index) => (
+                <Circle key={index} size="70px" borderColor="black" borderWidth={1}>
+                  {skill}
+                </Circle>
+              ))}
             </Grid>
           </Box>
           <Grid h="100%" w="100%" templateRows="15% 35% 50%">
@@ -121,8 +120,18 @@ const about: NextPage = () => {
               </Flex>
             </Flex>
             <Grid templateColumns="50% 50%">
-              <Box bg="tomato">ERCs</Box>
-              <Box bg="blue">Tools</Box>
+              <Box>
+                ERCs
+                {ercs.map((erc, index) => (
+                  <Box key={index}>{erc}</Box>
+                ))}
+              </Box>
+              <Box>
+                Tools
+                {tools.map((erc, index) => (
+                  <Box key={index}>{erc}</Box>
+                ))}
+              </Box>
             </Grid>
           </Grid>
         </Grid>
@@ -130,6 +139,26 @@ const about: NextPage = () => {
         <Box w="100%" p={4}>
           ACHIEVEMENTS
         </Box>
+        <Box h="2px" bg="black" />
+        <Flex px={10}>
+          <Box>Data DAO Category winner at ETH Global Online Hackathon</Box>
+        </Flex>
+        <Box h="2px" bg="black" />
+        <Flex px={10}>
+          <Box>Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development</Box>
+        </Flex>
+        <Box h="2px" bg="black" />
+        <Flex px={10}>
+          <Box>Winner of TU Delft Contest, Ideation Category, IRIS</Box>
+        </Flex>
+        <Box h="2px" bg="black" />
+        <Flex px={10}>
+          <Box>Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
+        </Flex>
+        <Box h="2px" bg="black" />
+        <Flex px={10} pb={2}>
+          <Box>Winner Morocan rugby championship U16</Box>
+        </Flex>
       </Box>
     </Flex>
   )
