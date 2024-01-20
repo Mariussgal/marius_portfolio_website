@@ -26,7 +26,7 @@ const about: NextPage = () => {
         <Box w="100%" pt={4}>
           <Heading size="lg">EDUCATION</Heading>
         </Box>
-        <Box h="4px" bg="black" />
+        <Box h="3px" bg="black" />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>New York</b> University</Box>
           <Box flex="2 0 56%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
@@ -56,10 +56,11 @@ const about: NextPage = () => {
           <Box flex="2 0 56%" textAlign="center">Middle school</Box>
           <Box flex="1 0 22%" textAlign="right">2008-2013</Box>
         </Flex>
-        <Box h="4px" bg="black" />
+
         <Box w="100%" pt={4}>
           <Heading size="lg">SKILLS</Heading>
         </Box>
+        <Box h="3px" bg="black" />
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
             <Heading size="md">Development</Heading>
@@ -145,11 +146,10 @@ const about: NextPage = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Box h="4px" bg="black" />
         <Box w="100%" pt={4}>
           <Heading size="lg">ACHIEVEMENTS</Heading>
         </Box>
-        <Box h="2px" bg="black" />
+        <Box h="3px" bg="black" />
         <Flex px={5}>
           <Box>Data DAO Category winner at ETH Global Online Hackathon</Box>
         </Flex>
