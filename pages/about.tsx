@@ -23,44 +23,43 @@ const about: NextPage = () => {
   return (
     <Flex as="div" flexDirection="row" width="100%">
       <Box width="100%" color="black">
-        <Box w="100%" p={4}>
+        <Box w="100%" pt={4}>
           <Heading size="lg">EDUCATION</Heading>
         </Box>
         <Box h="4px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 20%"><b>New York</b> University</Box>
-          <Box flex="2 0 60%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
-          <Box flex="1 0 20%" textAlign="right">2023-2024</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 22%"><b>New York</b> University</Box>
+          <Box flex="2 0 56%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
+          <Box flex="1 0 22%" textAlign="right">2023-2024</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 20%">Alyra Blockchain School</Box>
-          <Box flex="2 0 60%" textAlign="center">Blockchain Developer Course</Box>
-          <Box flex="1 0 20%" textAlign="right">2022</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 22%">Alyra Blockchain School, <b>Remote</b></Box>
+          <Box flex="2 0 56%" textAlign="center">Blockchain Developer Course</Box>
+          <Box flex="1 0 22%" textAlign="right">2022</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 20%"><b>Delft</b> University of Technology</Box>
-          <Box flex="2 0 60%" textAlign="center">Bachelor of Science, Computer Science & Engineering</Box>
-          <Box flex="1 0 20%" textAlign="right">2018-2021</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 22%"><b>Delft</b> University of Technology</Box>
+          <Box flex="2 0 56%" textAlign="center">Bachelor of Science, Computer Science & Engineering</Box>
+          <Box flex="1 0 22%" textAlign="right">2018-2021</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 20%">Lycée Lyautey, <b>Casablanca</b></Box>
-          <Box flex="2 0 60%" textAlign="center">Science Baccalaureat</Box>
-          <Box flex="1 0 20%" textAlign="right">2014-2018</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 22%">Lycée Lyautey, <b>Casablanca</b></Box>
+          <Box flex="2 0 56%" textAlign="center">Science Baccalaureat</Box>
+          <Box flex="1 0 22%" textAlign="right">2014-2018</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 20%">Lycée Français International de <b>Bangkok</b> </Box>
-          <Box flex="2 0 60%" textAlign="center">Middle school</Box>
-          <Box flex="1 0 20%" textAlign="right">2008-2013</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 22%">Lycée Français International de <b>Bangkok</b> </Box>
+          <Box flex="2 0 56%" textAlign="center">Middle school</Box>
+          <Box flex="1 0 22%" textAlign="right">2008-2013</Box>
         </Flex>
         <Box h="4px" bg="black" />
-        <Box w="100%" p={4}>
+        <Box w="100%" pt={4}>
           <Heading size="lg">SKILLS</Heading>
         </Box>
-        <Box h="2px" bg="black" />
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
             <Heading size="md">Development</Heading>
@@ -147,23 +146,23 @@ const about: NextPage = () => {
           </Grid>
         </Grid>
         <Box h="4px" bg="black" />
-        <Box w="100%" p={4}>
+        <Box w="100%" pt={4}>
           <Heading size="lg">ACHIEVEMENTS</Heading>
         </Box>
         <Box h="2px" bg="black" />
-        <Flex px={10}>
+        <Flex px={5}>
           <Box>Data DAO Category winner at ETH Global Online Hackathon</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10}>
+        <Flex px={5}>
           <Box>Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10}>
+        <Flex px={5}>
           <Box>Winner of TU Delft Contest, Ideation Category, IRIS</Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10}>
+        <Flex px={5}>
           <Box>Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
         </Flex>
         <Box h="2px" bg="black" />
