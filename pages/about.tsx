@@ -166,7 +166,7 @@ const about: NextPage = () => {
           <Box>Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
         </Flex>
         <Box h="2px" bg="black" />
-        <Flex px={10} pb={2}>
+        <Flex px={5} pb={2}>
           <Box>Winner Morocan rugby championship U16</Box>
         </Flex>
       </Box>
