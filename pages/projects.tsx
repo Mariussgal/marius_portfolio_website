@@ -15,7 +15,6 @@ const projects: NextPage = () => {
     {
       name: 'Cheyni TV Token & Subscription Model',
       description: 'CHEYNI TV is a film streaming platform featuring NFTs and exclusive collectibles like backstages and special utilities. The platform offers a unique watch-to-earn model with a native token, which viewers can spend on its marketplace.',
-      githubLink: 'private',
       projectLink: 'https://www.cheyni.com/'
     },
     {
@@ -45,17 +44,22 @@ const projects: NextPage = () => {
           <Box minWidth="300px" height="400px" p="5" bg="#1A202C" boxShadow="md" rounded="md" key={index} mr={4}>
             <Text mt="5">{card.name}</Text>
             <Text>{card.description}</Text>
-            <Box>
-              <Link href={card.githubLink} isExternal>
-                <Icon as={FaGithub} />
-              </Link>
-            </Box>
-            {card.projectLink &&
+            {
+              card.githubLink &&
+              <Box>
+                <Link href={card.githubLink} isExternal>
+                  <Icon as={FaGithub} />
+                </Link>
+              </Box>
+            }
+            {
+              card.projectLink &&
               <Box>
                 <Link href={card.projectLink} isExternal>
                   <Icon as={FaExternalLinkAlt} />
                 </Link>
-              </Box>}
+              </Box>
+            }
           </Box>
         ))}
       </Flex>
