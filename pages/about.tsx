@@ -1,4 +1,3 @@
-
 import type { NextPage } from 'next';
 import { Circle, Heading } from "@chakra-ui/layout";
 import { Box, Grid, Flex, Text } from '@chakra-ui/react';
@@ -11,12 +10,15 @@ import Pinata from '../icons/Pinata';
 import OpenZeppelin from '../icons/OpenZeppelin';
 import Metamask from '../icons/Metamask';
 import Web3Js from '../icons/Web3Js';
+import IPFS from '../icons/Ipfs';
+import Hardhat from '../icons/Hardhat';
+import Truffle from '../icons/Truffle';
 
 const about: NextPage = () => {
 
   const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
   const tools = ["Remix IDE", "Visual Studio Code", "Figma"];
-  const devSkills = ["React", "Typescript", "Javascript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
+  const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
   return (
     <Flex as="div" flexDirection="row" width="100%">
@@ -76,32 +78,34 @@ const about: NextPage = () => {
             </Box>
             <Flex wrap="wrap" h="35%">
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Ethereum</Text>
                 <Ethereum />
+                <Text>Ethereum</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Tezos</Text>
                 <Tezos />
+                <Text>Tezos</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Solidity</Text>
                 <Solidity />
+                <Text>Solidity</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <Hardhat />
                 <Text>Hardhat</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Truffle</Text>
+                <Truffle />
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Wagmi</Text>
                 <Wagmi />
+                <Text>Wagmi</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Web.js</Text>
                 <Web3Js />
+                <Text>Web.js</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+                <IPFS />
                 <Text>IPFS</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
@@ -109,10 +113,11 @@ const about: NextPage = () => {
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
                 <Pinata />
+
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Text>Metamask</Text>
                 <Metamask />
+                <Text textStyle="bold">Metamask</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
                 <Archetype />
@@ -124,7 +129,7 @@ const about: NextPage = () => {
             <Grid templateColumns="50% 50%">
               <Box>
                 <Heading size="md">ERCs and OpenZeppelin Contracts</Heading>
-                <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" gap={1}>
+                <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" pt={2} gap={1}>
                   {ercs.map((erc, index) => (
                     <Box key={index} fontSize="small">{erc}</Box>
                   ))}
@@ -132,9 +137,11 @@ const about: NextPage = () => {
               </Box>
               <Box>
                 <Heading size="md">Tools</Heading>
-                {tools.map((erc, index) => (
-                  <Box key={index} fontSize="small">{erc}</Box>
-                ))}
+                <Grid templateColumns="repeat(1, 1fr)" pt={2} gap={1}>
+                  {tools.map((erc, index) => (
+                    <Box key={index} fontSize="small">{erc}</Box>
+                  ))}
+                </Grid>
               </Box>
             </Grid>
           </Grid>
