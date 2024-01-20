@@ -1,6 +1,6 @@
 
 import type { NextPage } from 'next';
-import { Circle } from "@chakra-ui/layout";
+import { Circle, Heading } from "@chakra-ui/layout";
 import { Box, Grid, Flex, Text } from '@chakra-ui/react';
 import Solidity from '../icons/Solidity';
 import Ethereum from '../icons/Ethereum';
@@ -22,7 +22,7 @@ const about: NextPage = () => {
     <Flex as="div" flexDirection="row" width="100%">
       <Box width="100%" color="black">
         <Box w="100%" p={4}>
-          EDUCATION
+          <Heading size="lg">EDUCATION</Heading>
         </Box>
         <Box h="4px" bg="black" />
         <Flex px={10} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
@@ -56,12 +56,12 @@ const about: NextPage = () => {
         </Flex>
         <Box h="4px" bg="black" />
         <Box w="100%" p={4}>
-          SKILLS
+          <Heading size="lg">SKILLS</Heading>
         </Box>
         <Box h="2px" bg="black" />
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
-            Development
+            <Heading size="md">Development</Heading>
             <Grid templateColumns="repeat(4, 1fr)" fontSize="small" p={2} gap={2}>
               {devSkills.map((skill, index) => (
                 <Circle key={index} size="70px" borderColor="black" borderWidth={1}>
@@ -71,7 +71,9 @@ const about: NextPage = () => {
             </Grid>
           </Box>
           <Grid h="100%" w="100%" templateRows="15% 35% 50%">
-            <Box pt={3}>Web3</Box>
+            <Box w="100%" pt={4}>
+              <Heading size="md">Web3</Heading>
+            </Box>
             <Flex wrap="wrap" h="35%">
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Text>Ethereum</Text>
@@ -121,7 +123,7 @@ const about: NextPage = () => {
             </Flex>
             <Grid templateColumns="50% 50%">
               <Box>
-                ERCs and OpenZeppelin Contracts
+                <Heading size="md">ERCs and OpenZeppelin Contracts</Heading>
                 <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" gap={1}>
                   {ercs.map((erc, index) => (
                     <Box key={index} fontSize="small">{erc}</Box>
@@ -129,7 +131,7 @@ const about: NextPage = () => {
                 </Grid>
               </Box>
               <Box>
-                Tools
+                <Heading size="md">Tools</Heading>
                 {tools.map((erc, index) => (
                   <Box key={index} fontSize="small">{erc}</Box>
                 ))}
@@ -139,7 +141,7 @@ const about: NextPage = () => {
         </Grid>
         <Box h="4px" bg="black" />
         <Box w="100%" p={4}>
-          ACHIEVEMENTS
+          <Heading size="lg">ACHIEVEMENTS</Heading>
         </Box>
         <Box h="2px" bg="black" />
         <Flex px={10}>
