@@ -7,31 +7,36 @@ const projects: NextPage = () => {
 
   const cards: Project[] = [
     {
-      name: 'Coal Dapp (Project)',
-      description: 'Coal is a cutting-edge web3 platform that streamlines digital rights management in the music industry, providing robust copyright violation detection. This project represents a significant advancement in protecting the originality and legal rights of musical works, specifically designed to cater to the needs of artists and producers.',
+      name: 'Co-founded Coal',
+      date: 'Sept. 2023 - Present',
+      description: 'Coal is a cutting-edge web3 platform that streamlines digital rights management in the music industry, providing robust copyright violation detection.',
       githubLink: 'https://github.com/Coal-Organization/Coal-Dapp',
       projectLink: 'https://www.loom.com/share/8822c7ad16d24a70a4801c6418616f1b?sid=0f8b11de-06e5-4bef-903b-0f1a968b6970'
     },
     {
-      name: 'Cheyni TV Token & Subscription Model (Freelance)',
-      description: 'CHEYNI TV is a film streaming platform featuring NFTs and exclusive collectibles like backstages and special utilities. The platform offers a unique watch-to-earn model with a native token, which viewers can spend on its marketplace.',
+      name: 'Freelance Blockchain Developer @ Cheyni TV',
+      date: 'Feb. - Mar. 2023',
+      description: 'CHEYNI TV is a film streaming platform featuring NFTs and exclusive collectibles like backstages and special utilities. I developed a unique watch-to-earn model with smart contracts for the native Cheyni token and subscription system.',
       projectLink: 'https://www.cheyni.com/'
     },
     {
-      name: 'KYCY Nextchain - NFTouring (Freelance)',
-      description: 'This is project 2',
+      name: 'Freelance Blockchain Developer @ KYCY Nextchain',
+      date: 'Sept. 2022 - Jan. 2023',
+      description: 'Worked for the NFTouring project',
       githubLink: 'https://github.com/jjeangal/nftouring_mint_app',
       projectLink: 'https://nftouring-genesis-mint.vercel.app/'
     },
     {
-      name: 'Fundacion Chankuap (Internship) ',
-      description: 'This is project 2',
+      name: 'Software Engineer Intern @ Fundacion Chankuap',
+      date: 'Nov. 2020 - Feb. 2021',
+      description: 'Designed and implemented an ERP solution for the food and cosmetic supply chain of this Ecuadorian non-profit organization (cross-platform software application).',
       githubLink: 'https://github.com/jjeangal/chankuap_flutter',
       projectLink: 'https://chankuap.org/'
     },
     {
-      name: 'IRIS Decentralized News Media (Startup)',
-      description: 'Iris is a decentralized news platform promoting the publication of reliable and fact-checked articles.',
+      name: 'Co-founded IRIS Startup',
+      date: 'Feb. 2020 - Nov. 2021',
+      description: 'Iris is a decentralized blockchain based news platform, promoting the publication of reliable and fact-checked articles.',
       githubLink: 'https://github.com/The-Iris-Team',
       projectLink: 'https://the-iris-team.github.io/'
     }
@@ -44,7 +49,7 @@ const projects: NextPage = () => {
           <Box minWidth="350px" height="400px" p="5" bg="#1A202C" boxShadow="md" rounded="md" key={index} mr={4} position="relative">
             <Heading as="h2" size="md" mt="2" mb="4">{card.name}</Heading>
             <Text>{card.description}</Text>
-            <Flex position="absolute" right={4} bottom={4}>
+            <Flex position="absolute" left={4} bottom={4}>
               {card.githubLink &&
                 <Box mr={2}>
                   <Link href={card.githubLink} isExternal>
@@ -59,6 +64,9 @@ const projects: NextPage = () => {
                   </Link>
                 </Box>
               }
+            </Flex>
+            <Flex position="absolute" right={4} bottom={4}>
+              <Text fontSize="sm">{card.date}</Text>
             </Flex>
           </Box>
         ))}
