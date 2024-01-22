@@ -1,3 +1,10 @@
+export interface Project {
+	name: string;
+	description: string;
+	githubLink?: string;
+	projectLink?: string;
+}
+
 export interface POAP {
 	event: POAPEvent;
 	tokenId: string;
