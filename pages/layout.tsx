@@ -4,18 +4,18 @@ import Header from '../components/Header'
 import Head from 'next/head'
 
 type Props = {
-  children: ReactNode
+    children: ReactNode
 }
 
-export function Layout(props: Props) {
+const Layout: React.FC<Props> = (props) => {
     return (
         <div>
             <Head>
                 <title>Portfolio App</title>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <Flex direction="column" minHeight="100vh">
-                <Header/>
+                <Header />
                 <Container flexGrow={1} backgroundColor='#DCD7C9' maxW="full">
                     {props.children}
                 </Container>
@@ -23,3 +23,5 @@ export function Layout(props: Props) {
         </div>
     )
 }
+
+export default Layout;
