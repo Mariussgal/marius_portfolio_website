@@ -1,14 +1,18 @@
 import { POAPEvent } from "../ts/types";
 
-export const fetchPoapData = async () : Promise<any> => {
+export const fetchPoapData = async (): Promise<any> => {
 
     const poapAPIKey = process.env.NEXT_PUBLIC_POAP_API_KEY;
+
+    if (!poapAPIKey) {
+        throw new Error('POAP API key is not defined');
+    }
 
     const options = {
         method: 'GET',
         headers: {
-        accept: 'application/json',
-        'x-api-key': poapAPIKey
+            accept: 'application/json',
+            'x-api-key': poapAPIKey
         }
     };
 
