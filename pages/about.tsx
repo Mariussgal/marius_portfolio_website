@@ -22,7 +22,7 @@ const about: NextPage = () => {
   const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
   return (
-    <Flex as="div" flexDirection="row" width="100%">
+    <Flex as="div" flexDirection="column" width="100%">
       <Box width="100%" color="black">
         <Box w="100%" mt={4}>
           <Heading size="lg">EDUCATION</Heading>
@@ -180,6 +180,9 @@ const about: NextPage = () => {
           <Box flex="1 0 78%">Winner Morocan rugby championship U16</Box>
           <Box flex="1 0 22%" textAlign="right">2016</Box>
         </Flex>
+      </Box>
+      <Box display="flex" justifyContent="center" alignItems="flex-end" width="100%" height="100%">
+        <iframe width="640" height="480" src="https://www.polarsteps.com/JeanGal/4562958-south-america/embed"></iframe>
       </Box>
     </Flex>
   )
