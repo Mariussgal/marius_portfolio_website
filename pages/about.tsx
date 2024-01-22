@@ -14,11 +14,15 @@ import Web3Js from '../icons/Web3Js';
 import IPFS from '../icons/Ipfs';
 import Hardhat from '../icons/Hardhat';
 import Truffle from '../icons/Truffle';
+import Tools from '../icons/Tools';
+import Web3 from '../icons/Web3';
+import Dev from '../icons/Dev';
+import Security from '../icons/Security';
 
 const about: NextPage = () => {
 
   const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
-  const tools = ["Git - Github", "Remix IDE", "VSC", "Figma"];
+  const tools = ["Git - Github", "Slack", "Notion", "Figma"];
   const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
   return (
@@ -57,14 +61,16 @@ const about: NextPage = () => {
           <Box flex="2 0 56%" textAlign="center">Middle school</Box>
           <Box flex="1 0 22%" textAlign="right">2008-2013</Box>
         </Flex>
-
         <Box w="100%" mt={6}>
           <Heading size="lg">SKILLS</Heading>
         </Box>
         <Box h="3px" bg="black" />
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
-            <Heading size="md">DEVELOPMENT</Heading>
+            <Flex alignItems="center">
+              <Dev />
+              <Heading ml="2" size="md">DEVELOPMENT</Heading>
+            </Flex>
             <Grid templateColumns="repeat(4, 1fr)" fontSize="small" mt={4} gap={3}>
               {devSkills.map((skill, index) => (
                 <Circle key={index} size="70px" borderColor="black" borderWidth={1}>
@@ -74,9 +80,10 @@ const about: NextPage = () => {
             </Grid>
           </Box>
           <Grid h="100%" w="100%" templateRows="15% 35% 50%">
-            <Box w="100%" mt={4}>
-              <Heading size="md">WEB3</Heading>
-            </Box>
+            <Flex alignItems="center" mt={4}>
+              <Web3 />
+              <Heading ml="2" size="md">WEB 3</Heading>
+            </Flex>
             <Flex wrap="wrap" h="35%">
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Ethereum />
@@ -128,7 +135,10 @@ const about: NextPage = () => {
             </Flex>
             <Grid templateColumns="50% 50%">
               <Box>
-                <Heading size="md">ERCs & OPENZEPPELIN</Heading>
+                <Flex alignItems="center">
+                  <Security />
+                  <Heading ml="2" size="md">ERCs & OPENZEPPELIN</Heading>
+                </Flex>
                 <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
                   {ercs.map((erc, index) => (
                     <Flex key={index} fontSize="small" alignItems="center">
@@ -139,7 +149,10 @@ const about: NextPage = () => {
                 </Grid>
               </Box>
               <Box>
-                <Heading size="md">TOOLS</Heading>
+                <Flex alignItems="center">
+                  <Tools />
+                  <Heading size="md" ml={2}>TOOLS</Heading>
+                </Flex>
                 <Grid templateColumns="repeat(1, 1fr)" mt={2} gap={1}>
                   {tools.map((tool, index) => (
                     <Flex key={index} fontSize="small" alignItems="center">
