@@ -46,9 +46,9 @@ export default function Header() {
                     </NextLink>
                 </LinkBox>
             </HStack>
-            <Spacer/>
-            <Medias/>
-            <Spacer/>
+            <Spacer />
+            <Medias />
+            <Spacer />
             <Flex w="30%" alignItems="center" justifyContent="right" mr="2%">
                 <ConnectButton />
             </Flex>

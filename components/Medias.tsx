@@ -9,25 +9,25 @@ export default function Medias() {
                     aria-label="Mail"
                     icon={<FaEnvelope size="24px" />}
                     color="black"
-                    onClick={() => window.open('https://www.facebook.com/yourusername', '_blank')}
+                    onClick={() => window.open('mailto:jeangal.pro@gmail.com', '_blank')}
                 />
                 <IconButton
                     aria-label="Twitter"
                     icon={<FaTwitter size="24px" />}
                     color="black"
-                    onClick={() => window.open('https://twitter.com/yourusername', '_blank')}
+                    onClick={() => window.open('https://twitter.com/jeangalbc', '_blank')}
                 />
                 <IconButton
                     aria-label="LinkedIn"
                     icon={<FaLinkedin size="24px" />}
                     color="black"
-                    onClick={() => window.open('https://www.linkedin.com/in/yourusername', '_blank')}
+                    onClick={() => window.open('https://www.linkedin.com/in/jean-gal/', '_blank')}
                 />
                 <IconButton
                     aria-label="Github"
                     icon={<FaGithub size="24px" />}
                     color="black"
-                    onClick={() => window.open('https://www.instagram.com/yourusername', '_blank')}
+                    onClick={() => window.open('https://github.com/jjeangal', '_blank')}
                 />
             </Flex>
         </Box>
