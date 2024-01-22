@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { Circle, Heading } from "@chakra-ui/layout";
 import { Box, Grid, Flex, Text } from '@chakra-ui/react';
+import { IoIosCheckmark } from "react-icons/io";
 import Solidity from '../icons/Solidity';
 import Ethereum from '../icons/Ethereum';
 import Tezos from '../icons/Tezos';
@@ -23,48 +24,48 @@ const about: NextPage = () => {
   return (
     <Flex as="div" flexDirection="row" width="100%">
       <Box width="100%" color="black">
-        <Box w="100%" pt={4}>
+        <Box w="100%" mt={4}>
           <Heading size="lg">EDUCATION</Heading>
         </Box>
-        <Box h="3px" bg="black" />
+        <Box h="3px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>New York</b> University</Box>
           <Box flex="2 0 56%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
           <Box flex="1 0 22%" textAlign="right">2023-2024</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Alyra Blockchain School, <b>Remote</b></Box>
           <Box flex="2 0 56%" textAlign="center">Blockchain Developer Course</Box>
           <Box flex="1 0 22%" textAlign="right">2022</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>Delft</b> University of Technology</Box>
           <Box flex="2 0 56%" textAlign="center">Bachelor of Science, Computer Science & Engineering</Box>
           <Box flex="1 0 22%" textAlign="right">2018-2021</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Lycée Lyautey, <b>Casablanca</b></Box>
           <Box flex="2 0 56%" textAlign="center">Science Baccalaureat</Box>
           <Box flex="1 0 22%" textAlign="right">2014-2018</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Lycée Français International de <b>Bangkok</b> </Box>
           <Box flex="2 0 56%" textAlign="center">Middle school</Box>
           <Box flex="1 0 22%" textAlign="right">2008-2013</Box>
         </Flex>
 
-        <Box w="100%" pt={4}>
+        <Box w="100%" mt={6}>
           <Heading size="lg">SKILLS</Heading>
         </Box>
         <Box h="3px" bg="black" />
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
-            <Heading size="md">Development</Heading>
-            <Grid templateColumns="repeat(4, 1fr)" fontSize="small" p={2} gap={2}>
+            <Heading size="md">DEVELOPMENT</Heading>
+            <Grid templateColumns="repeat(4, 1fr)" fontSize="small" mt={4} gap={3}>
               {devSkills.map((skill, index) => (
                 <Circle key={index} size="70px" borderColor="black" borderWidth={1}>
                   {skill}
@@ -73,51 +74,50 @@ const about: NextPage = () => {
             </Grid>
           </Box>
           <Grid h="100%" w="100%" templateRows="15% 35% 50%">
-            <Box w="100%" pt={4}>
-              <Heading size="md">Web3</Heading>
+            <Box w="100%" mt={4}>
+              <Heading size="md">WEB3</Heading>
             </Box>
             <Flex wrap="wrap" h="35%">
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Ethereum />
-                <Text>Ethereum</Text>
+                <Text ml={1}>Ethereum</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Tezos />
-                <Text>Tezos</Text>
+                <Text ml={1}>Tezos</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Solidity />
-                <Text>Solidity</Text>
+                <Text ml={1}>Solidity</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Hardhat />
-                <Text>Hardhat</Text>
+                <Text ml={1}>Hardhat</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Truffle />
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Wagmi />
-                <Text>Wagmi</Text>
+                <Text ml={1}>Wagmi</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Web3Js />
-                <Text>Web.js</Text>
+                <Text ml={1}>Web.js</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <IPFS />
-                <Text>IPFS</Text>
+                <Text ml={1}>IPFS</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
                 <OpenZeppelin />
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
                 <Pinata />
-
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <Metamask />
-                <Text textStyle="bold">Metamask</Text>
+                <Text ml={1} textStyle="bold">Metamask</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
                 <Archetype />
@@ -128,44 +128,50 @@ const about: NextPage = () => {
             </Flex>
             <Grid templateColumns="50% 50%">
               <Box>
-                <Heading size="md">ERCs and OpenZeppelin Contracts</Heading>
-                <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" pt={2} gap={1}>
+                <Heading size="md">ERCs & OPENZEPPELIN</Heading>
+                <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
                   {ercs.map((erc, index) => (
-                    <Box key={index} fontSize="small">{erc}</Box>
+                    <Flex key={index} fontSize="small" alignItems="center">
+                      <IoIosCheckmark />
+                      <Text ml={1}>{erc}</Text>
+                    </Flex>
                   ))}
                 </Grid>
               </Box>
               <Box>
-                <Heading size="md">Tools</Heading>
-                <Grid templateColumns="repeat(1, 1fr)" pt={2} gap={1}>
-                  {tools.map((erc, index) => (
-                    <Box key={index} fontSize="small">{erc}</Box>
+                <Heading size="md">TOOLS</Heading>
+                <Grid templateColumns="repeat(1, 1fr)" mt={2} gap={1}>
+                  {tools.map((tool, index) => (
+                    <Flex key={index} fontSize="small" alignItems="center">
+                      <IoIosCheckmark />
+                      <Text ml={1}>{tool}</Text>
+                    </Flex>
                   ))}
                 </Grid>
               </Box>
             </Grid>
           </Grid>
         </Grid>
-        <Box w="100%" pt={4}>
+        <Box w="100%" mt={4}>
           <Heading size="lg">ACHIEVEMENTS</Heading>
         </Box>
-        <Box h="3px" bg="black" />
+        <Box h="3px" bg="black" mt={1} mb={1} />
         <Flex px={5}>
           <Box>Data DAO Category winner at ETH Global Online Hackathon</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5}>
           <Box>Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5}>
           <Box>Winner of TU Delft Contest, Ideation Category, IRIS</Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5}>
           <Box>Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
         </Flex>
-        <Box h="2px" bg="black" />
+        <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} pb={2}>
           <Box>Winner Morocan rugby championship U16</Box>
         </Flex>

@@ -6,8 +6,8 @@ export default function Metamask() {
         <Box
             as="svg"
             role="img"
-            width="42px"
-            height="42px"
+            width="28px"
+            height="28px"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 42 42"
             _hover={{
