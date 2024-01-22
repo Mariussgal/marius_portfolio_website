@@ -18,7 +18,7 @@ import Truffle from '../icons/Truffle';
 const about: NextPage = () => {
 
   const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
-  const tools = ["Remix IDE", "Visual Studio Code", "Figma"];
+  const tools = ["Git - Github", "Remix IDE", "VSC", "Figma"];
   const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
   return (
@@ -152,28 +152,33 @@ const about: NextPage = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Box w="100%" mt={4}>
+        <Box w="100%" mt={6}>
           <Heading size="lg">ACHIEVEMENTS</Heading>
         </Box>
         <Box h="3px" bg="black" mt={1} mb={1} />
-        <Flex px={5}>
-          <Box>Data DAO Category winner at ETH Global Online Hackathon</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Data DAO Category winner at ETH Global Online Hackathon</Box>
+          <Box flex="1 0 22%" textAlign="right">2022</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5}>
-          <Box>Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development</Box>
+          <Box flex="1 0 22%" textAlign="right">2021</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5}>
-          <Box>Winner of TU Delft Contest, Ideation Category, IRIS</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winner of TU Delft Contest, Ideation Category, IRIS</Box>
+          <Box flex="1 0 22%" textAlign="right">2020</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5}>
-          <Box>Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
+          <Box flex="1 0 22%" textAlign="right">2017</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5} pb={2}>
-          <Box>Winner Morocan rugby championship U16</Box>
+        <Flex px={5} pb={2} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winner Morocan rugby championship U16</Box>
+          <Box flex="1 0 22%" textAlign="right">2016</Box>
         </Flex>
       </Box>
     </Flex>
