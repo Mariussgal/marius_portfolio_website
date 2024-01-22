@@ -41,25 +41,25 @@ const projects: NextPage = () => {
     <Center height="90vh">
       <Flex overflowX="scroll" py={4} px={4}>
         {cards.map((card, index) => (
-          <Box minWidth="300px" height="400px" p="5" bg="#1A202C" boxShadow="md" rounded="md" key={index} mr={4}>
+          <Box minWidth="300px" height="400px" p="5" bg="#1A202C" boxShadow="md" rounded="md" key={index} mr={4} position="relative">
             <Text mt="5">{card.name}</Text>
             <Text>{card.description}</Text>
-            {
-              card.githubLink &&
-              <Box>
-                <Link href={card.githubLink} isExternal>
-                  <Icon as={FaGithub} />
-                </Link>
-              </Box>
-            }
-            {
-              card.projectLink &&
-              <Box>
-                <Link href={card.projectLink} isExternal>
-                  <Icon as={FaExternalLinkAlt} />
-                </Link>
-              </Box>
-            }
+            <Flex position="absolute" right={4} bottom={4}>
+              {card.githubLink &&
+                <Box mr={2}>
+                  <Link href={card.githubLink} isExternal>
+                    <Icon as={FaGithub} />
+                  </Link>
+                </Box>
+              }
+              {card.projectLink &&
+                <Box>
+                  <Link href={card.projectLink} isExternal>
+                    <Icon as={FaExternalLinkAlt} />
+                  </Link>
+                </Box>
+              }
+            </Flex>
           </Box>
         ))}
       </Flex>
