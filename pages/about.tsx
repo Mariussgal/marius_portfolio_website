@@ -1,12 +1,20 @@
 import type { NextPage } from 'next';
 import { Circle, Heading } from "@chakra-ui/layout";
-import { Box, Grid, Flex, Text, Link, Icon } from '@chakra-ui/react';
+import { Box, Grid, Flex, Text, Icon } from '@chakra-ui/react';
+import { Link } from "@chakra-ui/react";
 import Image from 'next/image';
 import { IoIosCheckmark } from "react-icons/io";
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import * as Icons from '../icons';
+import { useState, useEffect } from 'react';
 
 const about: NextPage = () => {
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
   const tools = ["Git - Github", "Slack", "Notion", "Figma"];
@@ -164,7 +172,7 @@ const about: NextPage = () => {
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">
             Data DAO Category winner at ETH Global Online Hackathon
-            <Link ml="2" href={"https://ethglobal.com/showcase/anc3stree-7a6y8"} isExternal>
+            <Link href="https://ethglobal.com/showcase/anc3stree-7a6y8" ml="2" isExternal>
               <Icon as={FaExternalLinkAlt} />
             </Link>
           </Box>
@@ -173,8 +181,8 @@ const about: NextPage = () => {
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">
-            Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development
-            <Link ml="2" href={"https://www.tudelft.nl/en/tpm/education/minors/international-entrepreneurship-development/"} isExternal>
+            Winner of Minor Contest, TU Delft, International Entrepreneurship and Development
+            <Link href="https://www.tudelft.nl/en/tpm/education/minors/international-entrepreneurship-development/" ml="2" isExternal>
               <Icon as={FaExternalLinkAlt} />
             </Link>
           </Box>
@@ -184,7 +192,7 @@ const about: NextPage = () => {
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">
             Winner of TU Delft Contest, Ideation Category, IRIS
-            <Link ml="2" href={"https://2020.tudelftcontest.nl/"} isExternal>
+            <Link href="https://2020.tudelftcontest.nl/" ml="2" isExternal>
               <Icon as={FaExternalLinkAlt} />
             </Link>
           </Box>
@@ -204,9 +212,11 @@ const about: NextPage = () => {
           <Box flex="1 0 22%" textAlign="right">2016</Box>
         </Flex>
       </Box>
-      <Box display="flex" justifyContent="center" alignItems="flex-end" width="100%" height="100%">
-        <iframe width="640" height="480" src="https://www.polarsteps.com/JeanGal/4562958-south-america/embed"></iframe>
-      </Box>
+      {isClient && (
+        <Box display="flex" justifyContent="center" alignItems="flex-end" width="100%" height="100%">
+          <iframe width="640" height="480" src="https://www.polarsteps.com/JeanGal/4562958-south-america/embed" title="South America Journey"></iframe>
+        </Box>
+      )}
     </Flex>
   )
 }
