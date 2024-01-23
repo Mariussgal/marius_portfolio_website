@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { Circle, Heading } from "@chakra-ui/layout";
-import { Box, Grid, Flex, Text } from '@chakra-ui/react';
+import { Box, Grid, Flex, Text, Link, Icon } from '@chakra-ui/react';
 import { IoIosCheckmark } from "react-icons/io";
 import Solidity from '../icons/Solidity';
 import Ethereum from '../icons/Ethereum';
@@ -18,6 +18,7 @@ import Tools from '../icons/Tools';
 import Web3 from '../icons/Web3';
 import Dev from '../icons/Dev';
 import Security from '../icons/Security';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const about: NextPage = () => {
 
@@ -172,18 +173,37 @@ const about: NextPage = () => {
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">Data DAO Category winner at ETH Global Online Hackathon</Box>
           <Box flex="1 0 22%" textAlign="right">2022</Box>
+          <Box>
+            <Link href={"https://ethglobal.com/showcase/anc3stree-7a6y8"} isExternal>
+              <Icon as={FaExternalLinkAlt} />
+            </Link>
+          </Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">Winnor of Minor Contest, TU Delft, International Entrepreneurship and Development</Box>
           <Box flex="1 0 22%" textAlign="right">2021</Box>
+          <Box>
+            <Link href={"https://www.tudelft.nl/en/tpm/education/minors/international-entrepreneurship-development/"} isExternal>
+              <Icon as={FaExternalLinkAlt} />
+            </Link>
+          </Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">Winner of TU Delft Contest, Ideation Category, IRIS</Box>
           <Box flex="1 0 22%" textAlign="right">2020</Box>
+          <Box>
+            <Link href={"https://2020.tudelftcontest.nl/"} isExternal>
+              <Icon as={FaExternalLinkAlt} />
+            </Link>
+          </Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+
+        <Box w="100%" mt={6}>
+          <Heading size="lg">HOBBIES</Heading>
+        </Box>
+        <Box h="3px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
           <Box flex="1 0 22%" textAlign="right">2017</Box>
@@ -197,6 +217,7 @@ const about: NextPage = () => {
       <Box display="flex" justifyContent="center" alignItems="flex-end" width="100%" height="100%">
         <iframe width="640" height="480" src="https://www.polarsteps.com/JeanGal/4562958-south-america/embed"></iframe>
       </Box>
+
     </Flex>
   )
 }
