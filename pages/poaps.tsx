@@ -1,26 +1,18 @@
-import type { NextPage } from 'next';
+import type { NextPage, GetServerSideProps } from 'next';
 import { Flex, Box, Text, Image, Tooltip, Grid, Heading } from "@chakra-ui/react";
-import { useState, useEffect } from 'react';
 import { fetchPoapData } from '../requests/fetchPoaps';
 import { POAP } from '../ts/types';
-import Header from '../components/Header';
 
-const Poaps: NextPage = () => {
+type Props = {
+  poaps: POAP[];
+};
 
-  const [poaps, setPoaps] = useState<POAP[]>([]);
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const poaps = await fetchPoapData();
+  return { props: { poaps } };
+};
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchPoapData();
-      setPoaps(data);
-    };
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    console.log('Poaps state:', poaps);
-  }, [poaps]);
-
+const poaps: NextPage<Props> = ({ poaps }) => {
   return (
     <>
       <Flex justifyContent="center" alignItems="center" p="10" direction="column">
@@ -44,4 +36,4 @@ const Poaps: NextPage = () => {
   )
 }
 
-export default Poaps;
+export default poaps;
