@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Project } from '../ts/types';
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { Box, Text, Flex, Center, Link, Icon, Heading } from '@chakra-ui/react';
+import { Box, Text, Flex, Center, Icon, Heading, Link } from '@chakra-ui/react';
 
 const projects: NextPage = () => {
 
