@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Container, Flex } from '@chakra-ui/react'
+import { Container, Flex, Box } from '@chakra-ui/react'
 import Header from '../components/Header'
 import Head from 'next/head'
 
@@ -9,7 +9,7 @@ type Props = {
 
 const Layout: React.FC<Props> = (props) => {
     return (
-        <div>
+        <Box>
             <Head>
                 <title>Portfolio App</title>
                 <link rel="icon" href="/favicon.png" />
@@ -20,7 +20,7 @@ const Layout: React.FC<Props> = (props) => {
                     {props.children}
                 </Container>
             </Flex>
-        </div>
+        </Box>
     )
 }
 
