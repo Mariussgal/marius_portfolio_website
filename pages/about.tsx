@@ -2,23 +2,9 @@ import type { NextPage } from 'next';
 import { Circle, Heading } from "@chakra-ui/layout";
 import { Box, Grid, Flex, Text, Link, Icon } from '@chakra-ui/react';
 import { IoIosCheckmark } from "react-icons/io";
-import Solidity from '../icons/Solidity';
-import Ethereum from '../icons/Ethereum';
-import Tezos from '../icons/Tezos';
-import Wagmi from '../icons/Wagmi';
-import Archetype from '../icons/Archetype';
-import Pinata from '../icons/Pinata';
-import OpenZeppelin from '../icons/OpenZeppelin';
-import Metamask from '../icons/Metamask';
-import Web3Js from '../icons/Web3Js';
-import IPFS from '../icons/Ipfs';
-import Hardhat from '../icons/Hardhat';
-import Truffle from '../icons/Truffle';
-import Tools from '../icons/Tools';
-import Web3 from '../icons/Web3';
-import Dev from '../icons/Dev';
-import Security from '../icons/Security';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import * as Icons from '../icons';
+
 
 const about: NextPage = () => {
 
@@ -69,7 +55,7 @@ const about: NextPage = () => {
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
             <Flex alignItems="center">
-              <Dev />
+              <Icons.Dev />
               <Heading ml="2" size="md">DEVELOPMENT</Heading>
             </Flex>
             <Grid templateColumns="repeat(4, 1fr)" fontSize="small" mt={4} gap={3}>
@@ -82,53 +68,53 @@ const about: NextPage = () => {
           </Box>
           <Grid h="100%" w="100%" templateRows="15% 35% 50%">
             <Flex alignItems="center" mt={4}>
-              <Web3 />
+              <Icons.Web3 />
               <Heading ml="2" size="md">WEB 3</Heading>
             </Flex>
             <Flex wrap="wrap" h="35%">
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Ethereum />
+                <Icons.Ethereum />
                 <Text ml={1}>Ethereum</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Tezos />
+                <Icons.Tezos />
                 <Text ml={1}>Tezos</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Solidity />
+                <Icons.Solidity />
                 <Text ml={1}>Solidity</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Hardhat />
+                <Icons.Hardhat />
                 <Text ml={1}>Hardhat</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Truffle />
+                <Icons.Truffle />
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Wagmi />
+                <Icons.Wagmi />
                 <Text ml={1}>Wagmi</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Web3Js />
+                <Icons.Web3Js />
                 <Text ml={1}>Web.js</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <IPFS />
+                <Icons.IPFS />
                 <Text ml={1}>IPFS</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
-                <OpenZeppelin />
+                <Icons.OpenZeppelin />
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
-                <Pinata />
+                <Icons.Pinata />
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <Metamask />
+                <Icons.Metamask />
                 <Text ml={1} textStyle="bold">Metamask</Text>
               </Flex>
               <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
-                <Archetype />
+                <Icons.Archetype />
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
                 <img src="https://ligolang.org/img/logo/logo-night.svg" alt="LIGO Logo" height="32" width="104"></img>
@@ -137,7 +123,7 @@ const about: NextPage = () => {
             <Grid templateColumns="50% 50%">
               <Box>
                 <Flex alignItems="center">
-                  <Security />
+                  <Icons.Security />
                   <Heading ml="2" size="md">ERCs & OPENZEPPELIN</Heading>
                 </Flex>
                 <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
@@ -151,7 +137,7 @@ const about: NextPage = () => {
               </Box>
               <Box>
                 <Flex alignItems="center">
-                  <Tools />
+                  <Icons.Tools />
                   <Heading size="md" ml={2}>TOOLS</Heading>
                 </Flex>
                 <Grid templateColumns="repeat(1, 1fr)" mt={2} gap={1}>
