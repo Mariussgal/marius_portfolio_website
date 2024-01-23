@@ -12,7 +12,7 @@ const Layout: React.FC<Props> = (props) => {
         <div>
             <Head>
                 <title>Portfolio App</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
             <Flex direction="column" minHeight="100vh">
                 <Header />
