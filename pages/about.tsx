@@ -6,7 +6,6 @@ import { IoIosCheckmark } from "react-icons/io";
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import * as Icons from '../icons';
 
-
 const about: NextPage = () => {
 
   const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
