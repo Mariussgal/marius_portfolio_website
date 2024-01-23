@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { Circle, Heading } from "@chakra-ui/layout";
 import { Box, Grid, Flex, Text, Link, Icon } from '@chakra-ui/react';
+import Image from 'next/image';
 import { IoIosCheckmark } from "react-icons/io";
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import * as Icons from '../icons';
@@ -117,7 +118,12 @@ const about: NextPage = () => {
                 <Icons.Archetype />
               </Flex>
               <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
-                <img src="https://ligolang.org/img/logo/logo-night.svg" alt="LIGO Logo" height="32" width="104"></img>
+                <Image
+                  src="https://ligolang.org/img/logo/logo-night.svg"
+                  alt="LIGO Logo"
+                  height={32}
+                  width={104}
+                />
               </Flex>
             </Flex>
             <Grid templateColumns="50% 50%">
