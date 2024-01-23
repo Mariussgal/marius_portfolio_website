@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/layout": "^2.3.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
@@ -24,7 +23,7 @@
     "wagmi": "^0.9.6"
   },
   "devDependencies": {
-    "@types/node": "^17.0.45",
+    "@types/node": "20.11.5",
     "@types/react": "^18.2.37",
     "eslint": "^8.53.0",
     "eslint-config-next": "^12.3.4",
