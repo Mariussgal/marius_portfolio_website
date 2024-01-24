@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           style={{ marginLeft: 0 }}
         >
           <Tooltip label="Address copied" m={0} isOpen={isOpen} >
-            <Button color="black" bg="transparent" onClick={handleClick}>{address}</Button>
+            <Button color="black" bg="transparent" onClick={handleClick}>{"ETH Address: " + address}</Button>
           </Tooltip>
         </motion.div>
       </Flex>
