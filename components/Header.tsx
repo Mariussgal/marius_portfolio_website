@@ -11,10 +11,10 @@ export default function Header() {
                     <Link href="/" fontSize="lg" fontWeight="bold">{siteTitle}</Link>
                 </Box>
                 <Box>
-                    <Link href="/projects" fontSize="lg" fontWeight="bold">Work</Link>
+                    <Link href="/about" fontSize="lg" fontWeight="bold">About</Link>
                 </Box>
                 <Box>
-                    <Link href="/about" fontSize="lg" fontWeight="bold">About</Link>
+                    <Link href="/projects" fontSize="lg" fontWeight="bold">Work</Link>
                 </Box>
                 <Box>
                     <Link href="/poaps" fontSize="lg" fontWeight="bold">POAPs</Link>
