@@ -4,7 +4,7 @@ import { Box, Grid, Flex, Text, Icon } from '@chakra-ui/react';
 import { Link } from "@chakra-ui/react";
 import Image from 'next/image';
 import { IoIosCheckmark } from "react-icons/io";
-import { FaExternalLinkAlt, FaFacebook } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaFacebook, FaVideo } from 'react-icons/fa';
 import * as Icons from '../icons';
 import { useState, useEffect } from 'react';
 
@@ -256,18 +256,21 @@ const about: NextPage = () => {
               <Text mr={2}>
                 <b>Casamasanté (Cap Skirring, Senegal), May 2023:</b> Responsible for the setup of the IT room and upgrading the software systems. I also assisted in running medical tests for 150 kids in remote villages and islands as part of a school health initiative.
               </Text>
-              <Link href="https://www.casamasante.org/" isExternal>
-                <FaExternalLinkAlt size="1em" />
-              </Link>
-              <Link ml="2" mr="2" href="https://www.facebook.com/Casamasante/posts/pfbid02BY742hWm8bQSsCWfd36CUear3VJYqLhA89Gn5LkmMT5ucGQtWa16RsyicbVk2pNql" isExternal>
+              <Link href="https://www.facebook.com/Casamasante/posts/pfbid02BY742hWm8bQSsCWfd36CUear3VJYqLhA89Gn5LkmMT5ucGQtWa16RsyicbVk2pNql" isExternal>
                 <FaFacebook size="1em" />
+              </Link>
+              <Link ml="2" mr="2" href="https://www.casamasante.org/" isExternal>
+                <FaExternalLinkAlt size="1em" />
               </Link>
             </Flex>
             <Flex mb={2} alignItems="flex-start">
               <Text mr={2}>
                 <b>Azul Wasi Orphanage (Oropesa, Peru), Dec. 2021:</b> Azul Wasi aims to improve the quality of life of children/adolescents from high-risk situations. Participated in daily activities and produced a promotional video.
               </Text>
-              <Link href="https://azulwasi.wordpress.com" isExternal>
+              <Link href="https://drive.google.com/file/d/1_zuxVwlwc6MI_ki8jpDJUKa4rEJLNStQ/view?usp=drive_link" isExternal ml={2}>
+                <FaVideo size="1em" />
+              </Link>
+              <Link ml="2" mr="2" href="https://azulwasi.wordpress.com" isExternal>
                 <FaExternalLinkAlt size="1em" />
               </Link>
             </Flex>
@@ -275,7 +278,7 @@ const about: NextPage = () => {
               <Text mr={2}>
                 <b>Mamatungu Hostel (Baños, Ecuador), Oct. - Nov. 2021:</b> Volunteered for a month as a Bartender, Promoter, Waiter and Receptionist.
               </Text>
-              <Link href="https://mamatunguhostel.negocio.site/" isExternal>
+              <Link mr="2" href="https://mamatunguhostel.negocio.site/" isExternal>
                 <FaExternalLinkAlt size="1em" />
               </Link>
             </Flex>
