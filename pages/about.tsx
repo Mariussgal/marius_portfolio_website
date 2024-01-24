@@ -4,7 +4,7 @@ import { Box, Grid, Flex, Text, Icon } from '@chakra-ui/react';
 import { Link } from "@chakra-ui/react";
 import Image from 'next/image';
 import { IoIosCheckmark } from "react-icons/io";
-import { FaExternalLinkAlt, FaFacebook, FaVideo } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo } from 'react-icons/fa';
 import * as Icons from '../icons';
 import { useState, useEffect } from 'react';
 
@@ -209,7 +209,7 @@ const about: NextPage = () => {
         <Box h="3px" bg="black" mt={1} mb={1} />
         <Flex mt="3" flexDirection="row">
           <Flex flex="1" flexDirection="column">
-            <Text ml="2"> After my bachelor's at TU Delft, a colleague and I left our comfort zone and backpacked in South America.</Text>
+            <Text ml="2"> Following the completion of our undergraduate studies at the Technical University of Delft, my colleague and I embarked on an enriching 7 months journey, stepping out of our comfort zones to explore the diverse landscapes and cultures of South America through backpacking and volunteering.</Text>
             {isClient && (
               <Box
                 display="flex"
@@ -260,7 +260,10 @@ const about: NextPage = () => {
               <Text mr={2}>
                 <b>Mamatungu Hostel (Baños, Ecuador), Oct. - Nov. 2021:</b> Volunteered for a month as a Bartender, Promoter, Waiter and Receptionist.
               </Text>
-              <Link mr="2" href="https://mamatunguhostel.negocio.site/" isExternal>
+              <Link href="https://www.instagram.com/mamatunguhostel/" isExternal>
+                <FaInstagram size="1em" />
+              </Link>
+              <Link ml="2" mr="2" href="https://mamatunguhostel.negocio.site/" isExternal>
                 <FaExternalLinkAlt size="1em" />
               </Link>
             </Flex>
