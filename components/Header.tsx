@@ -22,10 +22,6 @@ export default function Header() {
             </HStack>
             <Spacer />
             <Medias />
-            <Spacer />
-            <Flex w="30%" alignItems="center" justifyContent="right" mr="2%">
-                <Box>web3 button</Box >
-            </Flex>
         </Flex>
     );
 }
