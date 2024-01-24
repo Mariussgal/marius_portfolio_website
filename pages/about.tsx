@@ -1,12 +1,11 @@
-import type { NextPage } from 'next';
-import { Circle, Heading } from "@chakra-ui/layout";
-import { Box, Grid, Flex, Text, Icon } from '@chakra-ui/react';
-import { Link } from "@chakra-ui/react";
 import Image from 'next/image';
+import type { NextPage } from 'next';
+import { useState, useEffect } from 'react';
 import { IoIosCheckmark } from "react-icons/io";
 import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo } from 'react-icons/fa';
+import { Circle, Heading } from "@chakra-ui/layout";
+import { Box, Grid, Flex, Text, Icon, Link } from '@chakra-ui/react';
 import * as Icons from '../icons';
-import { useState, useEffect } from 'react';
 
 const about: NextPage = () => {
 
