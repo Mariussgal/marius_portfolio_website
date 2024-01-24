@@ -1,5 +1,4 @@
-import { Flex, Text, HStack, Spacer, Box, Link } from "@chakra-ui/react";
-import NextLink from "next/link"
+import { Flex, HStack, Spacer, Box, Link } from "@chakra-ui/react";
 import Medias from './Medias';
 
 export default function Header() {
