@@ -4,7 +4,7 @@ import { Box, Grid, Flex, Text, Icon } from '@chakra-ui/react';
 import { Link } from "@chakra-ui/react";
 import Image from 'next/image';
 import { IoIosCheckmark } from "react-icons/io";
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaFacebook } from 'react-icons/fa';
 import * as Icons from '../icons';
 import { useState, useEffect } from 'react';
 
@@ -30,25 +30,25 @@ const about: NextPage = () => {
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>New York</b> University</Box>
           <Box flex="2 0 56%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
-          <Box flex="1 0 22%" textAlign="right">2023-2024</Box>
+          <Box flex="1 0 22%" textAlign="right">Sept. 2023 - Dec. 2024</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Alyra Blockchain School, <b>Remote</b></Box>
           <Box flex="2 0 56%" textAlign="center">Blockchain Developer Course</Box>
-          <Box flex="1 0 22%" textAlign="right">2022</Box>
+          <Box flex="1 0 22%" textAlign="right">May - Aug. 2022</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>Delft</b> University of Technology</Box>
           <Box flex="2 0 56%" textAlign="center">Bachelor of Science, Computer Science & Engineering</Box>
-          <Box flex="1 0 22%" textAlign="right">2018-2021</Box>
+          <Box flex="1 0 22%" textAlign="right">Sept. 2018 - Aug. 2021</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Lycée Lyautey, <b>Casablanca</b></Box>
           <Box flex="2 0 56%" textAlign="center">Science Baccalaureat</Box>
-          <Box flex="1 0 22%" textAlign="right">2014-2018</Box>
+          <Box flex="1 0 22%" textAlign="right">Sept. 2014 - July 2018</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
@@ -176,7 +176,7 @@ const about: NextPage = () => {
               <Icon as={FaExternalLinkAlt} />
             </Link>
           </Box>
-          <Box flex="1 0 22%" textAlign="right">2022</Box>
+          <Box flex="1 0 22%" textAlign="right">Dec. 2022</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
@@ -186,7 +186,7 @@ const about: NextPage = () => {
               <Icon as={FaExternalLinkAlt} />
             </Link>
           </Box>
-          <Box flex="1 0 22%" textAlign="right">2021</Box>
+          <Box flex="1 0 22%" textAlign="right">Feb. 2021</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
@@ -196,7 +196,7 @@ const about: NextPage = () => {
               <Icon as={FaExternalLinkAlt} />
             </Link>
           </Box>
-          <Box flex="1 0 22%" textAlign="right">2020</Box>
+          <Box flex="1 0 22%" textAlign="right">June 2020</Box>
         </Flex>
         <Box w="100%" mt={6}>
           <Heading size="lg">HOBBIES</Heading>
@@ -207,16 +207,81 @@ const about: NextPage = () => {
           <Box flex="1 0 22%" textAlign="right">2017</Box>
         </Flex>
         <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5} pb={2} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 78%">Winner Morocan rugby championship U16</Box>
-          <Box flex="1 0 22%" textAlign="right">2016</Box>
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Completed the half marathon of Marrakesh in 1h54</Box>
+          <Box flex="1 0 22%" textAlign="right">2015</Box>
+        </Flex>
+        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winner Morocan rugby championship U15</Box>
+          <Box flex="1 0 22%" textAlign="right">2014</Box>
+        </Flex>
+        <Flex w="100%" mt={6}>
+          <Box w="50%">
+            <Heading size="lg">SABBATICAL YEAR</Heading>
+          </Box>
+          <Box w="50%">
+            <Heading size="lg">VOLUNTEERING</Heading>
+          </Box>
+        </Flex>
+        <Box h="3px" bg="black" mt={1} mb={1} />
+        <Flex mt="3" flexDirection="row">
+          <Flex flex="1" flexDirection="column">
+            <Text ml="2"> After my bachelor's at TU Delft, a colleague and I left our comfort zone and backpacked in South America.</Text>
+            {isClient && (
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="flex-end"
+                width="100%"
+                height="300px"
+                p={2}
+                mb="3"
+                border="0.5px solid rgba(204, 204, 204, 0.5)"
+                boxShadow="lg"
+                borderRadius="md"
+              >
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.polarsteps.com/JeanGal/4562958-south-america/embed"
+                  title="South America Journey"
+                  style={{ border: 0 }}
+                ></iframe>
+              </Box>
+            )}
+          </Flex>
+          <Flex flex="1" ml="2" flexDirection="column">
+            <Flex mb={2} alignItems="flex-start">
+              <Text mr={2}>
+                <b>Casamasanté (Cap Skirring, Senegal), May 2023:</b> Responsible for the setup of the IT room and upgrading the software systems. I also assisted in running medical tests for 150 kids in remote villages and islands as part of a school health initiative.
+              </Text>
+              <Link href="https://www.casamasante.org/" isExternal>
+                <FaExternalLinkAlt size="1em" />
+              </Link>
+              <Link ml="2" mr="2" href="https://www.facebook.com/Casamasante/posts/pfbid02BY742hWm8bQSsCWfd36CUear3VJYqLhA89Gn5LkmMT5ucGQtWa16RsyicbVk2pNql" isExternal>
+                <FaFacebook size="1em" />
+              </Link>
+            </Flex>
+            <Flex mb={2} alignItems="flex-start">
+              <Text mr={2}>
+                <b>Azul Wasi Orphanage (Oropesa, Peru), Dec. 2021:</b> Azul Wasi aims to improve the quality of life of children/adolescents from high-risk situations. Participated in daily activities and produced a promotional video.
+              </Text>
+              <Link href="https://azulwasi.wordpress.com" isExternal>
+                <FaExternalLinkAlt size="1em" />
+              </Link>
+            </Flex>
+            <Flex mb={2} alignItems="flex-start">
+              <Text mr={2}>
+                <b>Mamatungu Hostel (Baños, Ecuador), Oct. - Nov. 2021:</b> Volunteered for a month as a Bartender, Promoter, Waiter and Receptionist.
+              </Text>
+              <Link href="https://mamatunguhostel.negocio.site/" isExternal>
+                <FaExternalLinkAlt size="1em" />
+              </Link>
+            </Flex>
+          </Flex>
         </Flex>
       </Box>
-      {isClient && (
-        <Box display="flex" justifyContent="center" alignItems="flex-end" width="100%" height="100%">
-          <iframe width="640" height="480" src="https://www.polarsteps.com/JeanGal/4562958-south-america/embed" title="South America Journey"></iframe>
-        </Box>
-      )}
     </Flex>
   )
 }
