@@ -1,7 +1,7 @@
-import { Box, Flex, Image, Tooltip, Button, useToast } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
+import Marquee from "react-fast-marquee";
 import { useState } from 'react';
+import { Box, Flex, Image, Text, Tooltip, useMediaQuery } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
 
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   };
 
   const address = '0x4df30AF0237E9a5c29D0f49a18Cb6f46692e3c71';
+  const [isLargerThan900] = useMediaQuery("(max-width: 900px)");
 
   return (
     <Flex flexDirection="column" height="90vh" width="100%" color="black">
@@ -35,20 +36,26 @@ const Home: NextPage = () => {
           <p>Working as a freelancer, get in touch with me to collaborate!</p>
         </Flex>
       </Flex>
-      <Flex height="10%" width="100%">
-        <motion.div
-          initial={{ x: '-2vw' }}
-          animate={{ x: '100vw' }}
-          transition={{ repeat: Infinity, duration: 12 }}
-          style={{ marginLeft: 0 }}
-        >
-          <Tooltip label="Address copied" m={0} isOpen={isOpen} >
-            <Button color="black" bg="transparent" onClick={handleClick}>{"ETH Address: " + address}</Button>
-          </Tooltip>
-        </motion.div>
-      </Flex>
-    </Flex >
+      <Box position="absolute" bottom="20px" display="flex" justifyContent="center" width="100%" backgroundColor="transparent">
+        <Box display="flex" flexDirection="row" alignItems="center" width={isLargerThan900 ? "95%" : "97%"} height="auto" backgroundColor="transparent" border="var(--border-size-std) solid var(--primary)" borderRadius="10px">
+          <Marquee direction="right" speed={50} gradient={false} pauseOnHover={true}>
+            <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
+              JEAN GAL &copy; {new Date().getFullYear()}
+            </Text>
+            <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
+              SOFTWARE ENGINEER
+            </Text>
+            <Tooltip label="Address copied" m={0} isOpen={isOpen} >
+              <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }} onClick={handleClick}>
+                {"ETH: " + address}
+              </Text>
+            </Tooltip>
+          </Marquee>
+        </Box>
+      </Box>
+    </Flex>
   );
 };
+
 
 export default Home;
