@@ -198,24 +198,6 @@ const about: NextPage = () => {
           </Box>
           <Box flex="1 0 22%" textAlign="right">June 2020</Box>
         </Flex>
-        <Box w="100%" mt={6}>
-          <Heading size="lg">HOBBIES</Heading>
-        </Box>
-        <Box h="3px" bg="black" mt={1} mb={1} />
-        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 78%">Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
-          <Box flex="1 0 22%" textAlign="right">2017</Box>
-        </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 78%">Completed the half marathon of Marrakesh in 1h54</Box>
-          <Box flex="1 0 22%" textAlign="right">2015</Box>
-        </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
-          <Box flex="1 0 78%">Winner Morocan rugby championship U15</Box>
-          <Box flex="1 0 22%" textAlign="right">2014</Box>
-        </Flex>
         <Flex w="100%" mt={6}>
           <Box w="50%">
             <Heading size="lg">SABBATICAL YEAR</Heading>
@@ -283,6 +265,24 @@ const about: NextPage = () => {
               </Link>
             </Flex>
           </Flex>
+        </Flex>
+        <Box w="100%" mt={6}>
+          <Heading size="lg">HOBBIES</Heading>
+        </Box>
+        <Box h="3px" bg="black" mt={1} mb={1} />
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
+          <Box flex="1 0 22%" textAlign="right">2017</Box>
+        </Flex>
+        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Completed the half marathon of Marrakesh in 1h54</Box>
+          <Box flex="1 0 22%" textAlign="right">2015</Box>
+        </Flex>
+        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+          <Box flex="1 0 78%">Winner Morocan rugby championship U15</Box>
+          <Box flex="1 0 22%" textAlign="right">2014</Box>
         </Flex>
       </Box>
     </Flex>
