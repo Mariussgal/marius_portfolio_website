@@ -45,6 +45,9 @@ const Home: NextPage = () => {
             <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
               SOFTWARE ENGINEER
             </Text>
+            <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
+              BLOCKCHAIN DEVELOPER
+            </Text>
             <Tooltip label="Address copied" m={0} isOpen={isOpen} >
               <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }} onClick={handleClick}>
                 {"ETH: " + address}
