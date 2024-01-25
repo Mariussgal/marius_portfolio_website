@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Marquee from "react-fast-marquee";
 import { useState } from 'react';
-import { Box, Flex, Image, Text, Tooltip, useMediaQuery } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Tooltip } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
 
@@ -14,7 +14,6 @@ const Home: NextPage = () => {
   };
 
   const address = '0x4df30AF0237E9a5c29D0f49a18Cb6f46692e3c71';
-  const [isLargerThan900] = useMediaQuery("(max-width: 900px)");
 
   return (
     <Flex flexDirection="column" height="90vh" width="100%" color="black">
@@ -36,20 +35,20 @@ const Home: NextPage = () => {
           <p>Working as a freelancer, get in touch with me to collaborate!</p>
         </Flex>
       </Flex>
-      <Box position="absolute" bottom="20px" display="flex" justifyContent="center" width="100%" backgroundColor="transparent">
-        <Box display="flex" flexDirection="row" alignItems="center" width={isLargerThan900 ? "95%" : "97%"} height="auto" backgroundColor="transparent" border="var(--border-size-std) solid var(--primary)" borderRadius="10px">
+      <Box display="flex" justifyContent="center" height="10%" width="100%" mb="1%" backgroundColor="transparent">
+        <Box display="flex" flexDirection="row" alignItems="center" height="auto" backgroundColor="transparent" border="1px solid black" boxSizing="border-box" borderRadius="10px">
           <Marquee direction="right" speed={50} gradient={false} pauseOnHover={true}>
-            <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
+            <Text m="10px auto" mr={5} transition="all .15s linear" >
               JEAN GAL &copy; {new Date().getFullYear()}
             </Text>
-            <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
+            <Text m="10px auto" mr={5} transition="all .15s linear" >
               SOFTWARE ENGINEER
             </Text>
-            <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }}>
+            <Text m="10px auto" mr={5} transition="all .15s linear">
               BLOCKCHAIN DEVELOPER
             </Text>
-            <Tooltip label="Address copied" m={0} isOpen={isOpen} >
-              <Text fontSize={isLargerThan900 ? "1em" : "1.2em"} margin="10px 20px" color="var(--primary)" transition="all .15s linear" _hover={{ color: "var(--accent)" }} onClick={handleClick}>
+            <Tooltip label="Address copied" isOpen={isOpen} >
+              <Text m="10px auto" transition="all .15s linear" onClick={handleClick}>
                 {"ETH: " + address}
               </Text>
             </Tooltip>
