@@ -35,20 +35,20 @@ const Home: NextPage = () => {
           <p>Working as a freelancer, get in touch with me to collaborate!</p>
         </Flex>
       </Flex>
-      <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5} backgroundColor="transparent">
-        <Box display="flex" flexDirection="row" alignItems="center" height="auto" backgroundColor="transparent" border="1px solid black" boxSizing="border-box" borderRadius="10px" maxWidth="100%">
+      <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
+        <Box display="flex" flexDirection="row" alignItems="center" height="auto" border="1px solid black" boxSizing="border-box" borderRadius="10px" maxWidth="100%">
           <Marquee direction="right" speed={50} gradient={false} pauseOnHover={true}>
             <Text m="10px auto" mr={5} transition="all .15s linear" >
               JEAN GAL &copy; {new Date().getFullYear()}
             </Text>
-            <Text m="10px auto" mr={5} transition="all .15s linear" >
+            <Text mr={5} transition="all .15s linear" >
               SOFTWARE ENGINEER
             </Text>
-            <Text m="10px auto" mr={5} transition="all .15s linear">
+            <Text mr={5} transition="all .15s linear">
               BLOCKCHAIN DEVELOPER
             </Text>
             <Tooltip label="Address copied" isOpen={isOpen} >
-              <Text m="10px auto" mr={5} transition="all .15s linear" onClick={handleClick}>
+              <Text mr={5} transition="all .15s linear" onClick={handleClick}>
                 {"ETH: " + address}
               </Text>
             </Tooltip>
