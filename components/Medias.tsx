@@ -4,8 +4,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Medias() {
     return (
-        <Flex width="25%" direction="row" align="center" justify="right" mr="2%">
-            <Flex width="40px" justify="center" mr="2%">
+        <Flex direction="row" align="center" justify="right" mr="2%" width="25%">
+            <Flex width="40px" justify="center" mr="1%">
                 <Box as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank"
                     title="Hire me on Crypto Jobs List"
                     rel="noopener"
@@ -19,30 +19,30 @@ export default function Medias() {
                         borderRadius: 'md'
                     }}
                 >
-                    <Image src="https://cryptojobslist.com/images/logo-circle-white.svg" width="24px" height="24px" objectFit="contain" alt="Hire me on Crypto Jobs List" />
+                    <Image src="https://cryptojobslist.com/images/logo-circle-white.svg" width="20px" height="20px" objectFit="contain" alt="Hire me on Crypto Jobs List" />
                 </Box>
             </Flex>
-            <IconButton as="a" href="mailto:jeangal.pro@gmail.com" target="_blank" mr="2%"
+            <IconButton as="a" href="mailto:jeangal.pro@gmail.com" target="_blank" mr="1%"
                 aria-label="Mail"
-                icon={<FaEnvelope size="24px" />}
+                icon={<FaEnvelope size="20px" />}
                 color="white"
                 bg="none"
             />
-            <IconButton as="a" href="https://twitter.com/jeangalbc" target="_blank" mr="2%"
+            <IconButton as="a" href="https://twitter.com/jeangalbc" target="_blank" mr="1%"
                 aria-label="Twitter"
-                icon={<FaXTwitter size="24px" />}
+                icon={<FaXTwitter size="20px" />}
                 color="white"
                 bg="none"
             />
-            <IconButton as="a" href="https://www.linkedin.com/in/jean-gal/" target="_blank" mr="2%"
+            <IconButton as="a" href="https://www.linkedin.com/in/jean-gal/" target="_blank" mr="1%"
                 aria-label="LinkedIn"
-                icon={<FaLinkedin size="24px" />}
+                icon={<FaLinkedin size="20px" />}
                 color="white"
                 bg="none"
             />
             <IconButton as="a" href="https://github.com/jjeangal" target="_blank"
                 aria-label="Github"
-                icon={<FaGithub size="24px" />}
+                icon={<FaGithub size="20px" />}
                 color="white"
                 bg="none"
             />
