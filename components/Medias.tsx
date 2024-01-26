@@ -1,23 +1,28 @@
 import { Flex, IconButton, Image, Box } from '@chakra-ui/react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Medias() {
     return (
         <Flex width="25%" direction="row" align="center" justify="right" mr="2%">
-            <Flex width="24px" justify="center">
+            <Flex width="40px" justify="center" mr="2%">
                 <Box as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank"
                     title="Hire me on Crypto Jobs List"
                     rel="noopener"
-                    width="24px"
-                    height="24px"
+                    width="40px"
+                    height="40px"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                     _hover={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderRadius: 'md'
                     }}
                 >
                     <Image src="https://cryptojobslist.com/images/logo-circle-white.svg" width="24px" height="24px" objectFit="contain" alt="Hire me on Crypto Jobs List" />
                 </Box>
             </Flex>
-            <IconButton as="a" href="mailto:jeangal.pro@gmail.com" target="_blank" ml="2%" mr="2%"
+            <IconButton as="a" href="mailto:jeangal.pro@gmail.com" target="_blank" mr="2%"
                 aria-label="Mail"
                 icon={<FaEnvelope size="24px" />}
                 color="white"
@@ -25,7 +30,7 @@ export default function Medias() {
             />
             <IconButton as="a" href="https://twitter.com/jeangalbc" target="_blank" mr="2%"
                 aria-label="Twitter"
-                icon={<FaTwitter size="24px" />}
+                icon={<FaXTwitter size="24px" />}
                 color="white"
                 bg="none"
             />
