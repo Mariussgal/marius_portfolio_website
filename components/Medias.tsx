@@ -6,7 +6,7 @@ import CryptoJobs from '../icons/CryptoJobs';
 export default function Medias() {
     return (
         <Flex direction="row" align="center" justify="right" mr="2%" width="25%">
-            <IconButton as="a" href="mailto:jeangal.pro@gmail.com" target="_blank" mr="1%"
+            <IconButton as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank" mr="1%"
                 aria-label="Mail"
                 icon={<CryptoJobs />}
                 color="#DCD7C9"
@@ -17,6 +17,7 @@ export default function Medias() {
                 icon={<FaEnvelope size="20px" />}
                 color="#DCD7C9"
                 bg="none"
+                title="Hit me up!"
             />
             <IconButton as="a" href="https://twitter.com/jeangalbc" target="_blank" mr="1%"
                 aria-label="Twitter"
