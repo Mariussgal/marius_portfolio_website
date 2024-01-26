@@ -7,21 +7,21 @@ export default function Header() {
 
     return (
         <Flex h="10vh" borderBottom="1px" justifyContent="space-between">
-            <Box display="flex" alignItems="center" width="25%">
-                <Text fontSize="lg" color="#DCD7C9" ml='20%'>{"<JeanGal />"}</Text>
+            <Box isTruncated display="flex" alignItems="center" width="25%">
+                <Text fontSize="xl" color="#DCD7C9" ml='20%'>{"<JeanGal />"}</Text>
             </Box>
             <Flex justifyContent="center">
                 <HStack spacing="4vw" >
-                    <Box onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
+                    <Box isTruncated onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
                         <Link href="/" fontSize="lg" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>// home</Link>
                     </Box>
-                    <Box onMouseEnter={() => setHoveredLink('about')} onMouseLeave={() => setHoveredLink(null)}>
+                    <Box isTruncated onMouseEnter={() => setHoveredLink('about')} onMouseLeave={() => setHoveredLink(null)}>
                         <Link href="/about" fontSize="lg" color={hoveredLink === 'about' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>//  about</Link>
                     </Box>
-                    <Box onMouseEnter={() => setHoveredLink('work')} onMouseLeave={() => setHoveredLink(null)}>
+                    <Box isTruncated onMouseEnter={() => setHoveredLink('work')} onMouseLeave={() => setHoveredLink(null)}>
                         <Link href="/projects" fontSize="lg" color={hoveredLink === 'work' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>//  work</Link>
                     </Box>
-                    <Box onMouseEnter={() => setHoveredLink('poaps')} onMouseLeave={() => setHoveredLink(null)}>
+                    <Box isTruncated onMouseEnter={() => setHoveredLink('poaps')} onMouseLeave={() => setHoveredLink(null)}>
                         <Link href="/poaps" fontSize="lg" color={hoveredLink === 'poaps' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>//  poaps</Link>
                     </Box>
                 </HStack>
