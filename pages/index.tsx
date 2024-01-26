@@ -28,11 +28,10 @@ const Home: NextPage = () => {
       </Box>
       <Flex flexDirection="row" alignItems="center" justifyContent="center" w="100%" height="30%">
         <Flex alignItems="center" justifyContent="center" w="50%">
-          <p>Hi, my name is Jean Gal <br /> and welcome to my website</p>
+          <p>Hi, my name is Jean Gal <br /> and welcome to my website!</p>
         </Flex>
         <Flex flexDirection="column" alignItems="center" justifyContent="flex-start" w="50%">
-          <p>Software Engineer Graduate and Blockchain Developer</p>
-          <p>Working as a freelancer, get in touch with me to collaborate!</p>
+          <p>I am passionate Software Engineer  <br /> with a focus on Blockchain technology</p>
         </Flex>
       </Flex>
       <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
