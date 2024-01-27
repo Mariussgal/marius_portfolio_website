@@ -46,8 +46,8 @@ const projects: NextPage = () => {
     <Center height="90vh">
       <Flex overflowX="scroll">
         {cards.map((card, index) => (
-          <Box minWidth="350px" height="400px" p="5" bg="#1A202C" boxShadow="md" rounded="md" key={index} mr={4} position="relative">
-            <Heading as="h2" size="md" mt="2" mb="4">{card.name}</Heading>
+          <Box minWidth="350px" height="400px" p="5" bg="#1A202C" rounded="lg" key={index} mr={8} position="relative">
+            <Heading as="h3" size="md" mt="2" mb="4">{card.name}</Heading>
             <Text>{card.description}</Text>
             <Flex position="absolute" left={4} bottom={4}>
               {card.githubLink &&

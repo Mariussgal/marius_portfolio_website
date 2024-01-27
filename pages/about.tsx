@@ -67,7 +67,7 @@ const about: NextPage = () => {
             </Flex>
             <Grid templateColumns="repeat(4, 1fr)" fontSize="small" mt={4} gap={3}>
               {devSkills.map((skill, index) => (
-                <Circle key={index} size="70px" borderColor="black" borderWidth={1}>
+                <Circle key={index} size="75px" borderColor="black" borderWidth={1}>
                   {skill}
                 </Circle>
               ))}

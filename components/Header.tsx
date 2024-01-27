@@ -7,14 +7,13 @@ export default function Header() {
 
     return (
         <Flex h="10vh" borderBottom="1px" justifyContent="space-between">
-            <Box isTruncated display="flex" alignItems="center" width="25%">
-                <Text fontSize="xl" color="#DCD7C9" ml='20%'>{"<JeanGal />"}</Text>
+            <Box isTruncated display="flex" alignItems="center" width="25%" ml="5%">
+                <Box isTruncated onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
+                    <Link href="/" fontSize="xl" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>{"<JeanGal />"}</Link>
+                </Box>
             </Box>
             <Flex justifyContent="center">
                 <HStack spacing="4vw" >
-                    <Box isTruncated onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
-                        <Link href="/" fontSize="lg" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>// home</Link>
-                    </Box>
                     <Box isTruncated onMouseEnter={() => setHoveredLink('about')} onMouseLeave={() => setHoveredLink(null)}>
                         <Link href="/about" fontSize="lg" color={hoveredLink === 'about' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>//  about</Link>
                     </Box>
