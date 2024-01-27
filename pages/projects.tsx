@@ -29,7 +29,7 @@ const projects: NextPage = () => {
     {
       name: 'Software Engineer Intern @ Fundacion Chankuap',
       date: 'Nov. 2020 - Feb. 2021',
-      description: 'Designed and implemented an ERP solution for the food and cosmetic supply chain of this Ecuadorian non-profit organization (cross-platform software application).',
+      description: 'Designed and implemented an ERP solution for the food and cosmetic supply chain of an Ecuadorian non-profit organization (cross-platform software application).',
       githubLink: 'https://github.com/jjeangal/chankuap_flutter',
       projectLink: 'https://chankuap.org/'
     },
@@ -44,9 +44,9 @@ const projects: NextPage = () => {
 
   return (
     <Center height="90vh">
-      <Flex overflowX="scroll">
+      <Flex overflowX="scroll" color="#DCD7C9">
         {cards.map((card, index) => (
-          <Box minWidth="350px" height="400px" p="5" bg="#1A202C" rounded="lg" key={index} mr={8} position="relative">
+          <Box minWidth="350px" height="400px" p="5" bg="#1A202C" rounded="lg" key={index} mr={8} position="relative" border="2px" borderColor="#DCD7C9">
             <Heading as="h3" size="md" mt="2" mb="4">{card.name}</Heading>
             <Text>{card.description}</Text>
             <Flex position="absolute" left={4} bottom={4}>
