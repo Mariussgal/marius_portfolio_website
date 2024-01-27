@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = (props) => {
                 <title>Portfolio App</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Flex direction="column" minHeight="100vh">
+            <Flex direction="column" minHeight="100vh" bgColor="#1A202C">
                 <Header />
                 <Container flexGrow={1} maxW="full">
                     {props.children}
