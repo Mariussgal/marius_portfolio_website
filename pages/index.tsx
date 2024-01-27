@@ -39,6 +39,7 @@ const Home: NextPage = () => {
           sx={{ filter: 'brightness(80%)' }}
           border="2px"
           borderColor="#DCD7C9"
+          m="2%"
           borderRadius="50%"
           width="28%"
         />
@@ -47,12 +48,10 @@ const Home: NextPage = () => {
           alignItems="center"
           justifyContent="center"
           width="36%"
-          ml="2%"
         >
-          <Text fontSize={["sm", "md", "lg", "x-large"]}>I am a passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
+          <Text fontSize={["sm", "md", "lg", "x-large"]}>I am a passionate Software Engineer with a focus on Blockchain technology</Text>
         </Flex>
       </Flex>
-
       <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
         <Box display="flex" flexDirection="row" alignItems="center" height="auto" border="1px solid #DCD7C9" boxSizing="border-box" borderRadius="10px" maxWidth="100%">
           <Marquee direction="right" speed={50} gradient={false} pauseOnHover={true}>
