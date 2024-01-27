@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           justifyContent="center"
           width="36%"
         >
-          <Text fontSize={["sm", "md", "lg", "x-large"]}>Hi, I'm Jean Gal <br /> and welcome to my website!</Text>
+          <Text fontSize={["sm", "md", "lg", "x-large"]}>Hi, I&apos;m Jean Gal <br /> and welcome to my website!</Text>
         </Flex>
         <Image
           src={"./mepic.png"}
