@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           justifyContent="center"
           width="36%"
         >
-          <Text fontSize="x-large">Hi, my name is Jean Gal <br /> and welcome to my website!</Text>
+          <Text fontSize={["sm", "md", "lg", "x-large"]}>Hi, I'm Jean Gal <br /> and welcome to my website!</Text>
         </Flex>
         <Image
           src={"./mepic.png"}
@@ -47,8 +47,9 @@ const Home: NextPage = () => {
           alignItems="center"
           justifyContent="center"
           width="36%"
+          ml="2%"
         >
-          <Text fontSize="x-large">I am passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
+          <Text fontSize={["sm", "md", "lg", "x-large"]}>I am passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
         </Flex>
       </Flex>
 
