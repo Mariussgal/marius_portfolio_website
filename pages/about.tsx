@@ -7,7 +7,7 @@ import { Circle, Heading } from "@chakra-ui/layout";
 import { Box, Grid, Flex, Text, Icon, Link } from '@chakra-ui/react';
 import * as Icons from '../icons';
 
-const about: NextPage = () => {
+const About: NextPage = () => {
 
   const [isClient, setIsClient] = useState(false);
 
@@ -20,36 +20,36 @@ const about: NextPage = () => {
   const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
   return (
-    <Flex as="div" flexDirection="column" width="100%">
-      <Box width="100%" color="black">
+    <Flex as="div" flexDirection="column" width="100%" color="#DCD7C9">
+      <Box width="100%">
         <Box w="100%" mt={4}>
           <Heading size="lg">EDUCATION</Heading>
         </Box>
-        <Box h="3px" bg="black" mt={1} mb={1} />
+        <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>New York</b> University</Box>
           <Box flex="2 0 56%" textAlign="center">Master of Science in Computing, Entrepreneurship & Innovation</Box>
           <Box flex="1 0 22%" textAlign="right">Sept. 2023 - Dec. 2024</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Alyra Blockchain School, <b>Remote</b></Box>
           <Box flex="2 0 56%" textAlign="center">Blockchain Developer Course</Box>
           <Box flex="1 0 22%" textAlign="right">May - Aug. 2022</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%"><b>Delft</b> University of Technology</Box>
           <Box flex="2 0 56%" textAlign="center">Bachelor of Science, Computer Science & Engineering</Box>
           <Box flex="1 0 22%" textAlign="right">Sept. 2018 - Aug. 2021</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Lycée Lyautey, <b>Casablanca</b></Box>
           <Box flex="2 0 56%" textAlign="center">Science Baccalaureat</Box>
           <Box flex="1 0 22%" textAlign="right">Sept. 2014 - July 2018</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 22%">Lycée Français International de <b>Bangkok</b> </Box>
           <Box flex="2 0 56%" textAlign="center">Middle school</Box>
@@ -58,7 +58,7 @@ const about: NextPage = () => {
         <Box w="100%" mt={6}>
           <Heading size="lg">SKILLS</Heading>
         </Box>
-        <Box h="3px" bg="black" />
+        <Box h="3px" bg="#DCD7C9" />
         <Grid h="300px" templateColumns="40% 60%">
           <Box h="100%" w="100%" p={4}>
             <Flex alignItems="center">
@@ -67,7 +67,7 @@ const about: NextPage = () => {
             </Flex>
             <Grid templateColumns="repeat(4, 1fr)" fontSize="small" mt={4} gap={3}>
               {devSkills.map((skill, index) => (
-                <Circle key={index} size="75px" borderColor="black" borderWidth={1}>
+                <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
                   {skill}
                 </Circle>
               ))}
@@ -167,7 +167,7 @@ const about: NextPage = () => {
         <Box w="100%" mt={6}>
           <Heading size="lg">ACHIEVEMENTS</Heading>
         </Box>
-        <Box h="3px" bg="black" mt={1} mb={1} />
+        <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">
             Data DAO Category winner at ETH Global Online Hackathon
@@ -177,7 +177,7 @@ const about: NextPage = () => {
           </Box>
           <Box flex="1 0 22%" textAlign="right">Dec. 2022</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">
             Winner of Minor Contest, TU Delft, International Entrepreneurship and Development
@@ -187,7 +187,7 @@ const about: NextPage = () => {
           </Box>
           <Box flex="1 0 22%" textAlign="right">Feb. 2021</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">
             Winner of TU Delft Contest, Ideation Category, IRIS
@@ -205,7 +205,7 @@ const about: NextPage = () => {
             <Heading size="lg">VOLUNTEERING</Heading>
           </Box>
         </Flex>
-        <Box h="3px" bg="black" mt={1} mb={1} />
+        <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex mt="3" flexDirection="row">
           <Flex flex="1" flexDirection="column">
             <Text ml="2"> Following the completion of our undergraduate studies at the Technical University of Delft, my colleague and I embarked on an enriching 7 months journey, stepping out of our comfort zones to explore the diverse landscapes and cultures of South America through backpacking and volunteering.</Text>
@@ -244,6 +244,7 @@ const about: NextPage = () => {
                 <FaExternalLinkAlt size="1em" />
               </Link>
             </Flex>
+            <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
             <Flex mb={2} alignItems="flex-start">
               <Text mr={2}>
                 <b>Azul Wasi Orphanage (Oropesa, Peru), Dec. 2021:</b> Azul Wasi aims to improve the quality of life of children/adolescents from high-risk situations. Participated in daily activities and produced a promotional video.
@@ -255,6 +256,7 @@ const about: NextPage = () => {
                 <FaExternalLinkAlt size="1em" />
               </Link>
             </Flex>
+            <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
             <Flex mb={2} alignItems="flex-start">
               <Text mr={2}>
                 <b>Mamatungu Hostel (Baños, Ecuador), Oct. - Nov. 2021:</b> Volunteered for a month as a Bartender, Promoter, Waiter and Receptionist.
@@ -271,18 +273,18 @@ const about: NextPage = () => {
         <Box w="100%" mt={6}>
           <Heading size="lg">HOBBIES</Heading>
         </Box>
-        <Box h="3px" bg="black" mt={1} mb={1} />
+        <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">Winner lower bracket at French rugby 7 U16 championship, UNSS </Box>
           <Box flex="1 0 22%" textAlign="right">2017</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
         <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
           <Box flex="1 0 78%">Completed the half marathon of Marrakesh in 1h54</Box>
           <Box flex="1 0 22%" textAlign="right">2015</Box>
         </Flex>
-        <Box h="2px" bg="black" mt={1} mb={1} />
-        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+        <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
+        <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start" mb="3%">
           <Box flex="1 0 78%">Winner Morocan rugby championship U15</Box>
           <Box flex="1 0 22%" textAlign="right">2014</Box>
         </Flex>
@@ -291,5 +293,5 @@ const about: NextPage = () => {
   )
 }
 
-export default about
+export default About
 
