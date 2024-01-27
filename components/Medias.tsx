@@ -11,7 +11,7 @@ export default function Medias() {
             {isSmallScreen ? (
                 <Menu>
                     <MenuButton as={IconButton} aria-label="Options" icon={<FaBars color='#DCD7C9' />} bg="none" />
-                    <MenuList>
+                    <MenuList bgColor="#1A202C">
                         <MenuItem as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank">
                             <Box display="flex" alignItems="center">
                                 <CryptoJobs />
