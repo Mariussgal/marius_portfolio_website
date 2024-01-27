@@ -12,7 +12,7 @@ export default function Header() {
                     <Link href="/" fontSize="xl" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>{"<JeanGal />"}</Link>
                 </Box>
             </Box>
-            <Flex justifyContent="center">
+            <Flex justifyContent="center" width="50%">
                 <HStack spacing="4vw" >
                     <Box isTruncated onMouseEnter={() => setHoveredLink('about')} onMouseLeave={() => setHoveredLink(null)}>
                         <Link href="/about" fontSize="lg" color={hoveredLink === 'about' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>{'//  about'}</Link>
