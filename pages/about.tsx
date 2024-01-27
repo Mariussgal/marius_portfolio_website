@@ -15,7 +15,7 @@ const About: NextPage = () => {
     setIsClient(true);
   }, []);
 
-  const ercs = ["ERC-20", "ERC-721", "ERC-721A", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
+  const ercs = ["ERC-20", "ERC-721(A)", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
   const tools = ["Git - Github", "Slack", "Notion", "Figma"];
   const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
@@ -58,13 +58,13 @@ const About: NextPage = () => {
         <Heading size="lg">SKILLS</Heading>
       </Box>
       <Box h="3px" bg="#DCD7C9" />
-      <Grid h="300px" templateColumns="40% 60%">
+      <Grid h="auto" templateColumns={["100%", "40% 60%"]}>
         <Box h="100%" w="100%" p={4}>
           <Flex alignItems="center">
             <Icons.Dev />
             <Heading ml="2" size="md">DEVELOPMENT</Heading>
           </Flex>
-          <Grid templateColumns="repeat(4, 1fr)" fontSize="small" mt={4} gap={3}>
+          <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3}>
             {devSkills.map((skill, index) => (
               <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
                 {skill}
@@ -72,8 +72,8 @@ const About: NextPage = () => {
             ))}
           </Grid>
         </Box>
-        <Grid h="100%" w="100%" templateRows="15% 35% 50%">
-          <Flex alignItems="center" mt={4}>
+        <Grid h="auto" w="100%" templateRows={["auto", "15% 35% 50%"]}>
+          <Flex alignItems="center">
             <Icons.Web3 />
             <Heading ml="2" size="md">WEB 3</Heading>
           </Flex>
@@ -115,14 +115,11 @@ const About: NextPage = () => {
             <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
               <Icons.Pinata />
             </Flex>
-            <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+            <Flex flexDirection="row" alignItems="center" mt={3} mr={3}>
               <Icons.Metamask />
               <Text ml={1} textStyle="bold">Metamask</Text>
             </Flex>
-            <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="60%" mt={3} mr={3}>
-              <Icons.Archetype />
-            </Flex>
-            <Flex flexDirection="row" alignItems="center" maxH="60%" mt={3} mr={3}>
+            <Flex flexDirection="row" alignItems="center" mt={3} mr={3}>
               <Image
                 src="https://ligolang.org/img/logo/logo-night.svg"
                 alt="LIGO Logo"
@@ -130,14 +127,17 @@ const About: NextPage = () => {
                 width={104}
               />
             </Flex>
+            <Flex flexDirection="row" alignItems="center" justifyContent="start" mt={3} mr={3}>
+              <Icons.Archetype />
+            </Flex>
           </Flex>
-          <Grid templateColumns="50% 50%">
+          <Grid h="auto" templateColumns="50% 50%">
             <Box>
               <Flex alignItems="center">
                 <Icons.Security />
                 <Heading ml="2" size="md">ERCs & OPENZEPPELIN</Heading>
               </Flex>
-              <Grid templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
+              <Grid h="auto" templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
                 {ercs.map((erc, index) => (
                   <Flex key={index} fontSize="small" alignItems="center">
                     <IoIosCheckmark />
@@ -151,7 +151,7 @@ const About: NextPage = () => {
                 <Icons.Tools />
                 <Heading size="md" ml={2}>TOOLS</Heading>
               </Flex>
-              <Grid templateColumns="repeat(1, 1fr)" mt={2} gap={1}>
+              <Grid h="auto" templateColumns="repeat(1, 1fr)" mt={2} gap={1}>
                 {tools.map((tool, index) => (
                   <Flex key={index} fontSize="small" alignItems="center">
                     <IoIosCheckmark />
@@ -163,7 +163,7 @@ const About: NextPage = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Box w="100%" mt="3%">
+      <Box w="100%">
         <Heading size="lg">ACHIEVEMENTS</Heading>
       </Box>
       <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
