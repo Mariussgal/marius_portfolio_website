@@ -6,11 +6,11 @@ export default function Security() {
         <Box
             as="svg"
             role="img"
-            width="24px"  // Adjusted width
-            height="26.4px" // Adjusted height, maintaining aspect ratio
+            width="24px"
+            height="26.4px"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 111.811 122.88" // Adjusted viewBox to match new SVG
-            fill="#1f2127"
+            viewBox="0 0 111.811 122.88"
+            fill="#DCD7C9"
             _hover={{
                 fill: "brand.accent",
             }}

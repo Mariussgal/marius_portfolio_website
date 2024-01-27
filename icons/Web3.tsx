@@ -6,11 +6,11 @@ export default function Web3() {
         <Box
             as="svg"
             role="img"
-            width="30.72px"  // Adjust as needed to fit your UI
-            height="27.6px" // Adjust as needed to fit your UI
+            width="30.72px"
+            height="27.6px"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 459.22"
-            fill="#1f2127"
+            fill="#DCD7C9"
             _hover={{
                 fill: "brand.accent",
             }}

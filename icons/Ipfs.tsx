@@ -10,7 +10,7 @@ export default function IPFS() {
             height="20px"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="#1f2127"
+            fill="#DCD7C9"
             _hover={{
                 fill: "brand.accent",
             }}

@@ -10,7 +10,7 @@ export default function Tools() {
             height="20px"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 122.882 105.082"
-            fill="#1f2127"
+            fill="#DCD7C9"
             _hover={{
                 fill: "brand.accent",
             }}

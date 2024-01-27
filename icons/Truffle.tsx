@@ -10,7 +10,6 @@ export default function Truffle() {
             height="64px"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1700 1200"
-            fill="#1f2127"
             _hover={{
                 fill: "brand.accent",
             }}
