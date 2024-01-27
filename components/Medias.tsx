@@ -12,36 +12,36 @@ export default function Medias() {
                 <Menu>
                     <MenuButton as={IconButton} aria-label="Options" icon={<FaBars color='#DCD7C9' />} bg="none" _hover={{ icon: { color: "#1A202C" } }} />
                     <MenuList bgColor="#1A202C">
-                        <MenuItem as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank">
-                            <Box display="flex" alignItems="center" bgColor="#1A202C">
+                        <MenuItem as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank" bgColor="#1A202C">
+                            <Box display="flex" alignItems="center" bg="none">
                                 <CryptoJobs />
                                 <Spacer width="5px" />
                                 <Text>Crypto Jobs List</Text>
                             </Box>
                         </MenuItem>
-                        <MenuItem as="a" href="mailto:jeangal.pro@gmail.com" target="_blank">
-                            <Box display="flex" alignItems="center" bgColor="#1A202C">
+                        <MenuItem as="a" href="mailto:jeangal.pro@gmail.com" target="_blank" bgColor="#1A202C">
+                            <Box display="flex" alignItems="center" bg="none">
                                 <FaEnvelope size="20px" />
                                 <Spacer width="5px" />
                                 <Text>Email</Text>
                             </Box>
                         </MenuItem>
-                        <MenuItem as="a" href="https://twitter.com/jeangalbc" target="_blank">
-                            <Box display="flex" alignItems="center" bgColor="#1A202C">
+                        <MenuItem as="a" href="https://twitter.com/jeangalbc" target="_blank" bgColor="#1A202C">
+                            <Box display="flex" alignItems="center" bg="none">
                                 <FaXTwitter size="20px" />
                                 <Spacer width="5px" />
                                 <Text>Twitter / X</Text>
                             </Box>
                         </MenuItem>
-                        <MenuItem as="a" href="https://www.linkedin.com/in/jean-gal/" target="_blank">
-                            <Box display="flex" alignItems="center">
+                        <MenuItem as="a" href="https://www.linkedin.com/in/jean-gal/" target="_blank" bgColor="#1A202C">
+                            <Box display="flex" alignItems="center" bg="none">
                                 <FaLinkedin size="20px" />
                                 <Spacer width="5px" />
                                 <Text>Linkedin</Text>
                             </Box>
                         </MenuItem>
-                        <MenuItem as="a" href="https://github.com/jjeangal" target="_blank">
-                            <Box display="flex" alignItems="center">
+                        <MenuItem as="a" href="https://github.com/jjeangal" target="_blank" bgColor="#1A202C">
+                            <Box display="flex" alignItems="center" bg="none">
                                 <FaGithub size="20px" />
                                 <Spacer width="5px" />
                                 <Text>Github</Text>
