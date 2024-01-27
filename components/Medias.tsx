@@ -13,21 +13,21 @@ export default function Medias() {
                     <MenuButton as={IconButton} aria-label="Options" icon={<FaBars color='#DCD7C9' />} bg="none" _hover={{ icon: { color: "#1A202C" } }} />
                     <MenuList bgColor="#1A202C">
                         <MenuItem as="a" href="https://cryptojobslist.com/talent/profile/crypto-professional-remote-9qkhu5ocpn6" target="_blank">
-                            <Box display="flex" alignItems="center">
+                            <Box display="flex" alignItems="center" bgColor="#1A202C">
                                 <CryptoJobs />
                                 <Spacer width="5px" />
                                 <Text>Crypto Jobs List</Text>
                             </Box>
                         </MenuItem>
                         <MenuItem as="a" href="mailto:jeangal.pro@gmail.com" target="_blank">
-                            <Box display="flex" alignItems="center">
+                            <Box display="flex" alignItems="center" bgColor="#1A202C">
                                 <FaEnvelope size="20px" />
                                 <Spacer width="5px" />
                                 <Text>Email</Text>
                             </Box>
                         </MenuItem>
                         <MenuItem as="a" href="https://twitter.com/jeangalbc" target="_blank">
-                            <Box display="flex" alignItems="center">
+                            <Box display="flex" alignItems="center" bgColor="#1A202C">
                                 <FaXTwitter size="20px" />
                                 <Spacer width="5px" />
                                 <Text>Twitter / X</Text>
