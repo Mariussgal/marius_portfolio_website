@@ -9,7 +9,7 @@ export default function Header() {
         <Flex h="10vh" borderBottom="1px" justifyContent="space-between">
             <Box isTruncated display="flex" alignItems="center" width="25%" ml="5%">
                 <Box isTruncated onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
-                    <Link href="/" fontSize="xl" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>{"<JeanGal />"}</Link>
+                    <Link href="/" fontSize="x-large" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>{"<JeanGal />"}</Link>
                 </Box>
             </Box>
             <Flex justifyContent="center" width="50%">
