@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 const poaps: NextPage<Props> = ({ poaps }) => {
   return (
     <>
-      <Flex justifyContent="center" alignItems="center" p="10" direction="column">
+      <Flex justifyContent="center" alignItems="center" p="10" direction="column" color="#DCD7C9">
         <Heading mb="4">Check out some of my web3 memories!</Heading>
         {poaps.length > 0 ? (
           <Grid templateColumns="repeat(4, 1fr)" gap={6}>
@@ -24,7 +24,7 @@ const poaps: NextPage<Props> = ({ poaps }) => {
                 <Tooltip label={poap.event.description} aria-label="A tooltip">
                   <Image src={poap.event.image_url} alt={poap.event.name} />
                 </Tooltip>
-                <Text justifyContent="center" alignItems="center">{poap.event.name}</Text>
+                <Text mt="2%" textAlign="center">{poap.event.name}</Text>
               </Box>
             ))}
           </Grid>
