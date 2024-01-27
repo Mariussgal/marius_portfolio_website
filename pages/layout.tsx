@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react'
+import Head from 'next/head'
 import { Container, Flex, Box } from '@chakra-ui/react'
 import Header from '../components/Header'
-import Head from 'next/head'
+
 
 type Props = {
     children: ReactNode
@@ -16,7 +17,7 @@ const Layout: React.FC<Props> = (props) => {
             </Head>
             <Flex direction="column" minHeight="100vh">
                 <Header />
-                <Container flexGrow={1} backgroundColor='#DCD7C9' maxW="full">
+                <Container flexGrow={1} maxW="full">
                     {props.children}
                 </Container>
             </Flex>
