@@ -49,7 +49,7 @@ const Home: NextPage = () => {
           width="36%"
           ml="2%"
         >
-          <Text fontSize={["sm", "md", "lg", "x-large"]}>I am passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
+          <Text fontSize={["sm", "md", "lg", "x-large"]}>I am a passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
         </Flex>
       </Flex>
 
