@@ -17,21 +17,18 @@ const Home: NextPage = () => {
 
   return (
     <Flex flexDirection="column" height="90vh" width="100%" color="black">
-      <Box
-        height="60%"
+      <Flex
+        height="90%"
         width="100%"
-        display="flex"
         alignItems="center"
         justifyContent="center"
       >
-        <Image src={"./mepic.png"} alt='Jean Gal' height="60%" width="100%" objectFit="contain" alignSelf="flex-end" />
-      </Box>
-      <Flex flexDirection="row" alignItems="center" justifyContent="center" w="100%" height="30%">
-        <Flex alignItems="center" justifyContent="center" w="50%">
-          <p>Hi, my name is Jean Gal <br /> and welcome to my website!</p>
+        <Flex flexDirection="column" alignItems="center" justifyContent="center" w="50%">
+          <Text fontSize="x-large">Hi, my name is Jean Gal <br /> and welcome to my website!</Text>
         </Flex>
+        <Image src={"./mepic.png"} alt='Jean Gal' height="45%" width="45%" objectFit="contain" alignSelf="center" />
         <Flex flexDirection="column" alignItems="center" justifyContent="flex-start" w="50%">
-          <p>I am passionate Software Engineer  <br /> with a focus on Blockchain technology</p>
+          <Text fontSize="x-large">I am passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
         </Flex>
       </Flex>
       <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
