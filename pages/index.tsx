@@ -19,18 +19,39 @@ const Home: NextPage = () => {
     <Flex flexDirection="column" height="90vh" width="100%" color="#DCD7C9">
       <Flex
         height="90%"
-        width="100%"
+        flexDirection="row"
         alignItems="center"
         justifyContent="center"
       >
-        <Flex flexDirection="column" alignItems="center" justifyContent="center" w="50%">
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          width="36%"
+        >
           <Text fontSize="x-large">Hi, my name is Jean Gal <br /> and welcome to my website!</Text>
         </Flex>
-        <Image src={"./mepic.png"} alt='Jean Gal' height="45%" width="45%" objectFit="cover" alignSelf="center" sx={{ filter: 'brightness(80%)' }} border="2px" borderColor="#DCD7C9" borderRadius="full" />
-        <Flex flexDirection="column" alignItems="center" justifyContent="flex-start" w="50%">
+        <Image
+          src={"./mepic.png"}
+          alt='Jean Gal'
+          objectFit="cover"
+          alignSelf="center"
+          sx={{ filter: 'brightness(80%)' }}
+          border="2px"
+          borderColor="#DCD7C9"
+          borderRadius="50%"
+          width="28%"
+        />
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          width="36%"
+        >
           <Text fontSize="x-large">I am passionate Software Engineer  <br /> with a focus on Blockchain technology</Text>
         </Flex>
       </Flex>
+
       <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
         <Box display="flex" flexDirection="row" alignItems="center" height="auto" border="1px solid #DCD7C9" boxSizing="border-box" borderRadius="10px" maxWidth="100%">
           <Marquee direction="right" speed={50} gradient={false} pauseOnHover={true}>
@@ -44,7 +65,7 @@ const Home: NextPage = () => {
               BLOCKCHAIN DEVELOPER
             </Text>
             <Tooltip label="Address copied" isOpen={isOpen} >
-              <Text mr={5} transition="all .15s linear" onClick={handleClick}>
+              <Text mr={5} transition="all .15s linear" onClick={handleClick} cursor="pointer">
                 {"ETH: " + address}
               </Text>
             </Tooltip>
