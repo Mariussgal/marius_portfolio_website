@@ -22,7 +22,7 @@ const projects: NextPage = () => {
     {
       name: 'Freelance Blockchain Developer @ KYCY Nextchain',
       date: 'Sept. 2022 - Jan. 2023',
-      description: 'Worked for the NFTouring project',
+      description: 'For the NFTouring project, I developed an NFT collection with a whitelist presale and enforced royalties. I wrote the smart contracts in Solidity, employing ERC721A and other secure protocols, and build a user-friendly minting dApp using Next.js and TypeScript.',
       githubLink: 'https://github.com/jjeangal/nftouring_mint_app',
       projectLink: 'https://nftouring-genesis-mint.vercel.app/'
     },
@@ -34,7 +34,7 @@ const projects: NextPage = () => {
       projectLink: 'https://chankuap.org/'
     },
     {
-      name: 'Co-founded IRIS Startup',
+      name: 'Co-founded the Startup Iris',
       date: 'Feb. 2020 - Nov. 2021',
       description: 'Iris is a decentralized blockchain based news platform, promoting the publication of reliable and fact-checked articles.',
       githubLink: 'https://github.com/The-Iris-Team',
