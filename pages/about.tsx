@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { IoIosCheckmark } from "react-icons/io";
 import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo } from 'react-icons/fa';
@@ -293,7 +293,7 @@ const About: NextPage = () => {
       </Flex>
       <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
       <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start" mb="3%">
-        <Box flex="1 0 78%">Winner Morocan rugby championship U15</Box>
+        <Box flex="1 0 78%">Winner Moroccan rugby championship U15</Box>
         <Box flex="1 0 22%" textAlign="right">2014</Box>
       </Flex>
     </Flex>
