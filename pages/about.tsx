@@ -90,7 +90,7 @@ const About: NextPage = () => {
       </Flex>
       <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
       <Flex mt="1%" flexDirection="row">
-        <Flex flex="1" flexDirection="column" pr="2%">
+        <Flex flex="1" flexDirection="column">
           <Text textAlign="justify" ml="2" mb="4"> Following the completion of our undergraduate studies at the Technical University of Delft, my colleague and I embarked on an enriching 7 months journey, stepping out of our comfort zones to explore the diverse landscapes and cultures of South America through backpacking and volunteering.</Text>
           {isClient && (
             <Box
@@ -115,11 +115,11 @@ const About: NextPage = () => {
             </Box>
           )}
         </Flex>
-        <Flex flex="1" ml="2" flexDirection="column">
-          <Flex mb={2} alignItems="flex-start">
-            <Text textAlign="justify" mr={5}>
-              <b>Casamasanté (Cap Skirring, Senegal), May 2023:</b> Responsible for the setup of the IT room and upgrading the software systems. I also assisted in running medical tests for 150 kids in remote villages and islands as part of a school health initiative.
-            </Text>
+        <Flex flex="1" ml="1%" flexDirection="column">
+          <Text textAlign="justify" mr={5}>
+            <b>Casamasanté (Cap Skirring, Senegal), May 2023:</b> Responsible for the setup of the IT room and upgrading the software systems. I also assisted in running medical tests for 150 kids in remote villages and islands as part of a school health initiative.
+          </Text>
+          <Flex direction="row" mt="1%" mb="1%">
             <Link href="https://www.facebook.com/Casamasante/posts/pfbid02BY742hWm8bQSsCWfd36CUear3VJYqLhA89Gn5LkmMT5ucGQtWa16RsyicbVk2pNql" isExternal>
               <FaFacebook size="1em" />
             </Link>
@@ -128,11 +128,11 @@ const About: NextPage = () => {
             </Link>
           </Flex>
           <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
-          <Flex mb={2} alignItems="flex-start">
-            <Text textAlign="justify" mr={5}>
-              <b>Azul Wasi Orphanage (Oropesa, Peru), Dec. 2021:</b> Azul Wasi aims to improve the quality of life of children/adolescents from high-risk situations. Participated in daily activities and produced a promotional video.
-            </Text>
-            <Link href="https://drive.google.com/file/d/1_zuxVwlwc6MI_ki8jpDJUKa4rEJLNStQ/view?usp=drive_link" isExternal ml={2}>
+          <Text textAlign="justify" mr={5}>
+            <b>Azul Wasi Orphanage (Oropesa, Peru), Dec. 2021:</b> Azul Wasi aims to improve the quality of life of children/adolescents from high-risk situations. Participated in daily activities and produced a promotional video.
+          </Text>
+          <Flex direction="row" mt="1%" mb="1%">
+            <Link href="https://drive.google.com/file/d/1_zuxVwlwc6MI_ki8jpDJUKa4rEJLNStQ/view?usp=drive_link" isExternal>
               <FaVideo size="1em" />
             </Link>
             <Link ml="2" mr="2" href="https://azulwasi.wordpress.com" isExternal>
@@ -140,10 +140,10 @@ const About: NextPage = () => {
             </Link>
           </Flex>
           <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
-          <Flex mb={2} alignItems="flex-start">
-            <Text textAlign="justify" mr={5}>
-              <b>Mamatungu Hostel (Baños, Ecuador), Oct. - Nov. 2021:</b> Volunteered for a month as a Bartender, Promoter, Waiter and Receptionist.
-            </Text>
+          <Text textAlign="justify" mr={5}>
+            <b>Mamatungu Hostel (Baños, Ecuador), Oct. - Nov. 2021:</b> Volunteered for a month as a Bartender, Promoter, Waiter and Receptionist.
+          </Text>
+          <Flex direction="row" mt="1%">
             <Link href="https://www.instagram.com/mamatunguhostel/" isExternal>
               <FaInstagram size="1em" />
             </Link>

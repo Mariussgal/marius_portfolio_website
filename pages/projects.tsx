@@ -12,7 +12,6 @@ const projects: NextPage = () => {
   const tools = ["Git - Github", "Slack", "Notion", "Figma"];
   const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
-
   const cards: Project[] = [
     {
       name: 'Co-founded Coal',
