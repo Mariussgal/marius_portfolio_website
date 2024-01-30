@@ -53,7 +53,7 @@ const projects: NextPage = () => {
   return (
     <Flex width="100%" direction="column">
       <Box w="100%" mt="3%">
-        <Heading size="lg">EXPERIENCE AND PROJECTS</Heading>
+        <Heading color="#DCD7C9" size="lg">EXPERIENCE AND PROJECTS</Heading>
       </Box>
       <Box h="2px" bg="#DCD7C9" mb="2%" />
       <Flex overflowX="scroll" color="#DCD7C9">
@@ -84,7 +84,7 @@ const projects: NextPage = () => {
         ))}
       </Flex>
       <Box width="100%" mt="3%" mb="2%">
-        <Heading size="lg">SKILLS</Heading>
+        <Heading color="#DCD7C9" size="lg">SKILLS</Heading>
         <Box h="3px" bg="#DCD7C9" />
         <Grid h="auto" templateColumns={["100%", "40% 60%"]}>
           <Box h="auto" w="100%" p={4}>
@@ -92,9 +92,9 @@ const projects: NextPage = () => {
               <Box display={{ base: "none", md: "flex" }}>
                 <Icons.Dev />
               </Box>
-              <Heading ml={2} size="md">DEVELOPMENT</Heading>
+              <Heading color="#DCD7C9" ml={2} size="md">DEVELOPMENT</Heading>
             </Flex>
-            <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3}>
+            <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3} color="#DCD7C9">
               {devSkills.map((skill, index) => (
                 <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
                   {skill}
@@ -102,7 +102,7 @@ const projects: NextPage = () => {
               ))}
             </Grid>
           </Box>
-          <Grid h="auto" w="100%" templateRows="auto" gap={4}>
+          <Grid h="auto" w="100%" templateRows="auto" gap={4} color="#DCD7C9">
             <Flex alignItems="center" pt="4">
               <Box display={{ base: "none", md: "flex" }}>
                 <Icons.Web3 />
