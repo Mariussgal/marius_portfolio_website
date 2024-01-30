@@ -1,11 +1,8 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { IoIosCheckmark } from "react-icons/io";
 import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo } from 'react-icons/fa';
-import { Circle, Heading } from "@chakra-ui/layout";
-import { Box, Grid, Flex, Text, Icon, Link } from '@chakra-ui/react';
-import * as Icons from '../icons';
+import { Heading } from "@chakra-ui/layout";
+import { Box, Flex, Text, Link, Icon } from '@chakra-ui/react';
 
 const About: NextPage = () => {
 
@@ -14,10 +11,6 @@ const About: NextPage = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
-
-  const ercs = ["ERC-20", "ERC-721(A)", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
-  const tools = ["Git - Github", "Slack", "Notion", "Figma"];
-  const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
 
   return (
     <Flex as="div" flexDirection="column" width="100%" color="#DCD7C9">
@@ -55,130 +48,12 @@ const About: NextPage = () => {
         <Box flex="1 0 22%" textAlign="right">2008-2013</Box>
       </Flex>
       <Box w="100%" mt="3%">
-        <Heading size="lg">SKILLS</Heading>
-        <Box h="3px" bg="#DCD7C9" />
-        <Grid h="auto" templateColumns={["100%", "40% 60%"]}>
-
-          <Box h="auto" w="100%" p={4}>
-            <Flex alignItems="center">
-              <Box display={{ base: "none", md: "flex" }}>
-                <Icons.Dev />
-              </Box>
-              <Heading ml={2} size="md">DEVELOPMENT</Heading>
-            </Flex>
-            <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3}>
-              {devSkills.map((skill, index) => (
-                <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
-                  {skill}
-                </Circle>
-              ))}
-            </Grid>
-          </Box>
-          <Grid h="auto" w="100%" templateRows="auto" gap={4}>
-            <Flex alignItems="center" pt="4">
-              <Box display={{ base: "none", md: "flex" }}>
-                <Icons.Web3 />
-              </Box>
-              <Heading ml={2} size="md">WEB 3</Heading>
-            </Flex>
-            <Flex wrap="wrap" justify="start" align="start">
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Ethereum />
-                <Text ml={1}>Ethereum</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Tezos />
-                <Text ml={1}>Tezos</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Solidity />
-                <Text ml={1}>Solidity</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Hardhat />
-                <Text ml={1}>Hardhat</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Truffle />
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Wagmi />
-                <Text ml={1}>Wagmi</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Web3Js />
-                <Text ml={1}>Web.js</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.IPFS />
-                <Text ml={1}>IPFS</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" justifyContent="start" height="20px" mt={3} mr={3}>
-                <Icons.OpenZeppelin />
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" justifyContent="start" height="20px" mt={3} mr={3}>
-                <Icons.Pinata />
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Icons.Metamask />
-                <Text ml={1} textStyle="bold">Metamask</Text>
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
-                <Image
-                  src="https://ligolang.org/img/logo/logo-night.svg"
-                  alt="LIGO Logo"
-                  height={32}
-                  width={104}
-                />
-              </Flex>
-              <Flex flexDirection="row" alignItems="center" justifyContent="start" maxH="30%" mt={3} mr={3}>
-                <Icons.Archetype />
-              </Flex>
-            </Flex>
-            <Grid h="auto" w="100%" templateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap={4}>
-              <Box>
-                <Flex alignItems="center">
-                  <Box display={{ base: "none", md: "flex" }}>
-                    <Icons.Security />
-                  </Box>
-                  <Heading ml={2} size="md">ERCs & OPENZEPPELIN</Heading>
-                </Flex>
-                <Grid h="auto" templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
-                  {ercs.map((erc, index) => (
-                    <Flex key={index} fontSize="small" alignItems="center">
-                      <IoIosCheckmark />
-                      <Text ml={1}>{erc}</Text>
-                    </Flex>
-                  ))}
-                </Grid>
-              </Box>
-              <Box>
-                <Flex alignItems="center">
-                  <Box display={{ base: "none", md: "flex" }}>
-                    <Icons.Tools />
-                  </Box>
-                  <Heading ml={2} size="md">TOOLS</Heading>
-                </Flex>
-                <Grid templateColumns="repeat(2, 1fr)" gap={2} mt={2}>
-                  {tools.map((tool, index) => (
-                    <Flex key={index} fontSize="small" alignItems="center">
-                      <IoIosCheckmark />
-                      <Text ml={1}>{tool}</Text>
-                    </Flex>
-                  ))}
-                </Grid>
-              </Box>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Box>
-      <Box w="100%">
         <Heading size="lg">ACHIEVEMENTS</Heading>
       </Box>
-      <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
-      <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+      <Box h="2px" bg="#DCD7C9" mb={1} />
+      <Flex px={5} mt="1" flexDirection="row" justifyContent="space-between" alignItems="flex-start">
         <Box flex="1 0 78%">
-          Data DAO Category winner at ETH Global Online Hackathon
+          Winner at ETH Global Online Hackathon, Data DAO Category
           <Link href="https://ethglobal.com/showcase/anc3stree-7a6y8" ml="2" isExternal>
             <Icon as={FaExternalLinkAlt} />
           </Link>
@@ -188,7 +63,7 @@ const About: NextPage = () => {
       <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
       <Flex px={5} flexDirection="row" justifyContent="space-between" alignItems="flex-start">
         <Box flex="1 0 78%">
-          Winner of Minor Contest, TU Delft, International Entrepreneurship and Development
+          Winner of International Entrepreneurship and Development Minor Contest, TU Delft
           <Link href="https://www.tudelft.nl/en/tpm/education/minors/international-entrepreneurship-development/" ml="2" isExternal>
             <Icon as={FaExternalLinkAlt} />
           </Link>
@@ -214,7 +89,7 @@ const About: NextPage = () => {
         </Box>
       </Flex>
       <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
-      <Flex mt="3" flexDirection="row">
+      <Flex mt="1%" flexDirection="row">
         <Flex flex="1" flexDirection="column" pr="2%">
           <Text textAlign="justify" ml="2" mb="4"> Following the completion of our undergraduate studies at the Technical University of Delft, my colleague and I embarked on an enriching 7 months journey, stepping out of our comfort zones to explore the diverse landscapes and cultures of South America through backpacking and volunteering.</Text>
           {isClient && (
