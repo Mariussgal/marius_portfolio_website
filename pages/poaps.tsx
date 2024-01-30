@@ -18,7 +18,7 @@ const poaps: NextPage<Props> = ({ poaps }) => {
       <Flex justifyContent="center" alignItems="center" p="10" direction="column" color="#DCD7C9">
         <Heading mb="4">Check out some of my web3 memories!</Heading>
         {poaps.length > 0 ? (
-          <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+          <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }} gap={6}>
             {poaps.map((poap) => (
               <Box key={poap.tokenId} p={5}>
                 <Tooltip label={poap.event.description} aria-label="A tooltip">
