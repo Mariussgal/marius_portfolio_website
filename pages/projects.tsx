@@ -86,14 +86,14 @@ const projects: NextPage = () => {
         <Heading color="#DCD7C9" size="lg">SKILLS</Heading>
         <Box h="3px" bg="#DCD7C9" />
         <Grid h="auto" templateColumns={["100%", "40% 60%"]}>
-          <Box h="auto" w="100%" p={4}>
-            <Flex alignItems="center">
+          <Box h="auto" w="100%" p={4} color="#DCD7C9">
+            <Flex>
               <Box display={{ base: "none", md: "flex" }}>
                 <Icons.Dev />
               </Box>
-              <Heading color="#DCD7C9" ml={2} size="md">DEVELOPMENT</Heading>
+              <Heading ml={2} size="md">DEVELOPMENT</Heading>
             </Flex>
-            <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3} color="#DCD7C9">
+            <Grid templateColumns={["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3} color="#DCD7C9">
               {devSkills.map((skill, index) => (
                 <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
                   {skill}
@@ -101,14 +101,14 @@ const projects: NextPage = () => {
               ))}
             </Grid>
           </Box>
-          <Grid h="auto" w="100%" templateRows="auto" gap={4} color="#DCD7C9">
+          <Box h="auto" w="100%" color="#DCD7C9">
             <Flex alignItems="center" pt="4">
               <Box display={{ base: "none", md: "flex" }}>
                 <Icons.Web3 />
               </Box>
               <Heading ml={2} size="md">WEB 3</Heading>
             </Flex>
-            <Flex wrap="wrap" justify="start" align="start">
+            <Flex wrap="wrap" justify="start" align="start" mb="4%">
               <Flex flexDirection="row" alignItems="center" height="20px" mt={3} mr={3}>
                 <Icons.Ethereum />
                 <Text ml={1}>Ethereum</Text>
@@ -162,7 +162,7 @@ const projects: NextPage = () => {
                 <Icons.Archetype />
               </Flex>
             </Flex>
-            <Grid h="auto" w="100%" templateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap={4}>
+            <Grid h="auto" w="100%" templateColumns="repeat(auto-fit, minmax(240px, 1fr))" gap={2}>
               <Box>
                 <Flex alignItems="center">
                   <Box display={{ base: "none", md: "flex" }}>
@@ -170,7 +170,7 @@ const projects: NextPage = () => {
                   </Box>
                   <Heading ml={2} size="md">ERCs & OPENZEPPELIN</Heading>
                 </Flex>
-                <Grid h="auto" templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={1}>
+                <Grid h="auto" templateColumns="repeat(auto-fill, minmax(150px, 1fr))" mt={2} gap={2}>
                   {ercs.map((erc, index) => (
                     <Flex key={index} fontSize="small" alignItems="center">
                       <IoIosCheckmark />
@@ -196,7 +196,7 @@ const projects: NextPage = () => {
                 </Grid>
               </Box>
             </Grid>
-          </Grid>
+          </Box>
         </Grid>
       </Box>
     </Flex>
