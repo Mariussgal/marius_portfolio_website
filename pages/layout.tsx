@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { Container, Flex, Box } from '@chakra-ui/react'
 import Header from '../components/Header'
+import { Analytics } from '@vercel/analytics/react';
 
 
 type Props = {
@@ -20,6 +21,7 @@ const Layout: React.FC<Props> = (props) => {
                 <Container flexGrow={1} maxW="full">
                     {props.children}
                 </Container>
+                <Analytics />
             </Flex>
         </Box>
     )
