@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Container, Flex, Box } from '@chakra-ui/react'
 import Header from '../components/Header'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 type Props = {
@@ -22,6 +23,7 @@ const Layout: React.FC<Props> = (props) => {
                     {props.children}
                 </Container>
                 <Analytics />
+                <SpeedInsights />
             </Flex>
         </Box>
     )
