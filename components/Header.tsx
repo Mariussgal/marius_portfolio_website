@@ -14,7 +14,7 @@ export default function Header() {
         <Flex h="10vh" borderBottom="1px" justifyContent="space-between">
             <Box isTruncated display="flex" alignItems="center" width="25%" ml="5%">
                 <Box isTruncated onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
-                    <Link href="/" fontSize={{ md: "x-large", base: "lg" }} color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>
+                    <Link href="/" fontSize="x-large" color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>
                         {isSmallScreen ? <MdHome color='#DCD7C9' size="24px" /> : "<JeanGal />"}
                     </Link>
                 </Box>
