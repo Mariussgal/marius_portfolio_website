@@ -1,15 +1,22 @@
+import { useBreakpointValue } from "@chakra-ui/react";
 import { Flex, HStack, Box, Link } from "@chakra-ui/react";
+import { MdHome } from "react-icons/md";
 import Medias from './Medias';
 import { useState } from 'react';
 
+
+
 export default function Header() {
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+    const isSmallScreen = useBreakpointValue({ base: true, md: false });
 
     return (
         <Flex h="10vh" borderBottom="1px" justifyContent="space-between">
             <Box isTruncated display="flex" alignItems="center" width="25%" ml="5%">
                 <Box isTruncated onMouseEnter={() => setHoveredLink('home')} onMouseLeave={() => setHoveredLink(null)}>
-                    <Link href="/" fontSize={{ md: "x-large", base: "lg" }} color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>{"<JeanGal />"}</Link>
+                    <Link href="/" fontSize={{ md: "x-large", base: "lg" }} color={hoveredLink === 'home' ? 'white' : '#DCD7C9'} _hover={{ textDecoration: 'none' }}>
+                        {isSmallScreen ? <MdHome color='#DCD7C9' size="24px" /> : "<JeanGal />"}
+                    </Link>
                 </Box>
             </Box>
             <Flex justifyContent="center" width="50%">
