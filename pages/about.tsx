@@ -80,17 +80,12 @@ const About: NextPage = () => {
         </Box>
         <Box flex="1 0 22%" textAlign="right">June 2020</Box>
       </Flex>
-      <Flex w="100%" mt="3%">
-        <Box w="50%">
-          <Heading size="lg">SABBATICAL YEAR</Heading>
-        </Box>
-        <Box w="50%">
-          <Heading size="lg">VOLUNTEERING</Heading>
-        </Box>
-      </Flex>
-      <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
-      <Flex mt="1%" flexDirection="row">
+      <Flex mt="3%" flexDirection={{ base: "column", md: "row" }}>
         <Flex flex="1" flexDirection="column">
+          <Box w="100%">
+            <Heading size="lg">SABBATICAL YEAR</Heading>
+            <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
+          </Box>
           <Text textAlign="justify" ml="2" mb="4"> Following the completion of our undergraduate studies at the Technical University of Delft, my colleague and I embarked on an enriching 7 months journey, stepping out of our comfort zones to explore the diverse landscapes and cultures of South America through backpacking and volunteering.</Text>
           {isClient && (
             <Box
@@ -116,6 +111,10 @@ const About: NextPage = () => {
           )}
         </Flex>
         <Flex flex="1" ml="1%" flexDirection="column">
+          <Box w="100%">
+            <Heading size="lg">VOLUNTEERING</Heading>
+            <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
+          </Box>
           <Text textAlign="justify" mr={5}>
             <b>Casamasanté (Cap Skirring, Senegal), May 2023:</b> Responsible for the setup of the IT room and upgrading the software systems. I also assisted in running medical tests for 150 kids in remote villages and islands as part of a school health initiative.
           </Text>
