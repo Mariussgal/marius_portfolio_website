@@ -1,6 +1,6 @@
 ## Deployement info
 
-The website has been deployed at: https://jeangal.vercel.app/
+The website has been deployed at: https://jeangal.net/
 
 ## Run yourself
 
