@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Marquee from "react-fast-marquee";
 import { useState } from 'react';
-import { Box, Flex, Image, Text, Tooltip } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Tooltip, Link } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
 
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
     <Flex flexDirection="column" height="90vh" width="100%" color="#DCD7C9">
       <Flex
         height="90%"
-        flexDirection="row"
+        flexDirection={["column", "column", "row", "row"]}
         alignItems="center"
         justifyContent="center"
       >
@@ -27,29 +27,45 @@ const Home: NextPage = () => {
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
-          width="36%"
+          width={["80%", "80%", "26%", "26%"]}
+          pb={[8, 8, 0, 0]}
+          mr={[0, 0, 8, 8]}
         >
-          <Text fontSize={["sm", "md", "lg", "x-large"]}>Hi, I&apos;m Jean Gal <br /> and welcome to my website!</Text>
+          <Text
+            fontSize={["sm", "md", "lg", "x-large"]}
+            textAlign={["center", "center", "justify", "justify"]}
+          >
+            Hi, my name is Jean <br /> and welcome to my website!
+          </Text>
         </Flex>
-        <Image
-          src={"./mepic.png"}
-          alt='Jean Gal'
-          objectFit="cover"
-          alignSelf="center"
-          sx={{ filter: 'brightness(80%)' }}
-          border="2px"
-          borderColor="#DCD7C9"
-          m="2%"
-          borderRadius="50%"
-          width="28%"
-        />
+        <Flex width={["50%", "50%", "26%", "26%"]}>
+          <Link isExternal href="https://opensea.io/assets/matic/0x432b412f996876383179dd32b1d5a05d82b1c247/42422459518494875301295097471961745295004447736525645121969000116510048539885">
+            <Image
+              src={"./headshot.jpeg"}
+              alt='Jean Gal'
+              objectFit="cover"
+              alignSelf="center"
+              sx={{ filter: 'brightness(105%)' }}
+              border="1px"
+              borderColor="#DCD7C9"
+              borderRadius="50%"
+            />
+          </Link>
+        </Flex>
         <Flex
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
-          width="36%"
+          width={["80%", "80%", "26%", "26%"]}
+          pt={[8, 8, 0, 0]}
+          ml={[0, 0, 8, 8]}
         >
-          <Text fontSize={["sm", "md", "lg", "x-large"]}>I am a passionate Software Engineer with a focus on Blockchain technology</Text>
+          <Text
+            fontSize={["sm", "md", "lg", "x-large"]}
+            textAlign={["center", "center", "justify", "justify"]}
+
+          > I am a passionate Software Engineer with a focus on Blockchain technology
+          </Text>
         </Flex>
       </Flex>
       <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
