@@ -78,7 +78,7 @@ const Home: NextPage = () => {
               SOFTWARE ENGINEER
             </Text>
             <Text mr={5} transition="all .15s linear">
-              BLOCKCHAIN DEVELOPER
+              BLOCKCHAIN ENGINEER & DEVELOPER
             </Text>
             <Tooltip label="Address copied" isOpen={isOpen} >
               <Text mr={5} transition="all .15s linear" onClick={handleClick} cursor="pointer">
