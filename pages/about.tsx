@@ -1,8 +1,9 @@
 import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
-import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { Heading } from "@chakra-ui/layout";
 import { Box, Flex, Text, Link, Icon } from '@chakra-ui/react';
+import { FaX, FaXTwitter } from 'react-icons/fa6';
 
 const About: NextPage = () => {
 
@@ -51,6 +52,16 @@ const About: NextPage = () => {
         <Heading size="lg">ACHIEVEMENTS</Heading>
       </Box>
       <Box h="2px" bg="#DCD7C9" mb={1} />
+      <Flex px={5} mt="1" flexDirection="row" justifyContent="space-between" alignItems="flex-start">
+        <Box flex="1 0 78%">
+          Winner at ETH Denver, Story Protocol & Chainlink
+          <Link href="https://x.com/StoryProtocol/status/1765462365989175330" ml="2" isExternal>
+            <Icon as={FaExternalLinkAlt} />
+          </Link>
+        </Box>
+        <Box flex="1 0 22%" textAlign="right">March. 2023</Box>
+      </Flex>
+      <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
       <Flex px={5} mt="1" flexDirection="row" justifyContent="space-between" alignItems="flex-start">
         <Box flex="1 0 78%">
           Winner at ETH Global Online Hackathon, Data DAO Category
@@ -115,6 +126,24 @@ const About: NextPage = () => {
             <Heading size="lg">VOLUNTEERING</Heading>
             <Box h="2px" bg="#DCD7C9" mt={1} mb={1} />
           </Box>
+          <Text textAlign="justify">
+            <b>Blockchain Lab @ NYU (New York, USA),  Jan. - Dec. 2024:</b> As an E-board member during Spring 2024, I organized events with leading web3 figures and doubled our online presence. Now, as the president, I am in the process of registering the lab as an official NYU club for the first time, growing our influence through partnerships, events, and workshops.
+          </Text>
+          <Flex direction="row" mt="1%" mb="1%">
+            <Link href="https://www.linkedin.com/company/blockchain-lab-nyu/" isExternal>
+              <FaLinkedin size="1em" />
+            </Link>
+            <Link ml="2" mr="2" href="https://www.instagram.com/nyublockchainlab" isExternal>
+              <FaInstagram size="1em" />
+            </Link>
+            <Link href="https://x.com/BlockchainNYU" isExternal>
+              <FaXTwitter size="1em" />
+            </Link>
+            <Link ml="2" mr="2" href="https://linktr.ee/nyu_blockchain_lab" isExternal>
+              <FaExternalLinkAlt size="1em" />
+            </Link>
+          </Flex>
+          <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
           <Text textAlign="justify" mr={5}>
             <b>Casamasanté (Cap Skirring, Senegal), May 2023:</b> Responsible for the setup of the IT room and upgrading the software systems. I also assisted in running medical tests for 150 kids in remote villages and islands as part of a school health initiative.
           </Text>
