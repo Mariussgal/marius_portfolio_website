@@ -10,12 +10,44 @@ const projects: NextPage = () => {
 
   const ercs = ["ERC-20", "ERC-721(A)", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
   const tools = ["Git - Github", "Slack", "Notion", "Figma"];
-  const devSkills = ["React", "TypeScript", "JavaScript", "Nextjs", "Node.js", "HTML", "Matlab", "Java", "Python", "Dart", "Flutter"];
+  const devSkills = ["Rust", "TypeScript", "JavaScript", "C#", "Nextjs", "React", "Node.js", "Python", "HTML", "Matlab", "Java", "Dart", "Flutter"];
 
   const cards: Project[] = [
     {
+      name: 'KVaC',
+      date: 'Sept. 2024 - Dec. 2024',
+      description: 'Conducting a programming project as part of my independent study supervised by Professor Benedikt Bünz, I am implementing a key-value commitment scheme from Shashank Agrawal and Srinivasan Raghuraman in Rust, known as KVaC.',
+      githubLink: 'https://github.com/jjeangal/rust-kvac',
+      projectLink: 'https://eprint.iacr.org/2020/1161'
+    },
+    {
+      name: 'Course Assitant',
+      date: 'Sept. - Dec. 2024',
+      description: 'Preparing and giving technical lectures and solidity workshops for 60 undergraduates students taking the course “CSGY CS-UY 3943 9223 Introduction to Blockchain and Distributed Ledger Technology” taught by professor Ayesha Kiani.',
+    },
+    {
+      name: 'Computer Security Grader',
+      date: 'Sept. - Dec. 2024',
+      description: 'Grading the homework and technical projects of 95 undergraduates students taking the course “CSCI-UA.0480-​063 Special Topics: Introduction to Computer Security” led by professor Benedikt Bünz.',
+      projectLink: 'https://cs.nyu.edu/~jcb/CSCI-UA.0480-063.html'
+    },
+    {
+      name: 'Nethermind Intern',
+      date: 'May - Aug. 2024',
+      description: 'Supported the transition of Verkle Trees cryptographic proof operations from C# to Rust for Netherminds Ethereum client, achieving 60-70% improvements in proof creation and verification times as part of the \'Verge\' Ethereum roadmap.',
+      githubLink: 'https://github.com/jjeangal/rust-verklehttps://github.com/NethermindEth/bandersnatch-sharp/commit/b1bb93709235283b9d9a4d5bf58f36c7a2cec1cd',
+      projectLink: 'https://www.nethermind.io/verkle-trees'
+    },
+    {
+      name: 'DAO Protocol with BLS Aggregate Signatures',
+      date: 'Feb. - May 2024',
+      description: 'Developed and benchmarked a DAO protocol leveraging BLS aggregate signature verification on Ethereum, achieving a 30% reduction in gas costs for transactions with over 38 signatures compared to ECDSA.',
+      githubLink: 'https://github.com/jjeangal/bls-agg-dao',
+      projectLink: 'https://github.com/jjeangal/bls-agg-dao/blob/main/DaoWithBLS.pdf'
+    },
+    {
       name: 'Co-founded Coal',
-      date: 'Sept. 2023 - Present',
+      date: 'Sept. 2023 - Mar. 2024',
       description: 'Coal is a cutting-edge web3 platform that streamlines digital rights management in the music industry, providing robust copyright violation detection.',
       githubLink: 'https://github.com/Coal-Organization/Coal-Dapp',
       projectLink: 'https://www.loom.com/share/8822c7ad16d24a70a4801c6418616f1b?sid=0f8b11de-06e5-4bef-903b-0f1a968b6970'
