@@ -130,6 +130,18 @@ const About: NextPage = () => {
             <b>Blockchain Lab @ NYU (New York, USA),  Jan. - Dec. 2024:</b> As an E-board member during Spring 2024, I organized events with leading web3 figures and doubled our online presence. Now, as the president, I am in the process of registering the lab as an official NYU club for the first time, growing our influence through partnerships, events, and workshops.
           </Text>
           <Flex direction="row" mt="1%" mb="1%">
+            <Link href="https://www.linkedin.com/company/ethereum-foundation/" isExternal>
+              <FaLinkedin size="1em" />
+            </Link>
+            <Link ml="2" mr="2" href="https://blog.ethereum.org/2024/06/07/devcon7-scholars" isExternal>
+              <FaExternalLinkAlt size="1em" />
+            </Link>
+          </Flex>
+          <Box h="1px" bg="#DCD7C9" mt={1} mb={1} />
+          <Text textAlign="justify">
+            <b>Devcon Scholar, Ethereum Foundation (Bangkok, Thailand), Sept. - Nov. 2024: </b>  Prepare other scholars for the Devcon Conference by teaching about Zero Knowledge in the Ethereum Ecosystem.
+          </Text>
+          <Flex direction="row" mt="1%" mb="1%">
             <Link href="https://www.linkedin.com/company/blockchain-lab-nyu/" isExternal>
               <FaLinkedin size="1em" />
             </Link>
