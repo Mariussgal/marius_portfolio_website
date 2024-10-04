@@ -35,7 +35,7 @@ const projects: NextPage = () => {
       name: 'Blockchain Core Engineer Intern @ Nethermind',
       date: 'May - Aug. 2024',
       description: 'Supported the transition of Verkle Trees cryptographic proof operations from C# to Rust for Netherminds Ethereum client, achieving 60-70% improvements in proof creation and verification times as part of the \'Verge\' Ethereum roadmap.',
-      githubLink: 'https://github.com/jjeangal/rust-verklehttps://github.com/NethermindEth/bandersnatch-sharp/commit/b1bb93709235283b9d9a4d5bf58f36c7a2cec1cd',
+      githubLink: 'https://github.com/NethermindEth/bandersnatch-sharp/commit/b1bb93709235283b9d9a4d5bf58f36c7a2cec1cd',
       projectLink: 'https://www.nethermind.io/verkle-trees'
     },
     {
