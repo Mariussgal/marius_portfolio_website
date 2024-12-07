@@ -12,7 +12,7 @@ export const fetchPoapData = async (): Promise<any> => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            'x-api-key': poapAPIKey
+            //'x-api-key': poapAPIKey
         }
     };
 
