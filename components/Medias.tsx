@@ -19,13 +19,7 @@ export default function Medias() {
                                 <Text>Email</Text>
                             </Box>
                         </MenuItem>
-                        <MenuItem as="a" href="" target="_blank" bgColor="#1A202C">
-                            <Box display="flex" alignItems="center" bg="none">
-                                <FaXTwitter size="20px" />
-                                <Spacer width="5px" />
-                                <Text>Twitter / X</Text>
-                            </Box>
-                        </MenuItem>
+             
                         <MenuItem as="a" href="" target="_blank" bgColor="#1A202C">
                             <Box display="flex" alignItems="center" bg="none">
                                 <FaLinkedin size="20px" />
@@ -52,12 +46,7 @@ export default function Medias() {
                         bg="none"
                         title="Hit me up!"
                     />
-                    <IconButton as="a" href="" target="_blank" mr="1%"
-                        aria-label="Twitter"
-                        icon={<FaXTwitter size="20px" />}
-                        color="#DCD7C9"
-                        bg="none"
-                    />
+        
                     <IconButton as="a" href="" target="_blank" mr="1%"
                         aria-label="LinkedIn"
                         icon={<FaLinkedin size="20px" />}
