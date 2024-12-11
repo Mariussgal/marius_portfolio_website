@@ -6,7 +6,8 @@ import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultConfig,
   RainbowKitProvider,
-  Chain
+  Chain,
+  darkTheme
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider, } from 'wagmi';
 
@@ -27,7 +28,7 @@ const sepolia: Chain = {
   },
   rpcUrls: {
     default: {
-      http: ['https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID'],
+      http: ['https://sepolia.infura.io/v3/2e8d3e111bb64f068fa54221185abd59'],
     },
   },
   blockExplorers: {
@@ -54,7 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
 <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>
+        <RainbowKitProvider locale="en" theme={darkTheme()}>
           <ChakraProvider >
             <Layout>
               <Component {...pageProps} />

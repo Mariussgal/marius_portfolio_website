@@ -1,13 +1,15 @@
 import type { NextPage } from 'next';
 import Marquee from "react-fast-marquee";
-import { useState } from 'react';
-import { Box, Flex, VStack, Text, Button, useToast } from '@chakra-ui/react';
-import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { useState,  } from 'react';
+import { Box, Flex, VStack, Text, Button, useToast, Heading } from '@chakra-ui/react';
+import { useAccount,  } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ethers } from 'ethers';
 
-// Ton ABI et adresse de contrat ici
-const CONTRACT_ADDRESS = "ton-adresse-de-contrat";
+
+
+
+const CONTRACT_ADDRESS = "0x902F0Fb8351E0451DF8C13E1564eb11fE700B56F";
 const CONTRACT_ABI = 
   [
     {
@@ -528,70 +530,140 @@ const Home: NextPage = () => {
 
     const provider = new ethers.BrowserProvider(window.ethereum);
     const signer = await provider.getSigner();
-    const contract = new ethers.Contract("0x902F0Fb8351E0451DF8C13E1564eb11fE700B56F", CONTRACT_ABI, signer);
+    const contract = new ethers.Contract("0x902F0Fb8351E0451DF8C13E1564eb11fE700B56F", CONTRACT_ABI, signer)
 
     try {
       setIsMinting(true);
+      console.log("Minting NFT...");
       const tx = await contract.safeMint(address, "https://ipfs.io/ipfs/bafkreiebxd7imb32wuqbtvrkf7kn6sws2b57xhdc6qdkvdijb4iqj6ilru");
       await tx.wait();
+      console.log("Transaction minted:", tx.hash);
       toast({
-        title: "Succès",
-        description: "NFT minté avec succès !",
+        title: "Success",
+        description: `NFT successfully minted! Verify on Etherscan: https://sepolia.etherscan.io/tx/${tx.hash}`,
         status: "success",
         duration: 5000,
         isClosable: true,
       });
-    } catch (err) {
-      console.error("Erreur lors du mint :", err);
-      toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors du mint.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
-    } finally {
+      setIsMinting(false);
+
+    } catch (err: any) {
+      console.error("Minting error:", err);
+      console.log("Minting error:");
+      if (err?.code === 4001 || err?.reason === "rejected") {
+        toast({
+          title: "Error",
+          description: "Transaction rejected by the user.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else if (err?.message?.toLowerCase().includes("network")) {
+        toast({
+          title: "Error",
+          description: "Network connection problem.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Error while minting the NFT.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      }
       setIsMinting(false);
     }
   };
 
-  return (
-    <Flex flexDirection="column" height="90vh" width="100%" color="#DCD7C9">
-      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" height="90vh" textAlign="center" px={6}>
-        <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" mb={4}>
-          BUILD - EXPLORE - SCALE
-        </Text>
-
-        <VStack spacing={3}>
-          <Text fontSize={["3xl", "4xl"]} fontWeight="bold">
-            Hi, I'm <Text as="span" color="blue.500">Marius</Text>
+  
+    return (
+      <Flex flexDirection="column" height="90vh" width="100%" color="#DCD7C9">
+      <Flex flex={1} justifyContent="center" alignItems="center" px={6}>
+        <Box
+          width="45%"
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <VStack spacing={3} align="center">
+            <Text fontSize={['3xl', '4xl']} fontWeight="bold">
+              Hi, I'm <Text as="span" color="blue.500">Marius</Text>
+            </Text>
+          </VStack>
+          <Text fontSize={['md', 'lg']} mt={6} maxW="700px">
+            A generalist engineering student passionate about Blockchain
+            technology and DeFi, looking out for new experiences in web3.0!
           </Text>
-        </VStack>
+          <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" mt={6}>
+            BUILD - EXPLORE - SCALE
+          </Text>
+        </Box>
 
-        <Text fontSize={["md", "lg"]} mt={6} maxW="700px">
-          A generalist engineering student passionate about Blockchain technology and DeFi, looking out for new experiences in web3.0!
-        </Text>
+        <Box width="45%" h="90%" w="1px" bg="#DCD7C9" mx={6} my={4} />
 
-        <ConnectButton />
+        <Box
+          width="45%"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          textAlign="center"
+        >
+          <Box>
+            <Heading size="lg">My business card NFT</Heading>
+            <Text fontSize={['md', 'lg']} mb={6} mt={6} maxW="700px">
+              Connect your wallet and mint my business card NFT to keep in touch
+              with me!
+            </Text>
+          </Box>
 
-        {isConnected && (
-          <Button
-            mt={6}
-            colorScheme="teal"
-            onClick={mintNFT}
-            isLoading={isMinting}
-            loadingText="Minting..."
+          <VStack spacing={3}>
+            <ConnectButton />
+            {isConnected && (
+              <Button
+                mt={20}
+                colorScheme="teal"
+                onClick={mintNFT}
+                isLoading={isMinting}
+                loadingText="Minting..."
+                bg="#3182CE"
+              >
+                Mint my business card NFT
+              </Button>
+            )}
+          </VStack>
+        </Box>
+      </Flex>
+
+      <Box
+        display="flex"
+        justifyContent="center"
+        height="10%"
+        width="100%"
+        mb={5}
+      >
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          height="auto"
+          border="1px solid #DCD7C9"
+          boxSizing="border-box"
+          borderRadius="10px"
+          width="100%"
+        >
+          <Marquee
+            direction="right"
+            speed={50}
+            gradient={false}
+            pauseOnHover={true}
+            style={{ width: '100%' }}
           >
-            Mint my business card NFT
-          </Button>
-          
-        )}
-        
-      </Box>
-
-      <Box display="flex" justifyContent="center" height="10%" width="100%" mb={5}>
-        <Box display="flex" flexDirection="row" alignItems="center" height="auto" border="1px solid #DCD7C9" boxSizing="border-box" borderRadius="10px" width="100%">
-          <Marquee direction="right" speed={50} gradient={false} pauseOnHover={true} style={{ width: '100%' }}>
             <Text m="10px auto" mr={5} transition="all .15s linear">
               Marius GAL &copy; {new Date().getFullYear()}
             </Text>
