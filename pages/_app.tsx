@@ -2,6 +2,46 @@ import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import Layout from './layout';
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultConfig,
+  RainbowKitProvider,
+  Chain
+} from '@rainbow-me/rainbowkit';
+import { WagmiProvider, } from 'wagmi';
+
+import {
+  QueryClientProvider,
+  QueryClient,
+} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+const sepolia: Chain = {
+  id: 11155111, 
+  name: 'Sepolia Testnet',
+  nativeCurrency: {
+    name: 'Sepolia ETH',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID'],
+    },
+  },
+  blockExplorers: {
+    default: { name: 'Sepolia Explorer', url: 'https://sepolia.etherscan.io' },
+  },
+};
+
+
+const config = getDefaultConfig({
+  appName: 'My RainbowKit App',
+  projectId: 'YOUR_PROJECT_ID',
+  chains: [sepolia ],
+  ssr: true, 
+});
 
 const theme = extendTheme({
   fonts: {
@@ -12,11 +52,17 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+<WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <RainbowKitProvider>
+          <ChakraProvider >
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ChakraProvider>
+        </RainbowKitProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
   );
 }
 
