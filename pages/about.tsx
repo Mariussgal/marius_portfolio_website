@@ -105,7 +105,7 @@ const About: NextPage = () => {
           <Flex flexDirection="column" gap={4}>
             <Box>
               <b>Rugby</b>, Espoirs Fédérale 1 level at the Courbevoie rugby club
-              <Box textAlign="right">2012- Présent</Box>
+              <Box textAlign="right">2012- Present</Box>
             </Box>
             <Box h="1px" bg="#DCD7C9" />
             <Box>
@@ -114,8 +114,8 @@ const About: NextPage = () => {
             </Box>
             <Box h="1px" bg="#DCD7C9" />
             <Box>
-              <b>Gym</b>, Practiced for 2 years as a supplement to improve my rugby skills
-              <Box textAlign="right">2021 - Présent</Box>
+              <b>Weight lifting</b>, Practiced for 2 years as a supplement to improve my rugby skills
+              <Box textAlign="right">2021 - Present</Box>
             </Box>
           </Flex>
          </Flex>
@@ -166,7 +166,7 @@ const About: NextPage = () => {
         <b>Spanish</b>
       
       <Box textAlign="right" flex="1">
-        Intermediate
+        Beginner
       </Box>
       </Box>
     </Flex>
