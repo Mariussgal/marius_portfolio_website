@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
-import { FaExternalLinkAlt, FaFacebook, FaInstagram, FaVideo, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { Heading } from "@chakra-ui/layout";
-import { Box, Flex, Text, Link, Icon, Circle, Grid } from '@chakra-ui/react';
-import { FaX, FaXTwitter } from 'react-icons/fa6';
+import { Box, Flex,  Circle, Grid } from '@chakra-ui/react';
 import * as Icons from '../icons';
 
 
@@ -39,7 +37,7 @@ const About: NextPage = () => {
             </Flex>
             <Box h="1px" bg="#DCD7C9" />
   
-            {/* Ligne 2 */}
+           
             <Flex flexDirection="column">
               <Box>Lycée Montalembert, <b>Courbevoie</b></Box>
               <Box textAlign="center"> Mathematics & Physics Baccalaureate </Box>
@@ -47,7 +45,7 @@ const About: NextPage = () => {
             </Flex>
             <Box h="1px" bg="#DCD7C9" />
   
-            {/* Ligne 3 */}
+            
             <Flex flexDirection="column">
               <Box>Collège Sainte Geneviève, <b>Courbevoie</b></Box>
               <Box textAlign="center">Middle school</Box>
@@ -55,7 +53,7 @@ const About: NextPage = () => {
             </Flex>
             <Box h="1px" bg="#DCD7C9" />
   
-            {/* Ligne 4 */}
+            
             <Flex flexDirection="column">
               <Box>Lycée Lyautey, <b>Casablanca</b></Box>
               <Box textAlign="center">Middle school</Box>
@@ -64,14 +62,14 @@ const About: NextPage = () => {
           </Flex>
         </Flex>
 
-        {/* Colonne Expériences*/}
+       
         <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
           <Box mb={4}>
             <Heading size="lg">EXPERIENCE</Heading>
           </Box>
           <Box h="2px" bg="#DCD7C9" mb={4} />
   
-          {/* Contenu Expériences */}
+          
           <Flex flexDirection="column" gap={4}>
             <Box>
               <b>D-MAX (removal company)</b>,<br /> <br />Organization & planning of the move according to the client's needs. <br />Handling heavy loads using proper techniques
@@ -133,14 +131,14 @@ const About: NextPage = () => {
         
         
         
-        {/* Colonne LANGUAGES */}
+        
         <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
   <Box mb={4}>
     <Heading size="lg">LANGUAGES</Heading>
   </Box>
   <Box h="2px" bg="#DCD7C9" mb={4} />
   <Flex flexDirection="column" gap={4} flex="1">
-    {/* Section French */}
+    
     <Flex flex="1" justify="space-between" alignItems="center">
       <Box flex="1">
         <b>French</b>
@@ -150,7 +148,7 @@ const About: NextPage = () => {
     </Flex>
     <Box h="1px" bg="#DCD7C9" />
     
-    {/* Section English */}
+    
     <Flex flex="1" justify="space-between" alignItems="center">
       <Box flex="1">
         <b>English</b>
@@ -162,7 +160,7 @@ const About: NextPage = () => {
     </Flex>
     <Box h="1px" bg="#DCD7C9" />
 
-    {/* Section Spanish */}
+    
     <Flex flex="1" justify="space-between" alignItems="center">
       <Box flex="1">
         <b>Spanish</b>
@@ -175,7 +173,7 @@ const About: NextPage = () => {
 
   </Flex>
 
-    </Flex>{/* Colonne SKILLS */}
+    </Flex>
     <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
       <Box mb={4}>
         <Heading size="lg">SKILLS</Heading>
@@ -213,7 +211,7 @@ const About: NextPage = () => {
 
 
 
-    {/* Colonne INTERESTS */}
+    
     <Flex alignItems = "stretch" flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
       <Box mb={4}>
         <Heading size="lg">ASSETS</Heading>

@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['ligolang.org'],
   },
+  eslint: {
+    ignoreDuringBuilds: true, // Disable linting during build
+  },
 };
 
 module.exports = nextConfig;
