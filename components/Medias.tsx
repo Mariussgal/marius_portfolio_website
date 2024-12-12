@@ -1,6 +1,5 @@
 import { Flex, IconButton, useBreakpointValue, Menu, MenuButton, MenuItem, MenuList, Box, Spacer, Text } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaBars } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 export default function Medias() {
     const isSmallScreen = useBreakpointValue({ base: true, md: false });

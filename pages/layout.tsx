@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = (props) => {
         <Box>
             <Head>
                 <title>Portfolio App</title>
-                <link rel="icon" href="/favicon.png" />
+                <link rel="icon" href="/favicon1.png" />
             </Head>
             <Flex direction="column" minHeight="100vh" bgGradient="linear(to-br, red.800, purple.900, black)">
                 <Header />

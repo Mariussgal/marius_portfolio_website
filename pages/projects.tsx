@@ -1,10 +1,8 @@
 import type { NextPage } from 'next';
 import { Project } from '../ts/types';
-import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { Box, Text, Flex, Icon, Heading, Link, Circle, Grid } from '@chakra-ui/react';
-import * as Icons from '../icons';
-import { IoIosCheckmark } from 'react-icons/io';
+import { Box, Text, Flex, Icon, Heading, Link,  } from '@chakra-ui/react';
+
 
 const projects: NextPage = () => {
 
