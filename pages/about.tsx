@@ -19,7 +19,7 @@ const About: NextPage = () => {
       
   
       
-      <Flex flexDirection="row" gap={8} alignItems="stretch">
+      <Flex direction={{ base: 'column', md: 'row' }} gap={8} alignItems="stretch">
         
         <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
           <Box mb={4}>
