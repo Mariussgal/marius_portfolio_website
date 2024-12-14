@@ -22,7 +22,7 @@ export default function Header() {
 
     return (
         <Flex alignItems="center" h="10vh" borderBottom="1px" justifyContent="space-between">
-            <Box display="flex" ml={15} mb={5} alignItems="center" flex="1" justifyContent="flex-start" >
+            <Box display="flex" ml={15}  alignItems="center" flex="1" justifyContent="flex-start" >
                 <Box isTruncated onMouseEnter={() => setHoveredLink("home")} onMouseLeave={() => setHoveredLink(null)}>
                     <Link
                         href="/"
