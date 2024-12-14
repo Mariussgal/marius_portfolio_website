@@ -22,7 +22,7 @@ export default function Header() {
 
     return (
         <Flex alignItems="center" h="10vh" borderBottom="1px" justifyContent="space-between">
-            <Box display="flex" alignItems="center" flex="1" justifyContent="flex-start" >
+            <Box display="flex" ml={15} mb={5} alignItems="center" flex="1" justifyContent="flex-start" >
                 <Box isTruncated onMouseEnter={() => setHoveredLink("home")} onMouseLeave={() => setHoveredLink(null)}>
                     <Link
                         href="/"
@@ -40,6 +40,7 @@ export default function Header() {
                                 height={60}
                                 quality={100}
                                 priority
+                            
                                 style={{ objectFit: "contain", marginTop: "25px", width: "auto", height: "auto" }}
                             />
                         )}
