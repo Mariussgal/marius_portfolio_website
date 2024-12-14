@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Marquee from "react-fast-marquee";
 import { useState,  } from 'react';
-import { Box, Flex, VStack, Text, Button, useToast, Heading } from '@chakra-ui/react';
+import { Box, Flex, VStack, Text, Button, useToast, Heading, Link, Image } from '@chakra-ui/react';
 import { useAccount,  } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ethers } from 'ethers';
@@ -581,102 +581,119 @@ const Home: NextPage = () => {
 
   
     return (
-      <Flex flexDirection="column" height="90vh" width="100%" color="#DCD7C9">
-      <Flex flex={1} justifyContent="center" alignItems="center" px={6}>
-        <Box
-          width="45%"
-          textAlign="center"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <VStack spacing={3} align="center">
-            <Text fontSize={['3xl', '4xl']} fontWeight="bold">
-              Hi, I'm <Text as="span" color="blue.500">Marius</Text>
-            </Text>
-          </VStack>
-          <Text fontSize={['md', 'lg']} mt={6} maxW="700px">
-            A generalist engineering student passionate about Blockchain
-            technology and DeFi, looking out for new experiences in web3.0!
-          </Text>
-          <Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" mt={6}>
-            BUILD - EXPLORE - SCALE
-          </Text>
-        </Box>
+	<Flex flexDirection="column" height="90vh" width="100%" color="#DCD7C9">
+	  <Flex flex={1} justifyContent="center" alignItems="center" px={6}>
+		<Box
+		width="45%"
+		textAlign="center"
+		display="flex"
+		flexDirection="column"
+		alignItems="center"
+		>
+		<VStack spacing={3} align="center">
+		  <Text fontSize={['3xl', '4xl']} fontWeight="bold">
+			Hi, I'm <Text as="span" color="blue.500">Marius</Text>
+		  </Text>
+		</VStack>
+		<Text fontSize={['md', 'lg']} mt={6} maxW="700px">
+		  A generalist engineering student passionate about Blockchain
+		  technology and DeFi, looking out for new experiences in web3.0!
+		</Text>
+		<Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" mt={6}>
+		  BUILD - EXPLORE - SCALE
+		</Text>
+		</Box>
 
-        <Box width="45%" h="90%" w="1px" bg="#DCD7C9" mx={6} my={4} />
+		<Box width="45%" h="90%" w="1px" bg="#DCD7C9" mx={6} my={4} />
 
-        <Box
-          width="45%"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          textAlign="center"
-        >
-          <Box>
-            <Heading size="lg">My business card NFT</Heading>
-            <Text fontSize={['md', 'lg']} mb={6} mt={6} maxW="700px">
-              Connect your wallet and mint my business card NFT to keep in touch
-              with me!
-            </Text>
-          </Box>
+		<Box
+		width="45%"
+		display="flex"
+		justifyContent="center"
+		alignItems="center"
+		flexDirection="column"
+		textAlign="center"
+		>
+		
+		  <Heading size="lg">My business card NFT</Heading>
+		  
+			<Flex width={["70%", "70%", "46%", "46%"]}>
+			<Link isExternal href="https://testnets.opensea.io/assets/sepolia/0x76526bc283456aa2445634f22d30020290031d5d/0/">
+			  <Image
+				src={'/businessCard.jpg'}
+				alt='My NFT business card '
+				objectFit="cover"
+				mt={6}
+				display="flex"
+				sx={{ filter: 'brightness(105%)' }}
+				borderColor="#DCD7C9"
+			  />
+			</Link>
+			</Flex>
+		  
+		  <Text fontSize={['md', 'lg']} mb={6} mt={6} maxW="700px">
+			Connect your wallet and mint my business card NFT to keep in touch
+			with me!
+		  </Text>
+		
+		<Flex wrap="wrap" gap={2} >
+		<VStack spacing={3}>
+		  <ConnectButton />
+		  {isConnected && (
+			<Button
+			mt={20}
+			colorScheme="teal"
+			onClick={mintNFT}
+			isLoading={isMinting}
+			loadingText="Minting..."
+			bg="#3182CE"
+			
+			>
+			Mint my business card NFT
+			</Button>
+		  )}
+		</VStack>
+		</Flex>
+		</Box>
+	  </Flex>
 
-          <VStack spacing={3}>
-            <ConnectButton />
-            {isConnected && (
-              <Button
-                mt={20}
-                colorScheme="teal"
-                onClick={mintNFT}
-                isLoading={isMinting}
-                loadingText="Minting..."
-                bg="#3182CE"
-              >
-                Mint my business card NFT
-              </Button>
-            )}
-          </VStack>
-        </Box>
-      </Flex>
-
-      <Box
-        display="flex"
-        justifyContent="center"
-        height="10%"
-        width="100%"
-        mb={5}
-      >
-        <Box
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          height="auto"
-          border="1px solid #DCD7C9"
-          boxSizing="border-box"
-          borderRadius="10px"
-          width="100%"
-        >
-          <Marquee
-            direction="right"
-            speed={50}
-            gradient={false}
-            pauseOnHover={true}
-            style={{ width: '100%' }}
-          >
-            <Text m="10px auto" mr={5} transition="all .15s linear">
-              Marius GAL &copy; {new Date().getFullYear()}
-            </Text>
-            <Text mr={5} transition="all .15s linear">
-              GENERALIST ENGINEER STUDENT
-            </Text>
-            <Text mr={5} transition="all .15s linear">
-              BLOCKCHAIN & DeFi ENTHUSIAST
-            </Text>
-          </Marquee>
-        </Box>
-      </Box>
-    </Flex>
+	  <Box
+		display="flex"
+		justifyContent="center"
+		height="10%"
+		width="100%"
+		mb={5}
+	  >
+		<Box
+		display="flex"
+		flexDirection="row"
+		alignItems="center"
+		height="auto"
+		border="1px solid #DCD7C9"
+		boxSizing="border-box"
+		borderRadius="10px"
+		width="100%"
+		>
+		<Marquee
+		  direction="right"
+		  speed={50}
+		  gradient={false}
+		  pauseOnHover={true}
+		  style={{ width: '100%' }}
+		>
+		  <Text m="10px auto" mr={5} transition="all .15s linear">
+			Marius GAL &copy; {new Date().getFullYear()}
+		  </Text>
+		  <Text mr={5} transition="all .15s linear">
+			GENERALIST ENGINEER STUDENT
+		  </Text>
+		  <Text mr={5} transition="all .15s linear">
+			BLOCKCHAIN & DeFi ENTHUSIAST
+		  </Text>
+		</Marquee>
+		</Box>
+	  </Box>
+	</Flex>
   );
 };
 
