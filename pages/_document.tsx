@@ -6,6 +6,8 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+                    <meta property="og:image" content="/headshot.jpg" />
+                    <meta name="twitter:image" content="/headshot.jpg" />
                 </Head>
                 <body>
                     <Main />
