@@ -33,7 +33,7 @@ const About: NextPage = () => {
             <Flex flexDirection="column">
               <Box><b>ESME</b> Paris</Box>
               <Box textAlign="center">2nd year of generalist engineering, english section</Box>
-              <Box textAlign="right">Sept. 2023 - July 2027</Box>
+              <Box textAlign="right">Sept. 2023 - July 2028</Box>
             </Flex>
             <Box h="1px" bg="#DCD7C9" />
   
@@ -93,7 +93,123 @@ const About: NextPage = () => {
        
       </Flex>
   
+      <Flex flexDirection="column" gap={8} p={8}>
+
+<Flex flexDirection={{ base: "column", md: "row" }} gap={8} alignItems="stretch">
+      
+
+<Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
+<Box mb={4}>
+  <Heading size="lg">LANGUAGES</Heading>
+</Box>
+<Box h="2px" bg="#DCD7C9" mb={4} />
+<Flex flexDirection="column" gap={4} flex="1">
+  
+  <Flex flex="1" justify="space-between" alignItems="center">
+    <Box flex="1">
+      <b>French</b>
+ 
+    <Box textAlign="right" flex="1"> Native </Box>
+    </Box>
+  </Flex>
+  <Box h="1px" bg="#DCD7C9" />
+  
+  
+  <Flex flex="1" justify="space-between" alignItems="center">
+    <Box flex="1">
+      <b>English</b>
+    
+    <Box textAlign="right" flex="1">
+      Fluent
+    </Box>
+    </Box>
+  </Flex>
+  <Box h="1px" bg="#DCD7C9" />
+
+  
+  <Flex flex="1" justify="space-between" alignItems="center">
+    <Box flex="1">
+      <b>Spanish</b>
+    
+    <Box textAlign="right" flex="1">
+      Beginner
+    </Box>
+    </Box>
+  </Flex>
+
+</Flex>
+
+  </Flex>
+  <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
+    <Box mb={4}>
+      <Heading size="lg">SKILLS</Heading>
+    </Box>
+    <Box h="2px" bg="#DCD7C9" mb={4} />
+    <Flex flexDirection="column" gap={4}>
+    <Box h="auto" w="100%"  color="#DCD7C9">
+          <Flex>
+            <Box display={{ base: "none", md: "flex" }} >
+              <Icons.Dev />
+            </Box>
+            <Heading ml={2} size="md">DEVELOPMENT, (currently learning)</Heading>
+          </Flex>
+    <Grid templateColumns={["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3} color="#DCD7C9">
+            {devSkills.map((skill, index) => (
+              <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
+                {skill}
+              </Circle>
+            ))}
+          </Grid>
+          </Box>
+      
+          <Flex alignItems="center">
+                <Box display={{ base: "none", md: "flex" }}>
+                  <Icons.Tools />
+                </Box>
+                <Heading ml={2} size="md">Tools</Heading>
+              </Flex>
+      <Box>
         
+       Git, VSCode, Remix IDE
+      </Box>
+    </Flex>
+  </Flex>
+
+
+
+  
+  <Flex alignItems = "stretch" flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
+    <Box mb={4}>
+      <Heading size="lg">ASSETS</Heading>
+    </Box>
+    <Box h="2px" bg="#DCD7C9" mb={4} />
+    
+    <Flex flex="1" justify="space-between" alignItems="center">
+          <Box>
+            <b>Team spirit</b> 
+ 
+          </Box>
+          </Flex>
+          <Box h="1px" bg="#DCD7C9" />
+          <Flex flex="1" justify="space-between" alignItems="center">
+          <Box>
+            <b>Adaptability and flexibility</b> 
+   
+          </Box>
+          </Flex>
+          <Box h="1px" bg="#DCD7C9" />
+          <Flex flex="1" justify="space-between" alignItems="center">
+          <Box>
+            <b>Sens of organization</b>
+
+          </Box>
+          </Flex>
+          </Flex>
+        
+ 
+    </Flex>
+  </Flex>
+
       <Box color="#DCD7C9" mt={8}>
        
         <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
@@ -121,128 +237,7 @@ const About: NextPage = () => {
          </Flex>
       </Box>
 
-      <Flex flexDirection="column" gap={8} p={8}>
-
-  <Flex flexDirection={{ base: "column", md: "row" }} gap={8} alignItems="stretch">
-        
-        
-        
-        
-        
-        
-        
-        
-        <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
-  <Box mb={4}>
-    <Heading size="lg">LANGUAGES</Heading>
-  </Box>
-  <Box h="2px" bg="#DCD7C9" mb={4} />
-  <Flex flexDirection="column" gap={4} flex="1">
-    
-    <Flex flex="1" justify="space-between" alignItems="center">
-      <Box flex="1">
-        <b>French</b>
-   
-      <Box textAlign="right" flex="1"> Native </Box>
-      </Box>
-    </Flex>
-    <Box h="1px" bg="#DCD7C9" />
-    
-    
-    <Flex flex="1" justify="space-between" alignItems="center">
-      <Box flex="1">
-        <b>English</b>
-      
-      <Box textAlign="right" flex="1">
-        Fluent
-      </Box>
-      </Box>
-    </Flex>
-    <Box h="1px" bg="#DCD7C9" />
-
-    
-    <Flex flex="1" justify="space-between" alignItems="center">
-      <Box flex="1">
-        <b>Spanish</b>
-      
-      <Box textAlign="right" flex="1">
-        Beginner
-      </Box>
-      </Box>
-    </Flex>
-
-  </Flex>
-
-    </Flex>
-    <Flex flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
-      <Box mb={4}>
-        <Heading size="lg">SKILLS</Heading>
-      </Box>
-      <Box h="2px" bg="#DCD7C9" mb={4} />
-      <Flex flexDirection="column" gap={4}>
-      <Box h="auto" w="100%"  color="#DCD7C9">
-            <Flex>
-              <Box display={{ base: "none", md: "flex" }}>
-                <Icons.Dev />
-              </Box>
-              <Heading ml={2} size="md">DEVELOPMENT, (currently learning)</Heading>
-            </Flex>
-      <Grid templateColumns={["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="small" mt={4} gap={3} color="#DCD7C9">
-              {devSkills.map((skill, index) => (
-                <Circle key={index} size="75px" borderColor="#DCD7C9" borderWidth={1}>
-                  {skill}
-                </Circle>
-              ))}
-            </Grid>
-            </Box>
-        
-            <Flex alignItems="center">
-                  <Box display={{ base: "none", md: "flex" }}>
-                    <Icons.Tools />
-                  </Box>
-                  <Heading ml={2} size="md">Tools</Heading>
-                </Flex>
-        <Box>
-          
-         Git, VSCode, Remix IDE
-        </Box>
-      </Flex>
-    </Flex>
-
-
-
-    
-    <Flex alignItems = "stretch" flexDirection="column" flex="1" p={4} bg="gray.800" borderRadius="md" boxShadow="md">
-      <Box mb={4}>
-        <Heading size="lg">ASSETS</Heading>
-      </Box>
-      <Box h="2px" bg="#DCD7C9" mb={4} />
-      
-      <Flex flex="1" justify="space-between" alignItems="center">
-            <Box>
-              <b>Team spirit</b> 
-   
-            </Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
-            <Flex flex="1" justify="space-between" alignItems="center">
-            <Box>
-              <b>Adaptability and flexibility</b> 
      
-            </Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
-            <Flex flex="1" justify="space-between" alignItems="center">
-            <Box>
-              <b>Sens of organization</b>
-
-            </Box>
-            </Flex>
-            </Flex>
-          
-   
-      </Flex>
-    </Flex>
   </Flex>
 
 

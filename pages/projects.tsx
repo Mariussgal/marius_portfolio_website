@@ -5,10 +5,8 @@ import { Box, Text, Flex, Icon, Heading, Link,  } from '@chakra-ui/react';
 
 
 const projects: NextPage = () => {
-  const ercs = ["ERC-20", "ERC-721(A)", "ERC-1155", "ERC-2981", "Access Control", "PaymentSplitter"];
-  const tools = ["Git - Github", "Slack", "Notion", "Figma"];
-  const devSkills = ["Rust", "TypeScript", "JavaScript", "C#", "Nextjs", "React", "Node.js", "Python", "HTML", "Matlab", "Java", "Dart", "Flutter"];
-
+  
+  
   const cards: Project[] = [
     {
       name: "ERC-20 smart contract ",

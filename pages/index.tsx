@@ -590,6 +590,25 @@ const Home: NextPage = () => {
 		flexDirection="column"
 		alignItems="center"
 		>
+
+		<Box
+      	width={["100px", "120px", "150px"]} 
+      	height={["100px", "120px", "150px"]} 
+      	borderRadius="50%" 
+      	overflow="hidden" 
+      	display="flex"
+      	alignItems="center"
+      	justifyContent="center"
+    	>
+      		<Image
+        	src={"/headshot.jpg"}
+        	alt='Marius Gal'
+        	objectFit="cover"
+     		width="100%" 
+        	height="100%" 
+        	sx={{ filter: 'brightness(105%)' }}
+      		/>
+    	</Box>
 		<VStack spacing={3} align="center">
 		  <Text fontSize={['3xl', '4xl']} fontWeight="bold">
 			Hi, I'm <Text as="span" color="blue.500">Marius</Text>
@@ -599,7 +618,7 @@ const Home: NextPage = () => {
 		  A generalist engineering student passionate about Blockchain
 		  technology and DeFi, looking out for new experiences in web3.0!
 		</Text>
-		<Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" mt={6}>
+		<Text fontSize="sm" fontWeight="semibold" letterSpacing="wide" mt={6} display={["none", "block"]}>
 		  BUILD - EXPLORE - SCALE
 		</Text>
 		</Box>
@@ -685,7 +704,7 @@ const Home: NextPage = () => {
 			Marius GAL &copy; {new Date().getFullYear()}
 		  </Text>
 		  <Text mr={5} transition="all .15s linear">
-			GENERALIST ENGINEER STUDENT
+			GENERALIST ENGINEERING STUDENT
 		  </Text>
 		  <Text mr={5} transition="all .15s linear">
 			BLOCKCHAIN & DeFi ENTHUSIAST
