@@ -12,14 +12,14 @@ const projects: NextPage = () => {
       name: "ERC-20 smart contract ",
       date: "July 2024",
       description:
-        "Created a tutorial to deploy an ERC-20 token smart contract on BASE, ARBITRUM-ONE and SCROLL. The functions of the smart contract : \n\n- Enable trading\n- Remove wallet limit\n- Renounce ownership\n- Burn liq",
+        "Created an extensive tutorial for deploying ERC-20 contracts on Base, Arbitrum One, and Scroll. The functions of the smart contract : \n\n- Enable trading\n- Remove wallet limit\n- Renounce ownership\n- Burn liq",
       githubLink: "https://github.com/Mariussgal/ERC20-BASE-smart-contract",
     },
     {
       name: "ERC-721 smart contract ",
       date: "December 2024",
       description:
-        "Created a tutorial to deploy an ERC-721 smart contract on SEPOLIA. In this tutorial, it is explain how to : \n\n- Deploy\n- Verify & Publish\n- Hosting metadata on IPFS\n- Mint and transfer the NFT",
+        "Created a full grown tutorial for deploying ERC-721 contracts on Sepolia. In this tutorial, it is explained how to : \n\n- Deploy\n- Verify & Publish\n- Hosting metadata on IPFS\n- Mint and transfer the NFT",
       githubLink: "https://github.com/Mariussgal/ERC-721_contract_sepolia",
     },
   ];

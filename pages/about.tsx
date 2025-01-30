@@ -32,7 +32,7 @@ const About: NextPage = () => {
             
             <Flex flexDirection="column">
               <Box><b>ESME</b> Paris</Box>
-              <Box textAlign="center">2nd year of generalist engineering, english section</Box>
+              <Box textAlign="center"> Second-Year General Engineering (International, English-Taught Program) </Box>
               <Box textAlign="right">Sept. 2023 - July 2028</Box>
             </Flex>
             <Box h="1px" bg="#DCD7C9" />
@@ -40,7 +40,7 @@ const About: NextPage = () => {
            
             <Flex flexDirection="column">
               <Box>Lycée Montalembert, <b>Courbevoie</b></Box>
-              <Box textAlign="center"> Mathematics & Physics Baccalaureate </Box>
+              <Box textAlign="center"> Science Baccalaureate with Specializations in Mathematics and Physics </Box>
               <Box textAlign="right">Sept. 2020 - July 2023</Box>
             </Flex>
             <Box h="1px" bg="#DCD7C9" />
@@ -72,18 +72,17 @@ const About: NextPage = () => {
           
           <Flex flexDirection="column" gap={4}>
             <Box>
-              <b>D-MAX (removal company)</b>,<br /> <br />Organization & planning of the move according to the client's needs. <br />Handling heavy loads using proper techniques
-              to avoid injury.
-              <Box textAlign="right">june to july 2022, 2023 & 2024</Box>
+              <b>D-MAX (Moving company)</b>,<br /> <br />Successfully completed more than 50 moves, ensuring efficient organization and execution. <br />Applied effective lifting techniques to safely handle heavy loads and prevent injuries.
+              <Box textAlign="right">June - July 2022/23/24</Box>
             </Box>
             <Box h="1px" bg="#DCD7C9" />
             <Box>
-              <b>Levallois entraide (volunteering)</b>, <br /><br />Collections of clothes, food, care for the conflict in Ukraine. <br />Actions aimed at helping the most deprived.  
-              <Box textAlign="right">october to june 2022</Box>
+              <b>Levallois entraide (volunteering)</b>, <br /><br />Collected clothing, food, and essential supplies for humanitarian aid in Ukraine. <br />Participated in initiatives to support underprivileged individuals.  
+              <Box textAlign="right">Oct. 2021 - June 2022</Box>
             </Box>
             <Box h="1px" bg="#DCD7C9" />
             <Box>
-              <b>Les terrasses du clapas (Waiter and dishwasher)</b>,<br /><br /> Taking orders and serving customers at their tables. <br />finding solutions to deal with difficult situations and quickly adapt.
+              <b>Les terrasses du clapas (Waiter and dishwasher)</b>,<br /><br /> Took customer orders and provided attentive table service in a fast-paced environment. <br />Managed high-pressure situations, ensuring smooth service and customer satisfaction.
               <Box textAlign="right">july 2021</Box>
             </Box>
             
@@ -225,22 +224,22 @@ const About: NextPage = () => {
             </Box>
             <Box h="1px" bg="#DCD7C9" />
             <Box>
+              <b>Weight lifting</b>, Practiced for 2 years as a supplement to improve my rugby skills
+              <Box textAlign="right">2023 - Present</Box>
+            </Box>
+            <Box h="1px" bg="#DCD7C9" />
+            <Box>
               <b>Running</b>, Completed the half Marathon of Madrid in 1h53  
               <Box textAlign="right">2021</Box>
             </Box>
             <Box h="1px" bg="#DCD7C9" />
-            <Box>
-              <b>Weight lifting</b>, Practiced for 2 years as a supplement to improve my rugby skills
-              <Box textAlign="right">2021 - Present</Box>
-            </Box>
+
           </Flex>
          </Flex>
       </Box>
 
      
   </Flex>
-
-
 
 
   );
