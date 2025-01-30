@@ -1,6 +1,6 @@
 ## Deployement info
 
-The website has been deployed at: https://jeangal.net/
+The website has been deployed at: https://marius-gal.xyz/
 
 ## Run yourself
 
