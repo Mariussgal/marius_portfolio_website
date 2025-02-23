@@ -1,5 +1,7 @@
 import { Flex, IconButton, useBreakpointValue, Menu, MenuButton, MenuItem, MenuList, Box, Spacer, Text } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaBars } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 export default function Medias() {
     const isSmallScreen = useBreakpointValue({ base: true, md: false });
@@ -18,7 +20,13 @@ export default function Medias() {
                                 <Text>Email</Text>
                             </Box>
                         </MenuItem>
-             
+                        <MenuItem as="a" href="https://x.com/Mariusgal_eth" target="_blank" bgColor="#1A202C">
+                            <Box display="flex" alignItems="center" bg="none">
+                                <FaXTwitter size="20px" />
+                                <Spacer width="5px" />
+                                <Text>Twitter / X</Text>
+                            </Box>
+                        </MenuItem>
                         <MenuItem as="a" href="https://www.linkedin.com/in/marius-gal/" target="_blank" bgColor="#1A202C">
                             <Box display="flex" alignItems="center" bg="none">
                                 <FaLinkedin size="20px" />
@@ -45,6 +53,14 @@ export default function Medias() {
                         bg="none"
                         title="Hit me up!"
                     />
+
+                    <IconButton as="a" href="https://x.com/Mariusgal_eth" target="_blank" mr="1%"
+                        aria-label="X"
+                        icon={<FaXTwitter size="20px" />}
+                        color="#DCD7C9"
+                        bg="none"
+                    />
+        
         
                     <IconButton as="a" href="https://www.linkedin.com/in/marius-gal/" target="_blank" mr="1%"
                         aria-label="LinkedIn"
