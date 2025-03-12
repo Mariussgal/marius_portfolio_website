@@ -16,6 +16,7 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 
+
 const queryClient = new QueryClient();
 
 const sepolia: Chain = {
@@ -53,10 +54,10 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-<WagmiProvider config={config}>
+  <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider locale="en" theme={darkTheme()}>
-          <ChakraProvider >
+          <ChakraProvider>
             <Layout>
               <Component {...pageProps} />
             </Layout>

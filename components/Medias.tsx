@@ -2,7 +2,6 @@ import { Flex, IconButton, useBreakpointValue, Menu, MenuButton, MenuItem, MenuL
 import { FaLinkedin, FaGithub, FaEnvelope, FaBars } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-
 export default function Medias() {
     const isSmallScreen = useBreakpointValue({ base: true, md: false });
 

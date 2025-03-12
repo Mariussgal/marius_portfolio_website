@@ -5,7 +5,7 @@ import { Box, Flex, VStack, Text, Button, useToast, Heading, Link, Image } from 
 import { useAccount,  } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ethers } from 'ethers';
-
+import FlippableNFTCard from '../components/fFlippableNFTcard';
 
 
 
@@ -635,21 +635,8 @@ const Home: NextPage = () => {
 		>
 		
 		  <Heading size="lg">My business card NFT</Heading>
-		  
-			<Flex width={["70%", "70%", "46%", "46%"]}>
-			<Link isExternal href="https://testnets.opensea.io/assets/sepolia/0x76526bc283456aa2445634f22d30020290031d5d/0/">
-			  <Image
-				src={'/businessCard.jpg'}
-				alt='My NFT business card '
-				objectFit="cover"
-				mt={6}
-				display="flex"
-				sx={{ filter: 'brightness(105%)' }}
-				borderColor="#DCD7C9"
-			  />
-			</Link>
-			</Flex>
-		  
+		  <FlippableNFTCard/>
+			
 		  <Text fontSize={['md', 'lg']} mb={6} mt={6} maxW="700px">
 			Connect your wallet and mint my business card NFT to keep in touch
 			with me!
@@ -657,6 +644,7 @@ const Home: NextPage = () => {
 		
 		<Flex wrap="wrap" gap={2} >
 		<VStack spacing={3}>
+		  
 		  <ConnectButton />
 		  {isConnected && (
 			<Button
