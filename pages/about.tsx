@@ -3,12 +3,18 @@ import { useState, useEffect } from 'react';
 import { Heading } from "@chakra-ui/layout";
 import { Box, Flex,  Circle, Grid } from '@chakra-ui/react';
 import * as Icons from '../icons';
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { Link, Icon } from '@chakra-ui/react';
 
 
 
 const About: NextPage = () => {
   const devSkills = [ "TypeScript", "JavaScript", "Nextjs", "React", "Node.js", "Python", "HTML", "Solidity"];
   const [isClient, setIsClient] = useState(false);
+  const cards = [{
+      githubLink: "https://github.com/Mariussgal/Defib_simulation",
+    },
+  ];
 
   useEffect(() => {
     setIsClient(true);
@@ -71,6 +77,19 @@ const About: NextPage = () => {
   
           
           <Flex flexDirection="column" gap={4}>
+          <Box>
+              <b>Saint-Louis Hospital (AP-HP) - Web Development internship</b>,<br /> <br /> During my 2 months long internship, I had the opportunity to work on a project combining healthcare, education, and technology: the development of an online defibrillator simulation platform..
+              <Flex justifyContent="space-between" alignItems="center" mt={1}>
+                
+                {cards[0].githubLink && (
+                  <Link href={cards[0].githubLink} isExternal>
+                    <Icon as={FaGithub} />
+                  </Link>
+                )}
+                <Box>June - July 2025</Box>
+              </Flex>
+            </Box>
+            <Box h="1px" bg="#DCD7C9" />
             <Box>
               <b>D-MAX (Moving company)</b>,<br /> <br />Successfully completed more than 50 moves, ensuring efficient organization and execution. <br />Applied effective lifting techniques to safely handle heavy loads and prevent injuries.
               <Box textAlign="right">June - July 2022/23/24</Box>

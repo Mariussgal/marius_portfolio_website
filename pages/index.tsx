@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import Marquee from "react-fast-marquee";
-import { useState,  } from 'react';
+import { useState, useEffect, startTransition } from 'react';
 import { Box, Flex, VStack, Text, Button, useToast, Heading, Link, Image } from '@chakra-ui/react';
-import { useAccount,  } from 'wagmi';
+import { useAccount } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ethers } from 'ethers';
 import FlippableNFTCard from '../components/fFlippableNFTcard';
+import ClientOnly from '../components/ClientOnly';
 
 
 
@@ -510,11 +511,15 @@ const CONTRACT_ABI =
 
 const Home: NextPage = () => {
   const { isConnected, address } = useAccount();
-  
-  
+  const [isClient, setIsClient] = useState(false);
   const toast = useToast();
-
   const [isMinting, setIsMinting] = useState(false);
+
+  useEffect(() => {
+    startTransition(() => {
+      setIsClient(true);
+    });
+  }, []);
 
   const mintNFT = async () => {
     if (!isConnected) {
@@ -644,21 +649,21 @@ const Home: NextPage = () => {
 		
 		<Flex wrap="wrap" gap={2} >
 		<VStack spacing={3}>
-		  
-		  <ConnectButton />
-		  {isConnected && (
-			<Button
-			mt={20}
-			colorScheme="teal"
-			onClick={mintNFT}
-			isLoading={isMinting}
-			loadingText="Minting..."
-			bg="#3182CE"
-			
-			>
-			Mint my business card NFT
-			</Button>
-		  )}
+		  <ClientOnly fallback={<Box height="40px" />}>
+		    <ConnectButton />
+		    {isConnected && (
+			  <Button
+			  mt={20}
+			  colorScheme="teal"
+			  onClick={mintNFT}
+			  isLoading={isMinting}
+			  loadingText="Minting..."
+			  bg="#3182CE"
+			  >
+			  Mint my business card NFT
+			  </Button>
+		    )}
+		  </ClientOnly>
 		</VStack>
 		</Flex>
 		</Box>
@@ -689,7 +694,7 @@ const Home: NextPage = () => {
 		  style={{ width: '100%' }}
 		>
 		  <Text m="10px auto" mr={5} transition="all .15s linear">
-			Marius GAL &copy; {new Date().getFullYear()}
+			Marius GAL &copy; {isClient ? new Date().getFullYear() : '2024'}
 		  </Text>
 		  <Text mr={5} transition="all .15s linear">
 			GENERALIST ENGINEERING STUDENT
@@ -702,7 +707,7 @@ const Home: NextPage = () => {
 	  </Box>
 	</Flex>
   );
-};
+}
 
 export default Home;
 

@@ -9,7 +9,7 @@ import {
   Chain,
   darkTheme
 } from '@rainbow-me/rainbowkit';
-import { WagmiProvider, } from 'wagmi';
+import { WagmiProvider } from 'wagmi';
 
 import {
   QueryClientProvider,
@@ -17,7 +17,14 @@ import {
 } from "@tanstack/react-query";
 
 
-const queryClient = new QueryClient();
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000, 
+    },
+  },
+});
 
 const sepolia: Chain = {
   id: 11155111, 
@@ -42,7 +49,7 @@ const config = getDefaultConfig({
   appName: 'My RainbowKit App',
   projectId: 'YOUR_PROJECT_ID',
   chains: [sepolia ],
-  ssr: true, 
+  ssr: false, 
 });
 
 const theme = extendTheme({
@@ -54,10 +61,10 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <WagmiProvider config={config}>
+    <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider locale="en" theme={darkTheme()}>
-          <ChakraProvider>
+          <ChakraProvider theme={theme}>
             <Layout>
               <Component {...pageProps} />
             </Layout>

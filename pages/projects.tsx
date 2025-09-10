@@ -22,6 +22,13 @@ const projects: NextPage = () => {
         "Created a full grown tutorial for deploying ERC-721 contracts on Sepolia. In this tutorial, it is explained how to : \n\n- Deploy\n- Verify & Publish\n- Hosting metadata on IPFS\n- Mint and transfer the NFT",
       githubLink: "https://github.com/Mariussgal/ERC-721_contract_sepolia",
     },
+    {
+      name: "12th Man - Chiliz Hackathon",
+      date: "July 2025",
+      description:
+        "A decentralized crowd-lending protocol allowing sports clubs to launch fundraising campaigns with customizable APY.",
+      githubLink: "https://github.com/Mariussgal/12th_man_app/",
+    },
   ];
 
   return (

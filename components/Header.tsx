@@ -2,7 +2,7 @@ import { useBreakpointValue } from "@chakra-ui/react";
 import { Flex, HStack, Button, Box, Link } from "@chakra-ui/react";
 import { MdHome } from "react-icons/md";
 import Medias from "./Medias";
-import { useState, useEffect,  } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import MariusGAL1 from "../image/MariusGAL1.png";
 
