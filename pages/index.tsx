@@ -117,22 +117,20 @@ const Home: NextPage = () => {
         <div className="bg-[#3144D9] text-white pt-6 pb-2 px-4 rounded-b-[16px] relative overflow-hidden shadow-sm shrink-0">
           {/* Top bar */}
           <div className="flex items-center justify-between mb-6 z-10 relative">
-            <div className="flex items-center gap-1.5 bg-[#ffffff20] px-3 py-1.5 rounded-full cursor-pointer hover:bg-[#ffffff30] transition-colors">
-              <Key size={14} className="text-white" />
-              <span className="text-[13px] font-semibold text-white truncate max-w-[80px]">Private Ke...</span>
-              <span className="text-[13px] text-white/70 font-mono">0xe97f62...f30fd8</span>
-              <ChevronRight size={14} className="text-white/70" />
+            <div className="flex items-center gap-2 bg-[#ffffff20] px-3.5 py-2 rounded-[14px] cursor-pointer hover:bg-[#ffffff30] transition-colors">
+              <Key size={15} className="text-white" />
+              <span className="text-[14px] font-semibold text-white truncate max-w-[85px]">Private Ke...</span>
+              <span className="text-[14px] text-white/70 font-mono tracking-tight">0xe97f62...f30fd8</span>
+              <ChevronRight size={15} className="text-white/70" />
             </div>
-            <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-[8px] bg-[#ffffff20] flex items-center justify-center cursor-pointer hover:bg-[#ffffff30] transition-colors">
-                <Copy size={13} className="text-white" />
+            <div className="flex items-center gap-2">
+              <div className="w-[34px] h-[34px] rounded-[10px] bg-[#ffffff20] flex items-center justify-center cursor-pointer hover:bg-[#ffffff30] transition-colors">
+                <Copy size={15} className="text-white" />
               </div>
-              <div className="w-7 h-7 rounded-[8px] bg-[#ffffff20] flex items-center justify-center cursor-pointer hover:bg-[#ffffff30] transition-colors">
-                <Maximize size={13} className="text-white" />
+              <div className="w-[34px] h-[34px] rounded-[10px] bg-[#ffffff20] flex items-center justify-center cursor-pointer hover:bg-[#ffffff30] transition-colors">
+                <Maximize size={15} className="text-white" />
               </div>
-              <div className="w-7 h-7 rounded-[8px] bg-[#ffffff20] flex items-center justify-center cursor-pointer hover:bg-[#ffffff30] transition-colors">
-                <Settings size={13} className="text-white" />
-              </div>
+         
             </div>
           </div>
 
@@ -147,7 +145,6 @@ const Home: NextPage = () => {
                 <FaEthereum size={12} className="text-white/80" />
               </div>
             </div>
-            <ChevronRight size={20} className="text-white/50" />
           </div>
 
           {/* Chart Background Overlay */}
