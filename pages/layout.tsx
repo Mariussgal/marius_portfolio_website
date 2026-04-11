@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Head>
         <title>Marius Gal — Web3 Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon1.png" />
+        <link rel="icon" href="/eth-logo.svg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
