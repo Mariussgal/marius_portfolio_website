@@ -1,33 +1,32 @@
 import type { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 import Layout from './layout';
 import '@rainbow-me/rainbowkit/styles.css';
+import '../styles/globals.css';
+import '../styles/tailwind.css';
 import {
   getDefaultConfig,
   RainbowKitProvider,
   Chain,
-  darkTheme
+  lightTheme,
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
-
 import {
   QueryClientProvider,
   QueryClient,
-} from "@tanstack/react-query";
-
-
+} from '@tanstack/react-query';
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 60 * 1000, 
+      staleTime: 60 * 1000,
     },
   },
 });
 
 const sepolia: Chain = {
-  id: 11155111, 
+  id: 11155111,
   name: 'Sepolia Testnet',
   nativeCurrency: {
     name: 'Sepolia ETH',
@@ -44,18 +43,17 @@ const sepolia: Chain = {
   },
 };
 
-
 const config = getDefaultConfig({
-  appName: 'My RainbowKit App',
+  appName: 'Marius Gal Portfolio',
   projectId: 'YOUR_PROJECT_ID',
-  chains: [sepolia ],
-  ssr: false, 
+  chains: [sepolia],
+  ssr: false,
 });
 
 const theme = extendTheme({
   fonts: {
-    heading: "Montserrat, sans-serif",
-    body: "Montserrat, sans-serif"
+    heading: 'Inter, sans-serif',
+    body: 'Inter, sans-serif',
   },
 });
 
@@ -63,7 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider locale="en" theme={darkTheme()}>
+        <RainbowKitProvider locale="en" theme={lightTheme()}>
           <ChakraProvider theme={theme}>
             <Layout>
               <Component {...pageProps} />

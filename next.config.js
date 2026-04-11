@@ -7,9 +7,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true, // Disable linting during build
   },
-  experimental: {
-    suppressHydrationWarning: false,
-  },
 };
 
 module.exports = nextConfig;

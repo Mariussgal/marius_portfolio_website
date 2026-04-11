@@ -1,369 +1,248 @@
-import type { NextPage } from "next";
-import { useState, useEffect } from "react";
-import { Heading } from "@chakra-ui/layout";
-import { Box, Flex, Circle, Grid } from "@chakra-ui/react";
-import * as Icons from "../icons";
-import { FaGithub } from "react-icons/fa";
-import { Link, Icon } from "@chakra-ui/react";
+import type { NextPage } from 'next';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import {
+  FaGithub, FaLinkedinIn, FaTwitter,
+  FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython,
+  FaHtml5, FaCss3Alt, FaPhp, FaDocker, FaNpm,
+  FaEthereum,
+} from 'react-icons/fa';
+import {
+  SiTypescript, SiSolidity, SiChakraui, SiPrettier,
+  SiPnpm, SiTailwindcss, SiVercel, SiMongodb,
+  SiNumpy, SiGitbook, SiNextdotjs, SiGnubash,
+} from 'react-icons/si';
+import { MdMail, MdSportsFootball, MdFitnessCenter, MdDirectionsRun, MdBarChart } from 'react-icons/md';
 
-const About: NextPage = () => {
-  const devSkills = [
-    "TypeScript",
-    "JavaScript",
-    "Nextjs",
-    "React",
-    "Node.js",
-    "Python",
-    "HTML",
-    "Solidity",
-  ];
-  const [isClient, setIsClient] = useState(false);
-  const cards = [
-    {
-      githubLink: "https://github.com/Mariussgal/Defib_simulation",
-    },
-  ];
+type Skill = { label: string; Icon: React.ElementType; color: string; bg: string };
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+const devSkills: Skill[] = [
+  { label: 'JavaScript',  Icon: FaJs,          color: '#ca8a04', bg: '#fefce8' },
+  { label: 'TypeScript',  Icon: SiTypescript,   color: '#2563eb', bg: '#eff6ff' },
+  { label: 'React',       Icon: FaReact,        color: '#0891b2', bg: '#ecfeff' },
+  { label: 'Node.js',     Icon: FaNodeJs,       color: '#16a34a', bg: '#f0fdf4' },
+  { label: 'Next.js',     Icon: SiNextdotjs,    color: '#1e293b', bg: '#f8fafc' },
+  { label: 'Git',         Icon: FaGitAlt,       color: '#dc2626', bg: '#fef2f2' },
+  { label: 'Prettier',    Icon: SiPrettier,     color: '#1a56db', bg: '#eff6ff' },
+  { label: 'Solidity',    Icon: SiSolidity,     color: '#6366f1', bg: '#eef2ff' },
+  { label: 'Python',      Icon: FaPython,       color: '#ca8a04', bg: '#fefce8' },
+  { label: 'Chakra UI',   Icon: SiChakraui,     color: '#0891b2', bg: '#ecfeff' },
+  { label: 'npm',         Icon: FaNpm,          color: '#dc2626', bg: '#fef2f2' },
+  { label: 'pnpm',        Icon: SiPnpm,         color: '#ca8a04', bg: '#fefce8' },
+  { label: 'Tailwind',    Icon: SiTailwindcss,  color: '#0891b2', bg: '#ecfeff' },
+  { label: 'GitHub',      Icon: FaGithub,       color: '#1e293b', bg: '#f8fafc' },
+  { label: 'HTML5',       Icon: FaHtml5,        color: '#ea580c', bg: '#fff7ed' },
+  { label: 'PHP',         Icon: FaPhp,          color: '#6366f1', bg: '#eef2ff' },
+  { label: 'CSS',         Icon: FaCss3Alt,      color: '#2563eb', bg: '#eff6ff' },
+  { label: 'Vercel',      Icon: SiVercel,       color: '#1e293b', bg: '#f8fafc' },
+  { label: 'Ethereum',    Icon: FaEthereum,     color: '#6366f1', bg: '#eef2ff' },
+  { label: 'MongoDB',     Icon: SiMongodb,      color: '#16a34a', bg: '#f0fdf4' },
+  { label: 'Matplotlib',  Icon: MdBarChart,     color: '#2563eb', bg: '#eff6ff' },
+  { label: 'NumPy',       Icon: SiNumpy,        color: '#2563eb', bg: '#eff6ff' },
+  { label: 'GitBook',     Icon: SiGitbook,      color: '#1e293b', bg: '#f8fafc' },
+  { label: 'Docker',      Icon: FaDocker,       color: '#2563eb', bg: '#eff6ff' },
+  { label: 'Bash',        Icon: SiGnubash,      color: '#16a34a', bg: '#f0fdf4' },
+];
 
-  return (
-    <Flex as="div" flexDirection="column" width="100%" color="#DCD7C9" p={8}>
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        gap={8}
-        alignItems="stretch"
-      >
-        <Flex
-          flexDirection="column"
-          flex="1"
-          p={4}
-          bg="gray.800"
-          borderRadius="md"
-          boxShadow="md"
-        >
-          <Box mb={4}>
-            <Heading size="lg">EDUCATION</Heading>
-          </Box>
-          <Box h="2px" bg="#DCD7C9" mb={4} />
+const education = [
+  { institution: 'ESME Paris', degree: 'Third-Year General Engineering (International, English-Taught Program)', period: 'Sept. 2023 – July 2028' },
+  { institution: 'RMIT Vietnam', degree: 'Semester Abroad (Ho Chi Minh)', period: 'Sept. 2026 – Jan. 2027' },
+  { institution: 'Lycée Montalembert, Courbevoie', degree: 'Science Baccalaureate — Mathematics & Physics', period: 'Sept. 2020 – July 2023' },
+  { institution: 'Collège Sainte Geneviève, Courbevoie', degree: 'Middle school', period: '2018 – 2020' },
+  { institution: 'Lycée Lyautey, Casablanca', degree: 'Middle school', period: '2016 – 2018' },
+];
 
-          <Flex
-            flexDirection="column"
-            gap={4}
-            flex="1"
-            justifyContent="space-between"
-          >
-            <Flex
-              flexDirection="column"
-              flex="1"
-              justifyContent="center"
-              py={2}
-            >
-              <Box>
-                <b>ESME</b> Paris
-              </Box>
-              <Box textAlign="center">
-                {" "}
-                Third-Year General Engineering (International, English-Taught
-                Program){" "}
-              </Box>
-              <Box textAlign="right">Sept. 2023 - July 2028</Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
+const experience = [
+  {
+    role: 'CNM Agency — Co-founder',
+    desc: 'Web creation agency building digital products for startups, SMEs, and entrepreneurs — from wireframe to production.',
+    period: '2025 — Present',
+    link: 'https://www.linkedin.com/company/cnm-agency/',
+    linkIcon: 'linkedin',
+  },
+  {
+    role: 'Saint-Louis Hospital (AP-HP) — Web Dev Intern',
+    desc: 'Developed an online defibrillator simulation platform combining healthcare, education, and technology.',
+    period: 'June – July 2025',
+    link: 'https://github.com/Mariussgal/Defib_simulation',
+    linkIcon: 'github',
+  },
+  {
+    role: 'Les terrasses du clapas (Waiter and dishwasher)',
+    desc: 'Took customer orders and provided attentive table service in a fast-paced environment. Managed high-pressure situations, ensuring smooth service and customer satisfaction.',
+    period: 'July – August 2024',
+  },
+  {
+    role: 'D-MAX (Moving company)',
+    desc: 'Completed 50+ moves, efficient organisation and safe handling of heavy loads.',
+    period: 'June – July 2022/23/24',
+  },
+  {
+    role: 'Levallois entraide (Volunteering)',
+    desc: 'Collected clothing, food, and essential supplies for humanitarian aid in Ukraine.',
+    period: 'Oct. 2021 – June 2022',
+  },
+];
 
-            <Flex
-              flexDirection="column"
-              flex="1"
-              justifyContent="center"
-              py={2}
-            >
-              <Box>
-                Lycée Montalembert, <b>Courbevoie</b>
-              </Box>
-              <Box textAlign="center">
-                {" "}
-                Science Baccalaureate with Specializations in Mathematics and
-                Physics{" "}
-              </Box>
-              <Box textAlign="right">Sept. 2020 - July 2023</Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
+const languages = [
+  { lang: 'French', level: 'Native', pct: 100 },
+  { lang: 'English', level: 'Fluent', pct: 85 },
+  { lang: 'Spanish', level: 'Beginner', pct: 25 },
+];
 
-            <Flex
-              flexDirection="column"
-              flex="1"
-              justifyContent="center"
-              py={2}
-            >
-              <Box>
-                Collège Sainte Geneviève, <b>Courbevoie</b>
-              </Box>
-              <Box textAlign="center">Middle school</Box>
-              <Box textAlign="right">2018 - 2020</Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
+const contacts = [
+  { icon: MdMail, label: 'Email', href: 'mailto:marius.gal@esme.fr', color: '#3358d4' },
+  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/mariussgal', color: '#1e293b' },
+  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://linkedin.com/in/mariusgal', color: '#0077b5' },
+  { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/mariusgal', color: '#1da1f2' },
+];
 
-            <Flex
-              flexDirection="column"
-              flex="1"
-              justifyContent="center"
-              py={2}
-            >
-              <Box>
-                Lycée Lyautey, <b>Casablanca</b>
-              </Box>
-              <Box textAlign="center">Middle school</Box>
-              <Box textAlign="right">2016 - 2018</Box>
-            </Flex>
-          </Flex>
-        </Flex>
+const Row = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div className="flex flex-col h-full">
+    <p className="font-mono text-[12px] font-semibold text-[#8E91A0] uppercase tracking-wider mb-4">{title}</p>
+    <div className="flex-1 rounded-[20px] border border-[#E5E9F2] bg-white shadow-[0_4px_24px_rgba(0,0,0,0.02)] overflow-hidden">{children}</div>
+  </div>
+);
 
-        <Flex
-          flexDirection="column"
-          flex="1"
-          p={4}
-          bg="gray.800"
-          borderRadius="md"
-          boxShadow="md"
-        >
-          <Box mb={4}>
-            <Heading size="lg">EXPERIENCE</Heading>
-          </Box>
-          <Box h="2px" bg="#DCD7C9" mb={4} />
+const About: NextPage = () => (
+  <div className="flex flex-col min-h-full">
+    {/* Hero */}
+    <div className="w-full px-8 md:px-16 pt-8 pb-6 flex-shrink-0 z-10 bg-white border-b border-[#E5E9F2]">
+      <div className="flex items-center gap-6">
+        <div className="w-[80px] h-[80px] rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#E5E9F2] overflow-hidden flex-shrink-0">
+          <Image src="/headshot.jpg" alt="Marius Gal" width={80} height={80} className="w-full h-full object-cover" />
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-[36px] font-extrabold text-[#1C1E23] leading-tight tracking-tight">Marius Gal</h1>
+          <p className="font-mono text-[12px] text-[#4B65FF] font-semibold tracking-widest uppercase mt-2">Generalist engineering student</p>
+        </div>
+      </div>
+    </div>
 
-          <Flex flexDirection="column" gap={4}>
-            <Box>
-              <b>Saint-Louis Hospital (AP-HP) - Web Development internship</b>,
-              <br /> <br /> During my 2 months long internship, I had the
-              opportunity to work on a project combining healthcare, education,
-              and technology: the development of an online defibrillator
-              simulation platform..
-              <Flex justifyContent="space-between" alignItems="center" mt={1}>
-                {cards[0].githubLink && (
-                  <Link href={cards[0].githubLink} isExternal>
-                    <Icon as={FaGithub} />
-                  </Link>
-                )}
-                <Box>June - July 2025</Box>
-              </Flex>
-            </Box>
-            <Box h="1px" bg="#DCD7C9" />
-            <Box>
-              <b>D-MAX (Moving company)</b>,<br /> <br />
-              Successfully completed more than 50 moves, ensuring efficient
-              organization and execution. <br />
-              Applied effective lifting techniques to safely handle heavy loads
-              and prevent injuries.
-              <Box textAlign="right">June - July 2022/23/24</Box>
-            </Box>
-            <Box h="1px" bg="#DCD7C9" />
-            <Box>
-              <b>Levallois entraide (volunteering)</b>, <br />
-              <br />
-              Collected clothing, food, and essential supplies for humanitarian
-              aid in Ukraine. <br />
-              Participated in initiatives to support underprivileged
-              individuals.
-              <Box textAlign="right">Oct. 2021 - June 2022</Box>
-            </Box>
-            <Box h="1px" bg="#DCD7C9" />
-            <Box>
-              <b>Les terrasses du clapas (Waiter and dishwasher)</b>,<br />
-              <br /> Took customer orders and provided attentive table service
-              in a fast-paced environment. <br />
-              Managed high-pressure situations, ensuring smooth service and
-              customer satisfaction.
-              <Box textAlign="right">july 2021</Box>
-            </Box>
-          </Flex>
-        </Flex>
-      </Flex>
+    {/* Content */}
+    <div className="w-full px-8 md:px-16 py-8 flex flex-col gap-8">
 
-      <Flex flexDirection="column" gap={8} p={8}>
-        <Flex
-          flexDirection={{ base: "column", md: "row" }}
-          gap={8}
-          alignItems="stretch"
-        >
-          <Flex
-            flexDirection="column"
-            flex="1"
-            p={4}
-            bg="gray.800"
-            borderRadius="md"
-            boxShadow="md"
-          >
-            <Box mb={4}>
-              <Heading size="lg">LANGUAGES</Heading>
-            </Box>
-            <Box h="2px" bg="#DCD7C9" mb={4} />
-            <Flex flexDirection="column" gap={4} flex="1">
-              <Flex flex="1" justify="space-between" alignItems="center">
-                <Box flex="1">
-                  <b>French</b>
+      {/* Education + Experience — 2-col */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Row title="Education">
+          {education.map((ed, i) => (
+            <motion.div key={ed.institution}
+              initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.06 }}
+              className={`px-6 py-5 hover:bg-[#F5F6FA] transition-colors ${i < education.length - 1 ? 'border-b border-[#E5E9F2]' : ''}`}>
+              <p className="text-[15px] font-semibold text-[#1C1E23]">{ed.institution}</p>
+              <p className="text-[13px] font-medium text-[#4B4D59] mt-1 leading-snug">{ed.degree}</p>
+              <p className="font-mono text-[11px] font-medium text-[#8E91A0] bg-[#F5F6FA] px-2 py-0.5 rounded-md inline-block mt-3">{ed.period}</p>
+            </motion.div>
+          ))}
+        </Row>
 
-                  <Box textAlign="right" flex="1">
-                    {" "}
-                    Native{" "}
-                  </Box>
-                </Box>
-              </Flex>
-              <Box h="1px" bg="#DCD7C9" />
+        <Row title="Experience">
+          {experience.map((exp, i) => (
+            <div key={exp.role}
+              className={`px-6 py-5 hover:bg-[#F5F6FA] transition-colors ${i < experience.length - 1 ? 'border-b border-[#E5E9F2]' : ''}`}>
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <p className="text-[15px] font-semibold text-[#1C1E23] flex-1">{exp.role}</p>
+                <span className="font-mono text-[11px] font-medium text-[#8E91A0] bg-[#F5F6FA] px-2 py-0.5 rounded-md flex-shrink-0">{exp.period}</span>
+              </div>
+              <p className="text-[13px] font-medium text-[#4B4D59] mt-1.5 leading-relaxed">{exp.desc}</p>
+              {exp.link && (
+                <a href={exp.link} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[12px] font-medium text-[#4B65FF] no-underline hover:text-[#3A54E5] transition-colors mt-3">
+                  {exp.linkIcon === 'github' ? <FaGithub size={14} /> : <FaLinkedinIn size={14} />} View
+                </a>
+              )}
+            </div>
+          ))}
+        </Row>
+      </div>
 
-              <Flex flex="1" justify="space-between" alignItems="center">
-                <Box flex="1">
-                  <b>English</b>
+      {/* Languages + Assets — 2-col */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Row title="Languages">
+          <div className="flex flex-col justify-center h-full px-6 py-6 gap-4">
+            {languages.map((l, i, arr) => (
+              <div key={l.lang} className={`flex items-center gap-3 ${i < arr.length - 1 ? 'border-b border-[#E5E9F2] pb-4' : ''}`}>
+                <div className="w-2 h-2 rounded-full bg-[#4B65FF] flex-shrink-0" />
+                <span className="text-[15px] font-medium text-[#1C1E23] flex-1">{l.lang}</span>
+                <span className="text-[13px] font-medium text-[#8E91A0] bg-[#F5F6FA] px-2.5 py-1 rounded-md">{l.level}</span>
+              </div>
+            ))}
+          </div>
+        </Row>
 
-                  <Box textAlign="right" flex="1">
-                    Fluent
-                  </Box>
-                </Box>
-              </Flex>
-              <Box h="1px" bg="#DCD7C9" />
+        <Row title="Assets">
+          <div className="flex flex-col justify-center h-full px-6 py-6 gap-4">
+            {['Team spirit', 'Adaptability and flexibility', 'Sense of organization'].map((asset, i, arr) => (
+              <div key={asset} className={`flex items-center gap-3 ${i < arr.length - 1 ? 'border-b border-[#E5E9F2] pb-4' : ''}`}>
+                <div className="w-2 h-2 rounded-full bg-[#4B65FF] flex-shrink-0" />
+                <span className="text-[15px] font-medium text-[#1C1E23]">{asset}</span>
+              </div>
+            ))}
+          </div>
+        </Row>
+      </div>
 
-              <Flex flex="1" justify="space-between" alignItems="center">
-                <Box flex="1">
-                  <b>Spanish</b>
+      {/* Hobbies — full width */}
+      <div>
+        <Row title="Hobbies">
+          <div className="flex flex-col md:flex-row md:items-stretch h-full">
+            {[
+              { title: 'Rugby', desc: 'Espoirs Fédérale 1 level at the Courbevoie rugby club', date: '2012 - Present' },
+              { title: 'Weight lifting', desc: 'Practicing as a supplement to improve my rugby skills', date: '2023 - Present' },
+              { title: 'Running', desc: 'Completed the half Marathon of Madrid in 1h53', date: '2021' }
+            ].map((hobby, i, arr) => (
+              <div key={hobby.title} className={`flex flex-col justify-center p-6 flex-1 ${i < arr.length - 1 ? 'border-b md:border-b-0 md:border-r border-[#E5E9F2]' : ''} hover:bg-[#F5F6FA] transition-colors`}>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[16px] font-semibold text-[#1C1E23]">{hobby.title}</span>
+                  <span className="font-mono text-[11px] font-medium text-[#8E91A0] bg-[#F5F6FA] px-2 py-0.5 rounded-md flex-shrink-0">{hobby.date}</span>
+                </div>
+                <p className="text-[13px] font-medium text-[#4B4D59] leading-relaxed">{hobby.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Row>
+      </div>
 
-                  <Box textAlign="right" flex="1">
-                    Beginner
-                  </Box>
-                </Box>
-              </Flex>
-            </Flex>
-          </Flex>
-          <Flex
-            flexDirection="column"
-            flex="1"
-            p={4}
-            bg="gray.800"
-            borderRadius="md"
-            boxShadow="md"
-          >
-            <Box mb={4}>
-              <Heading size="lg">SKILLS</Heading>
-            </Box>
-            <Box h="2px" bg="#DCD7C9" mb={4} />
-            <Flex flexDirection="column" gap={4}>
-              <Box h="auto" w="100%" color="#DCD7C9">
-                <Flex>
-                  <Box display={{ base: "none", md: "flex" }}>
-                    <Icons.Dev />
-                  </Box>
-                  <Heading ml={2} size="md">
-                    DEVELOPMENT, (currently learning)
-                  </Heading>
-                </Flex>
-                <Grid
-                  templateColumns={[
-                    "repeat(2, 1fr)",
-                    "repeat(2, 1fr)",
-                    "repeat(3, 1fr)",
-                    "repeat(4, 1fr)",
-                  ]}
-                  fontSize="small"
-                  mt={4}
-                  gap={3}
-                  color="#DCD7C9"
-                >
-                  {devSkills.map((skill, index) => (
-                    <Circle
-                      key={index}
-                      size="75px"
-                      borderColor="#DCD7C9"
-                      borderWidth={1}
-                    >
-                      {skill}
-                    </Circle>
-                  ))}
-                </Grid>
-              </Box>
+      {/* Skills */}
+      <div>
+        <p className="font-mono text-[12px] font-semibold text-[#8E91A0] uppercase tracking-wider mb-4">Skills</p>
+        <div className="flex flex-wrap gap-2.5">
+          {devSkills.map(({ label, Icon, color, bg }) => (
+            <motion.span key={label}
+              whileHover={{ y: -2 }}
+              className="inline-flex items-center gap-2 text-[14px] font-medium px-3.5 py-2 rounded-[12px] shadow-sm transition-all"
+              style={{ color: '#1C1E23', backgroundColor: '#FFFFFF', border: `1px solid ${color}30` }}>
+              <span className="p-1 rounded-md flex items-center justify-center" style={{ backgroundColor: bg }}>
+                 <Icon size={14} style={{ color }} />
+              </span>
+              {label}
+            </motion.span>
+          ))}
+        </div>
+      </div>
 
-              <Flex alignItems="center">
-                <Box display={{ base: "none", md: "flex" }}>
-                  <Icons.Tools />
-                </Box>
-                <Heading ml={2} size="md">
-                  Tools
-                </Heading>
-              </Flex>
-              <Box>Git, VSCode, Remix IDE</Box>
-            </Flex>
-          </Flex>
+      {/* Contact */}
+      <div id="contact">
+        <p className="font-mono text-[12px] font-semibold text-[#8E91A0] uppercase tracking-wider mb-4 mt-4">Contact</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {contacts.map(({ icon: Icon, label, href, color }) => (
+            <a key={label} href={href}
+              target={href.startsWith('http') ? '_blank' : undefined}
+              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="flex flex-col items-center justify-center gap-3 p-5 rounded-[20px] border border-[#E5E9F2] bg-white no-underline hover:bg-[#F5F6FA] hover:-translate-y-1 transition-all shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+              <div className="w-[42px] h-[42px] rounded-[14px] flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: color + '15' }}>
+                <Icon size={20} style={{ color }} />
+              </div>
+              <span className="text-[14px] font-medium text-[#1C1E23]">{label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
 
-          <Flex
-            alignItems="stretch"
-            flexDirection="column"
-            flex="1"
-            p={4}
-            bg="gray.800"
-            borderRadius="md"
-            boxShadow="md"
-          >
-            <Box mb={4}>
-              <Heading size="lg">ASSETS</Heading>
-            </Box>
-            <Box h="2px" bg="#DCD7C9" mb={4} />
-
-            <Flex flex="1" justify="space-between" alignItems="center">
-              <Box>
-                <b>Team spirit</b>
-              </Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
-            <Flex flex="1" justify="space-between" alignItems="center">
-              <Box>
-                <b>Adaptability and flexibility</b>
-              </Box>
-            </Flex>
-            <Box h="1px" bg="#DCD7C9" />
-            <Flex flex="1" justify="space-between" alignItems="center">
-              <Box>
-                <b>Sens of organization</b>
-              </Box>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Flex>
-
-      <Box color="#DCD7C9" mt={8}>
-        <Flex
-          flexDirection="column"
-          flex="1"
-          p={4}
-          bg="gray.800"
-          borderRadius="md"
-          boxShadow="md"
-        >
-          <Box mb={4}>
-            <Heading size="lg">HOBBIES</Heading>
-          </Box>
-          <Box h="2px" bg="#DCD7C9" mb={4} />
-
-          <Flex flexDirection="column" gap={4}>
-            <Box>
-              <b>Rugby</b>, Espoirs Fédérale 1 level at the Courbevoie rugby
-              club
-              <Box textAlign="right">2012- Present</Box>
-            </Box>
-            <Box h="1px" bg="#DCD7C9" />
-            <Box>
-              <b>Weight lifting</b>, Practiced for 2 years as a supplement to
-              improve my rugby skills
-              <Box textAlign="right">2023 - Present</Box>
-            </Box>
-            <Box h="1px" bg="#DCD7C9" />
-            <Box>
-              <b>Running</b>, Completed the half Marathon of Madrid in 1h53
-              <Box textAlign="right">2021</Box>
-            </Box>
-            <Box h="1px" bg="#DCD7C9" />
-          </Flex>
-        </Flex>
-      </Box>
-    </Flex>
-  );
-};
+    </div>
+  </div>
+);
 
 export default About;

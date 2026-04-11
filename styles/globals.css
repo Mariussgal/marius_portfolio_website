@@ -1,0 +1,29 @@
+:root {
+  --rabby-blue: #6E84FF;
+  --rabby-blue-dark: #4B65FF;
+  --rabby-blue-light: #EEF1FF;
+  --rabby-bg: #F5F6FA;
+  --card-bg: #FFFFFF;
+  --border: #E5E9F2;
+  --text-primary: #1C1E23;
+  --text-secondary: #4B4D59;
+  --text-muted: #8E91A0;
+  --green-positive: #27C193;
+  --green-chart: #27C193;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--rabby-bg);
+}
+
+body {
+  font-family: ui-rounded, 'SF Pro Rounded', 'Nunito', sans-serif;
+  color: var(--text-primary);
+}
