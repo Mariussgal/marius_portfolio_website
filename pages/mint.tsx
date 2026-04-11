@@ -55,7 +55,7 @@ const Mint: NextPage = () => {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100dvh-144px)] overflow-hidden">
+    <div className="flex flex-col h-[calc(100dvh-144px)] overflow-y-auto overflow-x-hidden lg:overflow-hidden">
       {/* Hero */}
       <div className="w-full px-8 md:px-16 pt-6 pb-4 flex-shrink-0 z-10 bg-white border-b border-[#E5E9F2]">
         <div className="flex flex-col">
@@ -66,10 +66,10 @@ const Mint: NextPage = () => {
       </div>
 
       {/* Main content — 2-col on desktop */}
-      <div className="w-full flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6 px-8 md:px-16 py-6 min-h-0 pb-10">
+      <div className="w-full flex-1 lg:overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-6 px-8 md:px-16 py-6 min-h-min lg:min-h-0 pb-10">
         {/* Left: NFT preview */}
-        <div className="flex flex-col h-full rounded-[20px] border border-[#E5E9F2] p-4 bg-white  min-h-0">
-          <div className="w-full flex-1 relative flex justify-center items-center mb-3 min-h-0">
+        <div className="flex flex-col h-full rounded-[20px] border border-[#E5E9F2] p-4 bg-white min-h-[350px] lg:min-h-0">
+          <div className="w-full flex-1 relative flex justify-center items-center mb-3 min-h-[200px] lg:min-h-0">
             <Image src="/businessCard.jpg" alt="NFT Business Card" fill
               className="object-contain rounded-[12px] " />
           </div>

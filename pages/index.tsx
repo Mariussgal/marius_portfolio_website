@@ -112,9 +112,9 @@ const Home: NextPage = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className="flex md:hidden flex-col min-h-[100dvh] bg-[#F5F6FA] font-sans pb-20 relative">
+      <div className="flex md:hidden flex-col min-h-[calc(100dvh-80px)] bg-[#F5F6FA] font-sans relative overflow-y-auto">
         {/* Blue Header Section */}
-        <div className="bg-[#3144D9] text-white pt-12 pb-6 px-4 rounded-b-[16px] relative overflow-hidden shadow-sm">
+        <div className="bg-[#3144D9] text-white pt-6 pb-2 px-4 rounded-b-[16px] relative overflow-hidden shadow-sm shrink-0">
           {/* Top bar */}
           <div className="flex items-center justify-between mb-6 z-10 relative">
             <div className="flex items-center gap-1.5 bg-[#ffffff20] px-3 py-1.5 rounded-full cursor-pointer hover:bg-[#ffffff30] transition-colors">
@@ -172,49 +172,49 @@ const Home: NextPage = () => {
         </div>
 
         {/* Actions Grid */}
-        <div className="mx-4 mt-4 bg-white rounded-[16px] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E5E9F2]/60">
+        <div className="mx-4 mt-2 bg-white rounded-[16px] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E5E9F2]/60">
           <div className="grid grid-cols-3 divide-x divide-y divide-[#E5E9F2]/60">
-            <Link href="/projects" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors no-underline">
-              <Briefcase size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">Projects</span>
+            <Link href="/projects" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors no-underline">
+              <Briefcase size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">Projects</span>
             </Link>
-            <Link href="/about" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors border-t-0 no-underline">
-              <User size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">About</span>
+            <Link href="/about" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors border-t-0 no-underline">
+              <User size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">About</span>
             </Link>
-            <Link href="/mint" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors border-t-0 no-underline">
-              <Diamond size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">Mint NFT</span>
+            <Link href="/mint" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors border-t-0 no-underline">
+              <Diamond size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">Mint NFT</span>
             </Link>
-            <a href="https://github.com/Mariussgal" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors no-underline">
-              <FaGithub size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">GitHub</span>
+            <a href="https://github.com/Mariussgal" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors no-underline">
+              <FaGithub size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/marius-gal" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors no-underline">
-              <FaLinkedin size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">LinkedIn</span>
+            <a href="https://linkedin.com/in/marius-gal" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors no-underline">
+              <FaLinkedin size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">LinkedIn</span>
             </a>
-            <a href="https://twitter.com/mariusgal_eth" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors no-underline">
-              <FaTwitter size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">Twitter</span>
+            <a href="https://twitter.com/mariusgal_eth" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors no-underline">
+              <FaTwitter size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">Twitter</span>
             </a>
-            <a href="mailto:marius.gal05@gmail.com" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors no-underline">
-              <Mail size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">Contact</span>
+            <a href="mailto:marius.gal05@gmail.com" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors no-underline">
+              <Mail size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">Contact</span>
             </a>
-            <a href="/cv-marius-gal.pdf" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors no-underline">
-              <FileText size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">Resume</span>
+            <a href="/cv-marius-gal.pdf" target="_blank" rel="noreferrer" className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors no-underline">
+              <FileText size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">Resume</span>
             </a>
-            <a href='/about' className="bg-white flex flex-col items-center justify-center py-6 gap-2 cursor-pointer active:bg-gray-50 transition-colors">
-              <Star size={22} className="text-[#3144D9]" />
-              <span className="text-[13px] font-semibold text-[#1C1E23]">Skills</span>
+            <a href='/about' className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors">
+              <Star size={20} className="text-[#3144D9]" />
+              <span className="text-[12px] font-semibold text-[#1C1E23]">Skills</span>
             </a>
           </div>
         </div>
 
         {/* Market Info */}
-        <div className="mx-4 mt-4 bg-white rounded-[12px] p-4 py-3 flex items-center justify-between shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E5E9F2]/60">
+        <div className="mx-4 mt-2 bg-white rounded-[12px] p-3 flex items-center justify-between shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E5E9F2]/60">
           <div className="flex items-center gap-2">
             <div className="w-5 h-5 rounded-full bg-[#1C1E23] flex items-center justify-center">
               <FaEthereum size={11} className="text-white" />
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
         </div>
 
         {/* dApp Status */}
-        <div className="mx-4 mt-4 bg-white rounded-[12px] p-4 flex flex-col items-center justify-center shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E5E9F2]/60 text-center min-h-[100px]">
+        <div className="mx-4 mt-2 mb-4 bg-white rounded-[12px] p-3 flex flex-col items-center justify-center shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E5E9F2]/60 text-center min-h-[80px]">
           {mounted && isConnected ? (
             <div className="flex flex-col items-center">
               <div className="relative mb-2">
