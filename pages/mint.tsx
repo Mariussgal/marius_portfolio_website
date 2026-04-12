@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useToast } from '@chakra-ui/react';
@@ -55,6 +56,14 @@ const Mint: NextPage = () => {
   };
 
   return (
+    <>
+    <Head>
+      <title>Mint NFT — Marius Gal</title>
+      <meta name="description" content="Mint Marius Gal's NFT business card for free on the Ethereum Sepolia testnet. An on-chain way to keep in touch." />
+      <link rel="canonical" href="https://gal-marius.xyz/mint" />
+      <meta property="og:url" content="https://gal-marius.xyz/mint" />
+      <meta property="og:title" content="Mint NFT — Marius Gal" />
+    </Head>
     <div className="flex flex-col h-[calc(100dvh-144px)] overflow-y-auto overflow-x-hidden lg:overflow-hidden">
       {/* Hero */}
       <div className="w-full px-8 md:px-16 pt-6 pb-4 flex-shrink-0 z-10 bg-white border-b border-[#E5E9F2]">
@@ -100,6 +109,7 @@ const Mint: NextPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

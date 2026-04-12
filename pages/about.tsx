@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
@@ -93,8 +94,8 @@ const languages = [
 const contacts = [
   { icon: MdMail, label: 'Email', href: 'mailto:marius.gal@esme.fr', color: '#3358d4' },
   { icon: FaGithub, label: 'GitHub', href: 'https://github.com/mariussgal', color: '#1e293b' },
-  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://linkedin.com/in/mariusgal', color: '#0077b5' },
-  { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/mariusgal', color: '#1da1f2' },
+  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://linkedin.com/in/marius-gal', color: '#0077b5' },
+  { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/mariusgal_eth', color: '#1da1f2' },
 ];
 
 const Row = ({ title, children }: { title: string; children: React.ReactNode }) => (
@@ -105,6 +106,14 @@ const Row = ({ title, children }: { title: string; children: React.ReactNode }) 
 );
 
 const About: NextPage = () => (
+  <>
+  <Head>
+    <title>About — Marius Gal</title>
+    <meta name="description" content="Learn about Marius Gal — his skills in Solidity, React, TypeScript, blockchain development, and his background as a generalist engineering student." />
+    <link rel="canonical" href="https://gal-marius.xyz/about" />
+    <meta property="og:url" content="https://gal-marius.xyz/about" />
+    <meta property="og:title" content="About — Marius Gal" />
+  </Head>
   <div className="flex flex-col min-h-full">
     {/* Hero */}
     <div className="w-full px-8 md:px-16 pt-8 pb-6 flex-shrink-0 z-10 bg-white border-b border-[#E5E9F2]">
@@ -243,6 +252,7 @@ const About: NextPage = () => (
 
     </div>
   </div>
+  </>
 );
 
 export default About;

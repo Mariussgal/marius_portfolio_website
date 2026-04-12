@@ -15,10 +15,58 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Head>
         <title>Marius Gal — Web3 Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Marius Gal — Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card on Sepolia testnet." />
+        <meta name="keywords" content="Marius Gal, Web3, Blockchain, DeFi, Solidity, Ethereum, Smart Contract, NFT, Portfolio, Developer, React, Next.js, ETHGlobal" />
+        <meta name="author" content="Marius Gal" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#3144D9" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://gal-marius.xyz/" />
+        <meta property="og:title" content="Marius Gal — Web3 Portfolio" />
+        <meta property="og:description" content="Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card." />
+        <meta property="og:image" content="https://gal-marius.xyz/headshot.jpg" />
+        <meta property="og:site_name" content="Marius Gal" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mariusgal_eth" />
+        <meta name="twitter:creator" content="@mariusgal_eth" />
+        <meta name="twitter:title" content="Marius Gal — Web3 Portfolio" />
+        <meta name="twitter:description" content="Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card." />
+        <meta name="twitter:image" content="https://gal-marius.xyz/headshot.jpg" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://gal-marius.xyz/" />
+
         <link rel="icon" href="/eth-logo.svg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Marius Gal",
+              "url": "https://gal-marius.xyz/",
+              "image": "https://gal-marius.xyz/headshot.jpg",
+              "jobTitle": "Generalist Engineering Student",
+              "description": "Passionate about blockchain technology and DeFi, looking out for new experiences in Web3.",
+              "sameAs": [
+                "https://github.com/Mariussgal",
+                "https://linkedin.com/in/marius-gal",
+                "https://twitter.com/mariusgal_eth"
+              ],
+              "knowsAbout": ["Blockchain", "DeFi", "Solidity", "Ethereum", "Smart Contracts", "NFT", "React", "Next.js", "TypeScript"]
+            })
+          }}
         />
       </Head>
 

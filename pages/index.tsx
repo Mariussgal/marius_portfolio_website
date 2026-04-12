@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
@@ -111,6 +112,13 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Marius Gal — Web3 Portfolio</title>
+        <meta name="description" content="Marius Gal — Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card." />
+        <link rel="canonical" href="https://gal-marius.xyz/" />
+        <meta property="og:url" content="https://gal-marius.xyz/" />
+        <meta property="og:title" content="Marius Gal — Web3 Portfolio" />
+      </Head>
       {/* Mobile View */}
       <div className="flex md:hidden flex-col min-h-[calc(100dvh-80px)] bg-[#F5F6FA] font-sans relative overflow-y-auto">
         {/* Blue Header Section */}

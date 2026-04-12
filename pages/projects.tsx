@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FaGithub as Github } from 'react-icons/fa';
@@ -117,6 +118,14 @@ const Projects: NextPage = () => {
   };
 
   return (
+    <>
+    <Head>
+      <title>Projects — Marius Gal</title>
+      <meta name="description" content="Marius Gal's Web3 projects: ETHGlobal hackathons, ERC-721 and ERC-20 smart contracts on Ethereum, DeFi protocols, and more." />
+      <link rel="canonical" href="https://gal-marius.xyz/projects" />
+      <meta property="og:url" content="https://gal-marius.xyz/projects" />
+      <meta property="og:title" content="Projects — Marius Gal" />
+    </Head>
     <div className="flex flex-col min-h-full">
       {/* Hero */}
       <div className="w-full px-8 md:px-16 pt-8 pb-6 flex-shrink-0 z-10 bg-white border-b border-[#E5E9F2]">
@@ -218,6 +227,7 @@ const Projects: NextPage = () => {
 
       </div>
     </div>
+    </>
   );
 };
 
