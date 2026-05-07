@@ -18,6 +18,12 @@ declare global {
 
 const recentProjects = [
   {
+    hash: 'certified.onchor-ai.eth',
+    name: 'Onchor AI — ETHGlobal Open Agents 2026',
+    date: 'May 2026',
+    href: 'https://ethglobal.com/showcase/onchor-ai-mkuyn',
+  },
+  {
     hash: '0xa3f7...c291',
     name: 'YSM — ETHGlobal Cannes 2026',
     date: 'Apr 2026',

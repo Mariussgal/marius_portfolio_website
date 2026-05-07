@@ -21,6 +21,17 @@ interface Project {
 
 const cards: Project[] = [
   {
+    name: 'Onchor AI — ETHGlobal Open Agents 2026',
+    date: 'May 2026',
+    description: 'Solidity security AI-Agent with persistent collective memory. Decentralized vulnerability storage via 0G, on-chain anchoring via KeeperHub, and ENS audit certificates. Made it to Round 2 (~40/468 projects).',
+    githubLink: 'https://github.com/Mariussgal/OPEN-AGENTS-2026',
+    projectLink: 'https://ethglobal.com/showcase/onchor-ai-mkuyn',
+    address: 'certified.onchor-ai.eth',
+    network: 'Ethereum / 0G',
+    category: 'hackathon',
+    stack: ['Solidity', '0G Storage', 'KeeperHub MCP', 'ENS subnames'],
+  },
+  {
     name: 'YSM — ETHGlobal Cannes 2026',
     date: 'April 2026',
     description: 'Yield Stream Marketplace: DeFi protocols sell future fee revenue for instant USDC capital. Investors buy YST at a discount and earn yield.',
@@ -85,6 +96,9 @@ const stackColors: Record<string, string> = {
   Arc: '#f02e65',
   CCTP: '#5c7ee4',
   'Remix IDE': '#16a34a',
+  '0G Storage': '#000000',
+  'KeeperHub MCP': '#FF5733',
+  'ENS subnames': '#5284ff',
 };
 
 const Projects: NextPage = () => {
