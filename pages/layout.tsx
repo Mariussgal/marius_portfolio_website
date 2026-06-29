@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Head>
         <title>Marius Gal — Web3 Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Marius Gal — Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card on Sepolia testnet." />
+        <meta name="description" content="Marius Gal — Engineering student passionate about blockchain and DeFi. Explore my projects, smart contracts, and mint my NFT business card on Sepolia testnet." />
         <meta name="keywords" content="Marius Gal, Web3, Blockchain, DeFi, Solidity, Ethereum, Smart Contract, NFT, Portfolio, Developer, React, Next.js, ETHGlobal" />
         <meta name="author" content="Marius Gal" />
         <meta name="robots" content="index, follow" />
@@ -25,7 +25,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gal-marius.xyz/" />
         <meta property="og:title" content="Marius Gal — Web3 Portfolio" />
-        <meta property="og:description" content="Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card." />
+        <meta property="og:description" content="Engineering student passionate about blockchain and DeFi. Explore my projects, smart contracts, and mint NFT business card." />
         <meta property="og:image" content="https://gal-marius.xyz/headshot.jpg" />
         <meta property="og:site_name" content="Marius Gal" />
         <meta property="og:locale" content="en_US" />
@@ -35,7 +35,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <meta name="twitter:site" content="@mariusgal_eth" />
         <meta name="twitter:creator" content="@mariusgal_eth" />
         <meta name="twitter:title" content="Marius Gal — Web3 Portfolio" />
-        <meta name="twitter:description" content="Generalist engineering student passionate about blockchain, DeFi, and Web3. Explore my projects, smart contracts, and NFT business card." />
+        <meta name="twitter:description" content="Engineering student passionate about blockchain and DeFi. Explore my projects, smart contracts, and mint NFT business card." />
         <meta name="twitter:image" content="https://gal-marius.xyz/headshot.jpg" />
 
         {/* Canonical */}
@@ -57,7 +57,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               "name": "Marius Gal",
               "url": "https://gal-marius.xyz/",
               "image": "https://gal-marius.xyz/headshot.jpg",
-              "jobTitle": "Generalist Engineering Student",
+              "jobTitle": "Engineering student",
               "description": "Passionate about blockchain technology and DeFi, looking out for new experiences in Web3.",
               "sameAs": [
                 "https://github.com/Mariussgal",
