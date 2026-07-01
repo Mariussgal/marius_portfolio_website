@@ -29,7 +29,7 @@ const cards: Project[] = [
     address: '0xecho...2026',
     network: 'Sepolia',
     category: 'hackathon',
-    stack: ['WORLD ID', 'Chainlink CRE', 'UNLINK', 'Solidity', 'Next.js'],
+    stack: ['World ID', 'Chainlink CRE', 'Unlink', 'Solidity'],
   },
   {
     name: 'Onchor AI — ETHGlobal Open Agents 2026',

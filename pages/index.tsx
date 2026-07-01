@@ -223,10 +223,10 @@ const Home: NextPage = () => {
               <FileText size={20} className="text-[#3144D9]" />
               <span className="text-[12px] font-semibold text-[#1C1E23]">Resume</span>
             </a>
-            <a href='/about' className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors">
+            <Link href='/about' className="bg-white flex flex-col items-center justify-center py-3.5 gap-1.5 cursor-pointer active:bg-gray-50 transition-colors">
               <Star size={20} className="text-[#3144D9]" />
               <span className="text-[12px] font-semibold text-[#1C1E23]">Skills</span>
-            </a>
+            </Link>
           </div>
         </div>
 
